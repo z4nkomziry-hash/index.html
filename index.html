@@ -19,22 +19,14 @@
         }
         .dir-ltr { direction: ltr; }
         .dir-rtl { direction: rtl; }
-        .ad-placeholder {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px dashed rgba(255, 255, 255, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 12px;
-            font-weight: 600;
-            border-radius: 16px;
-            transition: all 0.3s;
-        }
     </style>
+    
+    <!-- SOCIAL BAR AD -->
+    <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js"></script>
 </head>
 <body class="text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-pink-500 selection:text-white">
 
+    <!-- TOP BAR -->
     <header class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-3">
             <div class="bg-gradient-to-tr from-pink-500 to-violet-600 p-2.5 rounded-2xl shadow-lg shadow-pink-500/20">
@@ -56,6 +48,7 @@
         </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="container mx-auto px-4 max-w-3xl my-auto py-6">
         <div class="text-center mb-6">
             <h1 id="mainTitle" class="text-3xl md:text-5xl font-extrabold mb-3 tracking-tight leading-tight">
@@ -66,10 +59,21 @@
             </p>
         </div>
 
-        <div class="ad-placeholder w-full h-20 mb-6" id="adTop">
-            <span>جهێ ڕیکلامێ (Top Ad 728x90)</span>
+        <!-- TOP AD (BANNER 728x90) -->
+        <div class="w-full flex justify-center mb-6" id="adTop">
+            <script>
+              atOptions = {
+                'key' : '5afe380c3cb536afa245e51fd8b6e583',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
         </div>
 
+        <!-- INPUT BOX -->
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
             <div class="flex flex-col md:flex-row gap-3">
                 <div class="relative flex-1">
@@ -91,10 +95,13 @@
             <div id="errorMessage" class="hidden mt-4 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
         </div>
 
-        <div class="ad-placeholder w-full h-24 mb-6" id="adMiddle">
-            <span>جهێ ڕیکلامێ (Middle Ad 728x90)</span>
+        <!-- MIDDLE AD (NATIVE BANNER) -->
+        <div class="w-full flex justify-center mb-6" id="adMiddle">
+            <script async="async" data-cfasync="false" src="https://pl29886920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
+            <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea"></div>
         </div>
 
+        <!-- RESULT CARD -->
         <div id="resultCard" class="hidden glass-card p-6 rounded-3xl shadow-2xl transition-all duration-500 mb-6">
             <div id="resultFlex" class="flex flex-col md:flex-row gap-6 items-center">
                 <div class="relative w-full md:w-48 aspect-[9/16] rounded-2xl overflow-hidden shadow-xl bg-slate-950 flex items-center justify-center">
@@ -123,8 +130,12 @@
             </div>
         </div>
 
-        <div class="ad-placeholder w-full h-20 mt-2" id="adBottom">
-            <span>جهێ ڕیکلامێ (Bottom Ad 728x90)</span>
+        <!-- SMARTLINK SUPPORT BUTTON -->
+        <div class="w-full flex justify-center mt-4">
+            <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a" target="_blank" class="bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center gap-2 shadow-md animate-pulse">
+                <i class="fa-solid fa-heart text-pink-500"></i>
+                <span id="txtSupport">پشتەڤانیا مە بکە ☕</span>
+            </a>
         </div>
     </main>
 
@@ -142,6 +153,7 @@
                 download: "دابەزینە",
                 noWm: "دابەزاندن ب بێ لۆگۆ",
                 music: "دابەزاندنا دەنگی (MP3)",
+                support: "پشتەڤانیا مە بکە ☕",
                 errorEmpty: "هیڤییە ل پێشدا لینکەکێ تیکتۆکێ یێ ڕاست دانی!",
                 errorFetch: "چ کێشە د لینکێ تە دا هەیە یان ڤیدیۆ یا تایبەتە!",
                 loading: "لێگەریان...", dir: "rtl", textAlign: "right"
@@ -154,6 +166,7 @@
                 download: "دایبگرە",
                 noWm: "داگرتن بێ لۆگۆ",
                 music: "داگرتنی دەنگ (MP3)",
+                support: "پشتیوانیمان بکە ☕",
                 errorEmpty: "تکایە سەرەتا لینکێکی تیکتۆکی ڕاست دابنێ!",
                 errorFetch: "کێشەیەک لە لینکەکەدا هەیە یاخود ڤیدیۆکە تایبەتە!",
                 loading: "گەڕان...", dir: "rtl", textAlign: "right"
@@ -166,6 +179,7 @@
                 download: "تحميل",
                 noWm: "تحميل بدون علامة مائية",
                 music: "تحميل الصوت (MP3)",
+                support: "ادعمنا ☕",
                 errorEmpty: "يرجى إدخال رابط تيك توك صحيح أولاً!",
                 errorFetch: "هناك خطأ في الرابط أو أن الفيديو خاص!",
                 loading: "جاري البحث...", dir: "rtl", textAlign: "right"
@@ -178,6 +192,7 @@
                 download: "Download",
                 noWm: "Download No Watermark",
                 music: "Download Audio (MP3)",
+                support: "Support Us ☕",
                 errorEmpty: "Please paste a valid TikTok link first!",
                 errorFetch: "Invalid link or the video is private!",
                 loading: "Searching...", dir: "ltr", textAlign: "left"
@@ -199,6 +214,7 @@
             document.getElementById('txtDownloadBtn').innerText = l.download;
             document.getElementById('txtNoWatermark').innerText = l.noWm;
             document.getElementById('txtMusic').innerText = l.music;
+            document.getElementById('txtSupport').innerText = l.support;
 
             const body = document.body;
             const resFlex = document.getElementById('resultFlex');
@@ -254,7 +270,6 @@
                     document.getElementById('authorName').innerText = videoData.author.nickname || `@${videoData.author.unique_id}`;
                     document.getElementById('videoDesc').innerText = videoData.title || 'TikTok Video';
                     
-                    // Cache the clean URLs internally to prevent any external routing redirects
                     cachedVideoUrl = videoData.play;
                     cachedMusicUrl = videoData.music;
 
@@ -270,7 +285,6 @@
             }
         }
 
-        // Native internal downloader block without escaping to external sites
         async function triggerBlobDownload(fileUrl, defaultName) {
             try {
                 const response = await fetch(fileUrl);
@@ -285,7 +299,6 @@
                 window.URL.revokeObjectURL(blobUrl);
                 document.body.removeChild(a);
             } catch (e) {
-                // Fallback direct open if fetch blob gets blocked by browser policy
                 window.open(fileUrl, '_blank');
             }
         }

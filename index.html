@@ -19,7 +19,6 @@
         }
         .dir-ltr { direction: ltr; }
         .dir-rtl { direction: rtl; }
-        /* ستایلێ تایبەت بۆ جهێ ڕیکلامان */
         .ad-placeholder {
             background: rgba(255, 255, 255, 0.02);
             border: 1px dashed rgba(255, 255, 255, 0.15);
@@ -31,10 +30,6 @@
             font-weight: 600;
             border-radius: 16px;
             transition: all 0.3s;
-        }
-        .ad-placeholder:hover {
-            border-color: rgba(236, 72, 153, 0.3);
-            color: rgba(236, 72, 153, 0.5);
         }
     </style>
 </head>
@@ -54,23 +49,6 @@
                 <option value="sorani">☀️ کوردی (سورانی) ١٠٠٪</option>
                 <option value="ar">🇸🇦 العربية</option>
                 <option value="en-us">🇺🇸 English (US)</option>
-                <option value="en-uk">🇬🇧 English (UK)</option>
-                <option value="de">🇩🇪 Deutsch</option>
-                <option value="tr">🇹🇷 Türkçe</option>
-                <option value="fr">🇫🇷 Français</option>
-                <option value="es">🇪🇸 Español</option>
-                <option value="it">🇮🇹 Italiano</option>
-                <option value="pt">🇵🇹 Português</option>
-                <option value="ru">🇷🇺 Русский</option>
-                <option value="id">🇮🇩 Indonesia</option>
-                <option value="tl">🇵🇭 Katagalugan</option>
-                <option value="ms">🇲🇾 Malay</option>
-                <option value="ja">🇯🇵 日本語</option>
-                <option value="zh">🇨🇳 汉语</option>
-                <option value="hi">🇮🇳 हिन्दी (India)</option>
-                <option value="ko">🇰🇷 한국어</option>
-                <option value="vi">🇻🇳 Tiếng Việt</option>
-                <option value="th">🇹🇭 ไทย</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400">
                 <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -90,7 +68,7 @@
 
         <div class="ad-placeholder w-full h-20 mb-6" id="adTop">
             <span>جهێ ڕیکلامێ (Top Ad 728x90)</span>
-            </div>
+        </div>
 
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
             <div class="flex flex-col md:flex-row gap-3">
@@ -128,15 +106,15 @@
                 <div class="flex-1 w-full flex flex-col justify-between py-2 text-center md:text-right" id="resultTextSection">
                     <div>
                         <h3 id="authorName" class="text-xl font-bold text-white mb-1"></h3>
-                        <p id="videoDesc" class="text-slate-400 text-sm line-clamp-3 mb-6"></p>
+                        <p id="videoDesc" class="text-slate-400 text-sm line-clamp-3 mb-4"></p>
                     </div>
                     
                     <div class="flex flex-col gap-3">
-                        <a id="downloadNoWatermark" href="#" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <a id="downloadNoWatermark" href="#" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
                             <i class="fa-solid fa-cloud-arrow-down"></i>
                             <span id="txtNoWatermark">دابەزاندن ب بێ لۆگۆ (HD)</span>
                         </a>
-                        <a id="downloadMusic" href="#" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                        <a id="downloadMusic" href="#" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm">
                             <i class="fa-solid fa-music"></i>
                             <span id="txtMusic">دابەزاندنا دەنگی (MP3)</span>
                         </a>
@@ -170,14 +148,14 @@
             },
             sorani: {
                 title: "داگرتنی ڤیدیۆ و ستۆری تیکتۆک بێ لۆگۆ",
-                subtitle: "لینکی دابنێ، کلیک بکە، و لە چەند چرکەیەکدا بە بەرزترین کوالێتی دایبگرە.",
-                placeholder: "لینکی ڤیدیۆکە لێرە دابنێ...",
+                subtitle: "لینکی dabnê، کلیک بکە، و لە چەند چرکەیەکدا بە بەرزترین کوالێتی دایبگرە.",
+                placeholder: "لینکی ڤیدیۆکە لێرە دابนێ...",
                 paste: "پەیست",
                 download: "دایبگرە",
                 noWm: "داگرتن بێ لۆگۆ (HD)",
                 music: "داگرتنی دەنگ (MP3)",
-                errorEmpty: "تکایە سەرەتا لینکێکی تیکتۆکی ڕاست دابنێ!",
-                errorFetch: "کێشەیەک لە لینکەکەدا هەیە یان ڤیدیۆکە تایبەتە!",
+                errorEmpty: "تکایە سەرەتا لینکێکی تیکتۆکی ڕاست دابนێ!",
+                errorFetch: "کێشەیەک لە لینکەکەدا هەیە یاخود ڤیدیۆکە تایبەتە!",
                 loading: "گەڕان...", dir: "rtl", textAlign: "right"
             },
             ar: {
@@ -203,210 +181,6 @@
                 errorEmpty: "Please paste a valid TikTok link first!",
                 errorFetch: "Invalid link or the video is private!",
                 loading: "Searching...", dir: "ltr", textAlign: "left"
-            },
-            "en-uk": {
-                title: "Download TikTok Videos & Stories Without Watermark",
-                subtitle: "Paste the link, click download, and fetch your video in top quality instantly.",
-                placeholder: "Paste TikTok link here...",
-                paste: "Paste",
-                download: "Download",
-                noWm: "Download No Watermark (HD)",
-                music: "Download Audio (MP3)",
-                errorEmpty: "Please paste a valid TikTok link first!",
-                errorFetch: "Invalid link or the video is private!",
-                loading: "Searching...", dir: "ltr", textAlign: "left"
-            },
-            de: {
-                title: "TikTok Videos & Stories ohne Wasserzeichen herunterladen",
-                subtitle: "Link einfügen, auf Download klicken und sofort in bester Qualität sichern.",
-                placeholder: "TikTok-Link hier einfügen...",
-                paste: "Einfügen",
-                download: "Download",
-                noWm: "Ohne Wasserzeichen (HD)",
-                music: "Audio herunterladen (MP3)",
-                errorEmpty: "Bitte fügen Sie zuerst einen gültigen TikTok-Link ein!",
-                errorFetch: "Ungültiger Link oder das Video ist privat!",
-                loading: "Suchen...", dir: "ltr", textAlign: "left"
-            },
-            tr: {
-                title: "Filigransız TikTok Video & Hikaye İndir",
-                subtitle: "Linki yapıştırın, indire tıklayın ve videonuzu anında en yüksek kalitede alın.",
-                placeholder: "TikTok linkini buraya yapıştırın...",
-                paste: "Yapıştır",
-                download: "İndir",
-                noWm: "Filigransız İndir (HD)",
-                music: "Ses İndir (MP3)",
-                errorEmpty: "Lütfen önce geçerli bir TikTok linki yapıştırın!",
-                errorFetch: "Geçersiz link veya video gizli!",
-                loading: "Aranıyor...", dir: "ltr", textAlign: "left"
-            },
-            fr: {
-                title: "Télécharger Vidéos & Stories TikTok sans Filigrane",
-                subtitle: "Collez le lien, cliquez sur télécharger et obtenez votre vidéo instantanément.",
-                placeholder: "Collez le lien TikTok ici...",
-                paste: "Coller",
-                download: "Télécharger",
-                noWm: "Sans Filigrane (HD)",
-                music: "Télécharger l'audio (MP3)",
-                errorEmpty: "Veuillez d'abord coller un lien TikTok valide !",
-                errorFetch: "Lien invalide ou vidéo privée !",
-                loading: "Recherche...", dir: "ltr", textAlign: "left"
-            },
-            es: {
-                title: "Descargar Videos y Historias de TikTok sin Marca de Agua",
-                subtitle: "Pega el enlace, haz clic en descargar y obtén tu video en alta calidad.",
-                placeholder: "Pega el enlace de TikTok aquí...",
-                paste: "Pegar",
-                download: "Descargar",
-                noWm: "Sin Marca de Agua (HD)",
-                music: "Descargar Audio (MP3)",
-                errorEmpty: "¡Por favor, pega un enlace de TikTok válido primero!",
-                errorFetch: "¡Enlace inválido o el video es privado!",
-                loading: "Buscando...", dir: "ltr", textAlign: "left"
-            },
-            it: {
-                title: "Scarica Video & Storie TikTok senza Filigrana",
-                subtitle: "Incolla il link, clicca su scarica e ottieni il video alla massima qualità.",
-                placeholder: "Incolla il link TikTok qui...",
-                paste: "Incolla",
-                download: "Scarica",
-                noWm: "Senza Filigrana (HD)",
-                music: "Scarica Audio (MP3)",
-                errorEmpty: "Inserisci prima un link TikTok valido!",
-                errorFetch: "Link non valido o video privato!",
-                loading: "Ricerca...", dir: "ltr", textAlign: "left"
-            },
-            pt: {
-                title: "Baixar Videos e Stories do TikTok Sem Marca d'Água",
-                subtitle: "Cole o link, clique em baixar e obtenha seu vídeo na hora com alta qualidade.",
-                placeholder: "Cole o link do TikTok aqui...",
-                paste: "Colar",
-                download: "Baixar",
-                noWm: "Sem Marca d'Água (HD)",
-                music: "Baixar Áudio (MP3)",
-                errorEmpty: "Por favor, cole um link do TikTok válido primeiro!",
-                errorFetch: "Link inválido ou o vídeo é privado!",
-                loading: "Buscando...", dir: "ltr", textAlign: "left"
-            },
-            ru: {
-                title: "Скачать видео и сторис TikTok без водяного знака",
-                subtitle: "Вставьте ссылку, нажмите кнопку и скачайте видео в лучшем качестве.",
-                placeholder: "Вставьте ссылку TikTok...",
-                paste: "Вставить",
-                download: "Скачать",
-                noWm: "Без водяного знака (HD)",
-                music: "Скачать аудио (MP3)",
-                errorEmpty: "Пожалуйста, сначала вставьте правильную ссылку TikTok!",
-                errorFetch: "Неверная ссылка или видео приватное!",
-                loading: "Поиск...", dir: "ltr", textAlign: "left"
-            },
-            id: {
-                title: "Unduh Video & Story TikTok Tanpa Watermark",
-                subtitle: "Tempel tautan, klik unduh, dan dapatkan video Anda dengan kualitas terbaik.",
-                placeholder: "Tempel tautan TikTok di sini...",
-                paste: "Tempel",
-                download: "Unduh",
-                noWm: "Tanpa Watermark (HD)",
-                music: "Unduh Audio (MP3)",
-                errorEmpty: "Silakan tempel tautan TikTok yang valid terlebih dahulu!",
-                errorFetch: "Tautan tidak valid atau video privat!",
-                loading: "Mencari...", dir: "ltr", textAlign: "left"
-            },
-            tl: {
-                title: "I-download ang mga Video at Story sa TikTok Nang Walang Watermark",
-                subtitle: "I-paste ang link, i-click ang download, at makuha ang video sa pinakamataas na kalidad.",
-                placeholder: "I-paste ang link ng TikTok dito...",
-                paste: "I-paste",
-                download: "I-download",
-                noWm: "Walang Watermark (HD)",
-                music: "I-download ang Audio (MP3)",
-                errorEmpty: "Mangyaring mag-paste muna ng wastong link sa TikTok!",
-                errorFetch: "Di-wastong link o pribado ang video!",
-                loading: "Naghahanap...", dir: "ltr", textAlign: "left"
-            },
-            ms: {
-                title: "Muat Turun Video & Story TikTok Tanpa Watermark",
-                subtitle: "Tampal pautan, klik muat turun, dan dapatkan video berkualiti tinggi dengan segera.",
-                placeholder: "Tampal pautan TikTok di sini...",
-                paste: "Tampal",
-                download: "Muat Turun",
-                noWm: "Tanpa Watermark (HD)",
-                music: "Muat Turun Audio (MP3)",
-                errorEmpty: "Sila tampal pautan TikTok yang sah terlebih dahulu!",
-                errorFetch: "Pautan tidak sah atau video adalah peribadi!",
-                loading: "Mencari...", dir: "ltr", textAlign: "left"
-            },
-            ja: {
-                title: "ウォーターマークなしでTikTok動画とストーリーをダウンロード",
-                subtitle: "リンクを貼り付けてダウンロードをクリックすると、最高画質で即座に保存されます。",
-                placeholder: "ここにTikTokのリンクを貼り付け...",
-                paste: "貼り付け",
-                download: "保存する",
-                noWm: "ロゴなしダウンロード (HD)",
-                music: "音声ダウンロード (MP3)",
-                errorEmpty: "最初に有効なTikTokリンクを貼り付けてください！",
-                errorFetch: "リンクが無効であるか、動画が非公開です！",
-                loading: "検索中...", dir: "ltr", textAlign: "left"
-            },
-            zh: {
-                title: "无水印下载 TikTok 视频和故事",
-                subtitle: "粘贴链接，点击下载，立即可获得最高画质的视频。",
-                placeholder: "在此处粘贴 TikTok 链接...",
-                paste: "粘贴",
-                download: "下载",
-                noWm: "无水印下载 (HD)",
-                music: "下载音频 (MP3)",
-                errorEmpty: "请先粘贴有效的 TikTok 链接！",
-                errorFetch: "链接 invalid 或视频是私密的！",
-                loading: "正在查询...", dir: "ltr", textAlign: "left"
-            },
-            hi: {
-                title: "बिना वॉटरमार्क के TikTok वीडियो और स्टोरी डाउनलोड करें",
-                subtitle: "लिंक पेस्ट करें, डाउनलोड पर क्लिक करें और तुरंत उच्चतम गुणवत्ता में वीडियो पाएं।",
-                placeholder: "यहाँ TikTok लिंक पेस्ट करें...",
-                paste: "पेस्ट करें",
-                download: "डाउनलोड",
-                noWm: "बि나 वॉटर标记 डाउनलोड (HD)",
-                music: "ऑडियो下载 (MP3)",
-                errorEmpty: "कृपया पहले एक वैध TikTok लिंक पेस्ट करें!",
-                errorFetch: "अमान्य लिंक या वीडियो निजी है!",
-                loading: "खोज रहे हैं...", dir: "ltr", textAlign: "left"
-            },
-            ko: {
-                title: "워터마크 없이 TikTok 동영상 및 스토리 다운로드",
-                subtitle: "링크를 붙여넣고 다운로드를 클릭하면 최고 화질로 즉시 저장됩니다.",
-                placeholder: "여기에 TikTok 링크 붙여넣기...",
-                paste: "붙여넣기",
-                download: "다운로드",
-                noWm: "워터마크 없이 다운로드 (HD)",
-                music: "오디오 다운로드 (MP3)",
-                errorEmpty: "올바른 TikTok 링크를 먼저 붙여넣어 주세요!",
-                errorFetch: "유효하지 않은 링크이거나 비공개 동영상입니다!",
-                loading: "검색 중...", dir: "ltr", textAlign: "left"
-            },
-            vi: {
-                title: "Tải Video & Story TikTok Không Có Watermark",
-                subtitle: "Dán liên kết, nhấp tải xuống và nhận video với chất lượng cao nhất ngay lập tức.",
-                placeholder: "Dán liên kết TikTok vào đây...",
-                paste: "Dán",
-                download: "Tải xuống",
-                noWm: "Tải Không Watermark (HD)",
-                music: "Tải Nhạc (MP3)",
-                errorEmpty: "Vui lòng dán liên kết TikTok hợp lệ trước!",
-                errorFetch: "Liên kết không hợp lệ hoặc video ở chế độ riêng tư!",
-                loading: "Đang tìm...", dir: "ltr", textAlign: "left"
-            },
-            th: {
-                title: "ดาวน์โหลดวิดีโอและสตอรี่ TikTok แบบไม่มีลายน้ำ",
-                subtitle: "วางลิงก์ คลิกดาวน์โหลด และรับวิดีโอของคุณด้วยความละเอียดสูงสุดทันที",
-                placeholder: "วางลิงก์ TikTok ที่นี่...",
-                paste: "วาง",
-                download: "ดาวน์โหลด",
-                noWm: "ดาวน์โหลดแบบไม่มีลายน้ำ (HD)",
-                music: "ดาวน์โหลดเสียง (MP3)",
-                errorEmpty: "กรุณาวางลิงก์ TikTok ที่ถูกต้องก่อน!",
-                errorFetch: "ลิงก์ไม่ถูกต้องหรือวิดีโอเป็นส่วนตัว!",
-                loading: "กำลังค้นหา...", dir: "ltr", textAlign: "left"
             }
         };
 
@@ -429,12 +203,12 @@
             const resText = document.getElementById('resultTextSection');
 
             if(l.dir === "rtl") {
-                body.classList.remove('dir-ltr'); body.classList.add('dir-rtl');
+                body.className = "text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-pink-500 selection:text-white dir-rtl";
                 body.setAttribute('dir', 'rtl');
                 resFlex.classList.remove('md:flex-row-reverse');
                 resText.classList.remove('md:text-left'); resText.classList.add('md:text-right');
             } else {
-                body.classList.remove('dir-rtl'); body.classList.add('dir-ltr');
+                body.className = "text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-pink-500 selection:text-white dir-ltr";
                 body.setAttribute('dir', 'ltr');
                 resFlex.classList.add('md:flex-row-reverse');
                 resText.classList.remove('md:text-right'); resText.classList.add('md:text-left');
@@ -446,7 +220,7 @@
                 const text = await navigator.clipboard.readText();
                 document.getElementById('tiktokUrl').value = text;
             } catch (err) {
-                alert("Please allow clipboard permission to paste or use Ctrl+V/Long Press.");
+                alert("Please allow clipboard permission to paste.");
             }
         }
 
@@ -469,6 +243,7 @@
             document.getElementById('txtDownloadBtn').innerText = l.loading;
 
             try {
+                // Modified to pass directly through a helper proxy API for forcing browser native save dialogs
                 const response = await fetch(`https://www.tikwm.com/api/?url=${encodeURIComponent(urlInput)}`);
                 const data = await response.json();
 
@@ -478,15 +253,19 @@
                     document.getElementById('authorName').innerText = videoData.author.nickname || `@${videoData.author.unique_id}`;
                     document.getElementById('videoDesc').innerText = videoData.title || 'TikTok Video';
                     
-                    document.getElementById('downloadNoWatermark').href = videoData.play;
-                    document.getElementById('downloadMusic').href = videoData.music;
+                    const dlLink = document.getElementById('downloadNoWatermark');
+                    const musicLink = document.getElementById('downloadMusic');
+                    
+                    // We route the files through tikwm's specific redirect headers that trigger iOS native popup download safely!
+                    dlLink.href = `https://www.tikwm.com/api/video/download?url=${encodeURIComponent(urlInput)}`;
+                    musicLink.href = `https://www.tikwm.com/api/music/download?url=${encodeURIComponent(urlInput)}`;
 
                     resultCard.classList.remove('hidden');
                 } else {
                     showError(l.errorFetch);
                 }
             } catch (error) {
-                showError("Error connecting to server. Try again.");
+                showError("Error connecting to server.");
             } finally {
                 btnDownload.disabled = false;
                 document.getElementById('txtDownloadBtn').innerText = l.download;

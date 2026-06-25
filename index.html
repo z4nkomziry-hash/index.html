@@ -110,14 +110,14 @@
                     </div>
                     
                     <div class="flex flex-col gap-3">
-                        <a id="downloadNoWatermark" href="#" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                        <button id="downloadBtnNoWm" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer">
                             <i class="fa-solid fa-cloud-arrow-down"></i>
-                            <span id="txtNoWatermark">دابەزاندن ب بێ لۆگۆ (HD)</span>
-                        </a>
-                        <a id="downloadMusic" href="#" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                            <span id="txtNoWatermark">دابەزاندن ب بێ لۆگۆ</span>
+                        </button>
+                        <button id="downloadBtnMusic" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer">
                             <i class="fa-solid fa-music"></i>
                             <span id="txtMusic">دابەزاندنا دەنگی (MP3)</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                 placeholder: "لینکی ڤیدیۆیێ لڤێرە دانێ...",
                 paste: "پێوەکە",
                 download: "دابەزینە",
-                noWm: "دابەزاندن ب بێ لۆگۆ (HD)",
+                noWm: "دابەزاندن ب بێ لۆگۆ",
                 music: "دابەزاندنا دەنگی (MP3)",
                 errorEmpty: "هیڤییە ل پێشدا لینکەکێ تیکتۆکێ یێ ڕاست دانی!",
                 errorFetch: "چ کێشە د لینکێ تە دا هەیە یان ڤیدیۆ یا تایبەتە!",
@@ -148,13 +148,13 @@
             },
             sorani: {
                 title: "داگرتنی ڤیدیۆ و ستۆری تیکتۆک بێ لۆگۆ",
-                subtitle: "لینکی dabnê، کلیک بکە، و لە چەند چرکەیەکدا بە بەرزترین کوالێتی دایبگرە.",
-                placeholder: "لینکی ڤیدیۆکە لێرە دابนێ...",
+                subtitle: "لینکی دابنێ، کلیک بکە، و لە چەند چرکەیەکدا بە بەرزترین کوالێتی دایبگرە.",
+                placeholder: "لینکی ڤیدیۆکە لێرە دابنێ...",
                 paste: "پەیست",
                 download: "دایبگرە",
-                noWm: "داگرتن بێ لۆگۆ (HD)",
+                noWm: "داگرتن بێ لۆگۆ",
                 music: "داگرتنی دەنگ (MP3)",
-                errorEmpty: "تکایە سەرەتا لینکێکی تیکتۆکی ڕاست دابนێ!",
+                errorEmpty: "تکایە سەرەتا لینکێکی تیکتۆکی ڕاست دابنێ!",
                 errorFetch: "کێشەیەک لە لینکەکەدا هەیە یاخود ڤیدیۆکە تایبەتە!",
                 loading: "گەڕان...", dir: "rtl", textAlign: "right"
             },
@@ -164,7 +164,7 @@
                 placeholder: "أدخل رابط تيك توك هنا...",
                 paste: "لصق",
                 download: "تحميل",
-                noWm: "تحميل بدون علامة مائية (HD)",
+                noWm: "تحميل بدون علامة مائية",
                 music: "تحميل الصوت (MP3)",
                 errorEmpty: "يرجى إدخال رابط تيك توك صحيح أولاً!",
                 errorFetch: "هناك خطأ في الرابط أو أن الفيديو خاص!",
@@ -176,7 +176,7 @@
                 placeholder: "Paste TikTok link here...",
                 paste: "Paste",
                 download: "Download",
-                noWm: "Download No Watermark (HD)",
+                noWm: "Download No Watermark",
                 music: "Download Audio (MP3)",
                 errorEmpty: "Please paste a valid TikTok link first!",
                 errorFetch: "Invalid link or the video is private!",
@@ -185,6 +185,8 @@
         };
 
         let currentLang = 'badini';
+        let cachedVideoUrl = "";
+        let cachedMusicUrl = "";
 
         function changeLanguage(lang) {
             currentLang = lang;
@@ -243,7 +245,6 @@
             document.getElementById('txtDownloadBtn').innerText = l.loading;
 
             try {
-                // Modified to pass directly through a helper proxy API for forcing browser native save dialogs
                 const response = await fetch(`https://www.tikwm.com/api/?url=${encodeURIComponent(urlInput)}`);
                 const data = await response.json();
 
@@ -253,12 +254,9 @@
                     document.getElementById('authorName').innerText = videoData.author.nickname || `@${videoData.author.unique_id}`;
                     document.getElementById('videoDesc').innerText = videoData.title || 'TikTok Video';
                     
-                    const dlLink = document.getElementById('downloadNoWatermark');
-                    const musicLink = document.getElementById('downloadMusic');
-                    
-                    // We route the files through tikwm's specific redirect headers that trigger iOS native popup download safely!
-                    dlLink.href = `https://www.tikwm.com/api/video/download?url=${encodeURIComponent(urlInput)}`;
-                    musicLink.href = `https://www.tikwm.com/api/music/download?url=${encodeURIComponent(urlInput)}`;
+                    // Cache the clean URLs internally to prevent any external routing redirects
+                    cachedVideoUrl = videoData.play;
+                    cachedMusicUrl = videoData.music;
 
                     resultCard.classList.remove('hidden');
                 } else {
@@ -271,6 +269,34 @@
                 document.getElementById('txtDownloadBtn').innerText = l.download;
             }
         }
+
+        // Native internal downloader block without escaping to external sites
+        async function triggerBlobDownload(fileUrl, defaultName) {
+            try {
+                const response = await fetch(fileUrl);
+                const blob = await response.blob();
+                const blobUrl = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = blobUrl;
+                a.download = defaultName;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(blobUrl);
+                document.body.removeChild(a);
+            } catch (e) {
+                // Fallback direct open if fetch blob gets blocked by browser policy
+                window.open(fileUrl, '_blank');
+            }
+        }
+
+        document.getElementById('downloadBtnNoWm').addEventListener('click', () => {
+            if(cachedVideoUrl) triggerBlobDownload(cachedVideoUrl, 'tikjet_video.mp4');
+        });
+
+        document.getElementById('downloadBtnMusic').addEventListener('click', () => {
+            if(cachedMusicUrl) triggerBlobDownload(cachedMusicUrl, 'tikjet_audio.mp3');
+        });
 
         function showError(msg) {
             const errorMessage = document.getElementById('errorMessage');

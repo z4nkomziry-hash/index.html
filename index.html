@@ -66,16 +66,15 @@
 
     <main class="container mx-auto px-4 max-w-3xl my-auto py-6">
         
-        <!-- VIP SPONSOR SECTION -->
+        <!-- VIP SPONSOR SECTION WITH IMAGE_12.PNG INSTEAD OF ZB TEXT -->
         <div id="vipSponsorCard" class="w-full max-w-xl mx-auto mb-8 p-4 bg-gradient-to-r from-slate-950 via-purple-950/40 to-slate-950 rounded-2xl border vip-glow flex items-center justify-between gap-4 transition duration-300 transform hover:scale-[1.01]">
             <div class="flex items-center gap-3.5">
-                <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-purple-600 p-[2px] shadow-md">
-                    <div class="w-full h-full rounded-[10px] bg-slate-900 overflow-hidden">
-                        <img src="image_7.png" onerror="this.src='https://ui-avatars.com/api/?name=Zano+B22&background=0f172a&color=eab308'" alt="Zano B22 Profile" class="w-full h-full object-cover">
+                <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 p-[2px] shadow-md shadow-purple-500/10">
+                    <div class="w-full h-full rounded-full bg-slate-900 overflow-hidden">
+                        <img src="image_12.png" onerror="this.src='https://ui-avatars.com/api/?name=Zano+B22&background=0f172a&color=eab308'" alt="Zano B22 Profile" class="w-full h-full object-cover">
                     </div>
-                    <span class="absolute -top-1 -right-1 flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                    <span class="absolute bottom-0 right-0 flex h-3.5 w-3.5 rounded-full border-2 border-slate-950 bg-emerald-500">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     </span>
                 </div>
                 <div>
@@ -101,14 +100,7 @@
             </p>
         </div>
 
-        <!-- Adsterra Banner 728x90 -->
-        <div class="w-full flex justify-center mb-6" id="adTop">
-            <script>
-              atOptions = { 'key' : '5afe380c3cb536afa245e51fd8b6e583', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
-            </script>
-            <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
-        </div>
-
+        <!-- MAIN DOWNLOAD CARD -->
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
             <div class="flex gap-2 p-1 bg-slate-950/60 rounded-xl mb-4 border border-slate-800/80 max-w-xs mx-auto">
                 <button onclick="switchDownloadMode('link')" id="modeLink" class="flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow">
@@ -137,9 +129,17 @@
             </div>
             
             <div id="storyNotice" class="hidden mt-3 text-[11px] text-amber-400 text-center font-medium bg-amber-500/10 py-2 px-4 rounded-xl border border-amber-500/20">
-                ⚠️ <span id="txtStoryNotice">بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.</span>
+                ⚠️ <span id="txtStoryNotice">بۆ دابەزاندنا ستۆری یان هایڵایتان, هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.</span>
             </div>
             <div id="errorMessage" class="hidden mt-4 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
+        </div>
+
+        <!-- FIXED ADSTERRA BOX TO PREVENT OVERLAP -->
+        <div class="w-full flex justify-center mb-8 clear-both relative z-20 min-h-[95px] overflow-hidden" id="adTop">
+            <script>
+              atOptions = { 'key' : '5afe380c3cb536afa245e51fd8b6e583', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+            </script>
+            <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
         </div>
 
         <!-- Multi-Tab User Results -->
@@ -194,7 +194,7 @@
             </div>
         </div>
 
-        <!-- SUPPORT BUTTONS - CONNECTED TO YOUR CUSTOM MODAL POPUP -->
+        <!-- SUPPORT BUTTONS -->
         <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
             <button onclick="openSupportModal()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
                 <i class="fa-solid fa-heart text-pink-500"></i>
@@ -209,7 +209,7 @@
     </main>
 
     <!-- CUSTOM SUPPORT MODAL POPUP HTML -->
-    <div id="customSupportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+    <div id="customSupportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
         <div class="glass-card w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-slate-700/50 bg-slate-950/95 relative">
             <button onclick="closeSupportModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition cursor-pointer">
                 <i class="fa-solid fa-xmark text-lg"></i>
@@ -230,10 +230,9 @@
             <!-- FastPay Content -->
             <div id="contentFastPay" class="flex flex-col items-center">
                 <div class="bg-white p-3 rounded-2xl mb-4 shadow-xl">
-                    <!-- لڤێرە دیشێی وێنێ QR Code یێ خۆ یێ دروست دابنی -->
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%2B9647506045491" alt="FastPay QR" class="w-36 h-36">
                 </div>
-                <p id="modalInstruction" class="text-[11px] text-slate-400 mb-3 text-center">بارکۆدی سەبکەن یان ژمارەیا خوارێ کۆپی بکە</p>
+                <p id="modalInstruction" class="text-[11px] text-slate-400 mb-3 text-center">بارکۆدی سەبکەن یاخود ژمارەیا خوارێ کۆپی بکە</p>
                 <div class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 flex justify-between items-center gap-2">
                     <span class="text-amber-400 font-bold text-sm tracking-wide dir-ltr">+964 750 604 5491</span>
                     <button onclick="copyToClipboard('+9647506045491')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2 rounded-lg text-xs transition cursor-pointer">
@@ -245,7 +244,6 @@
             <!-- USDT Content -->
             <div id="contentUsdt" class="hidden flex flex-col items-center">
                 <div class="bg-white p-3 rounded-2xl mb-4 shadow-xl">
-                    <!-- لڤێرە دیشێی وێنێ QR Code یێ گونجای بۆ ئەدرێسێ خۆ دابنی -->
                     <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=VwnjyT2KUa9xnBreT32YLLJEwACHpc" alt="USDT QR" class="w-36 h-36">
                 </div>
                 <p id="modalUsdtNotice" class="text-[11px] text-emerald-400 mb-3 text-center">تەنیا پارەی ل سەر هێلا TRC-20 بفرێژە</p>
@@ -284,12 +282,12 @@
                 placeholderUser: "ناڤێ حسابێ بنڤیسە (نموونە: @zanyar)...",
                 paste: "پێوەکە", download: "دابەزینە", noWm: "Download Video", music: "دابەزاندنا دەنگی (MP3)",
                 support: "پشتەڤانیا مە بکە ☕", supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
-                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "چ کێشە د نڤیسینا تە دا هەیە یان ڤیدیۆ یا تایبەتە!",
+                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "چ کێشە د نڤیسینا تە دا هەیە یاخود ڤیدیۆ یا تایبەتە!",
                 loading: "لێگەریان...", 
                 vipAdText: "باشترین و بلیمەتترین ئیدیتۆرێ بێ ڕکابەر! بۆ دیتنا کارێن شاکار، سەرەدانا پڕۆفایلی بکە.",
                 storyNoticeText: "بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.",
                 userResultsTitle: "ئەنجامێن هژمارێ:", modalTitle: "پشتەڤانیا مە بکە",
-                modalInstruction: "بارکۆدی سەبکەن یان ژمارەیا خوارێ کۆپی بکە", modalUsdtNotice: "تەنیا پارەی ل سەر هێلا TRC-20 بفرێژە", dir: "rtl"
+                modalInstruction: "بارکۆدی سەبکەن یاخود ژمارەیا خوارێ کۆپی بکە", modalUsdtNotice: "تەنیا پارەی ل سەر هێلا TRC-20 بفرێژە", dir: "rtl"
             },
             sorani: {
                 title: "داگرتنی ڤیدیۆ و ستۆری تیکتۆک بێ لۆگۆ",
@@ -356,7 +354,6 @@
             document.getElementById('txtStoryNotice').innerText = l.storyNoticeText;
             document.getElementById('userResultTitle').innerHTML = `<i class="fa-solid fa-clapperboard text-pink-500"></i> ${l.userResultsTitle}`;
             
-            // Translate Modal content too
             document.getElementById('modalTitle').innerText = l.modalTitle;
             document.getElementById('modalInstruction').innerText = l.modalInstruction;
             document.getElementById('modalUsdtNotice').innerText = l.modalUsdtNotice;
@@ -502,7 +499,6 @@
             errorMessage.classList.remove('hidden');
         }
 
-        // --- Custom Support Modal Logic ---
         function openSupportModal() {
             document.getElementById('customSupportModal').classList.remove('hidden');
         }

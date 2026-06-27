@@ -418,7 +418,6 @@
 
             try {
                 if (currentMode === 'link') {
-                    // Optimized Direct TikWm Single Fetch Endpoint
                     let apiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(urlInput)}`;
                     const response = await fetch(apiUrl);
                     const resJson = await response.json();
@@ -428,13 +427,20 @@
                         document.getElementById('videoCover').src = d.cover;
                         document.getElementById('authorName').innerText = d.author.nickname || 'TikTok User';
                         document.getElementById('videoDesc').innerText = d.title || 'TikTok Media';
-                        document.getElementById('downloadBtnNoWm').href = d.play || d.wmplay;
-                        document.getElementById('downloadBtnMusic').href = d.music || "#";
+                        
+                        const dlBtn = document.getElementById('downloadBtnNoWm');
+                        const musicBtn = document.getElementById('downloadBtnMusic');
+                        
+                        dlBtn.href = d.play || d.wmplay;
+                        musicBtn.href = d.music || "#";
+                        
+                        dlBtn.setAttribute('download', `tiktok_video_${d.id}.mp4`);
+                        musicBtn.setAttribute('download', `tiktok_audio_${d.id}.mp3`);
+
                         resultCard.classList.remove('hidden');
                     } else { showError(l.errorFetch); }
                 } 
                 else if (currentMode === 'username') {
-                    // Safe TikWm User List Endpoint
                     let apiUrl = `https://www.tikwm.com/api/user/posts?unique_id=${encodeURIComponent(urlInput)}`;
                     const response = await fetch(apiUrl);
                     const resJson = await response.json();
@@ -473,10 +479,12 @@
                 items.forEach(item => {
                     const card = document.createElement('div');
                     card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group";
+                    
+                    // لڤێرە ژی مە ئەتربیوتا download زێدەکر بۆ میدیایێن خودان ناڤ
                     card.innerHTML = `
                         <img src="${item.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                        <a href="${item.play}" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center">
+                        <a href="${item.play}" download="tiktok_media.mp4" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center">
                             <i class="fa-solid fa-download"></i> Download
                         </a>
                     `;

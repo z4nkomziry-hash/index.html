@@ -271,7 +271,7 @@
                 placeholderUser: "ناڤێ حسابێ بنڤیسە (نموونە: @zanyar)...",
                 paste: "پێوەکە", download: "دابەزینە", noWm: "Download Video", music: "دابەزاندنا دەنگی (MP3)",
                 support: "پشتەڤانیا مە بکە ☕", supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
-                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "کێشەیەک هەیە! هیڤییە ل سەر شێوازێ URL تاقیکە.",
+                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "کێشەیەک هەیە! یاخود لینک یێ شاشە.",
                 loading: "لێگەریان...", 
                 vipAdText: "باشترین و بلیمەتترین ئیدیتۆرێ بێ ڕکابەر! بۆ دیتنا کارێن شاکار، سەرەدانا پڕۆفایلی بکە.",
                 storyNoticeText: "بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.",
@@ -285,7 +285,7 @@
                 placeholderUser: "ناوی حیسابەکە بنووسە (مثال: @zanyar)...",
                 paste: "پەیست", download: "دایبگرە", noWm: "Download Video", music: "داگرتنی دەنگ (MP3)",
                 support: "پشتیوانیمان بکە ☕", supportBtn: "ڕێگاکانی تری پشتیوانی 💳 / 🪙",
-                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!", errorFetch: "کێشەیەک هەیە! تکایە لەسەر شێوازی URL تاقیکەرەوە.",
+                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!", errorFetch: "کێشەیەک هەیە! یاخود لینکەکە شاشە.",
                 loading: "گەڕان...", 
                 vipAdText: "باشترین و بەناوبانگترین ئیدیتۆری بێ ڕکابەر! بۆ دیتنی کارە شاکارەکانی, سەردانی پڕۆفایلەکەی بکە.",
                 storyNoticeText: "بۆ داگرتنی ستۆری یاخود هایڵایت، تکایە لینکەکەی ڕاستەوخۆ لە بەشی URL Link دابنێ.",
@@ -298,7 +298,7 @@
                 placeholderLink: "أدخل رابط تيك توك هنا...", placeholderUser: "أدخل اسم المستخدم (مثال: @zanyar)...",
                 paste: "لصق", download: "تحميل", noWm: "Download Video", music: "تحميل الصوت (MP3)",
                 support: "ادعمنا ☕", supportBtn: "طرق الدعم الأخرى 💳 / 🪙",
-                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!", errorFetch: "حدث خطأ ما! يرجى تجربة تحميل الرابط المباشر.",
+                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!", errorFetch: "حدث خطأ ما! يرجى التأكد من الرابط.",
                 loading: "جاري البحث...", 
                 vipAdText: "أفضل ومحرر فيديوهات مبدع بلا منازع! لمشاهدة أعماله الأسطورية، قم بزيارة حسابه.",
                 storyNoticeText: "لتنزيل القصة (الستوري) أو الهايلايت، يرجى وضع الرابط مباشرة في قسم URL Link.",
@@ -311,7 +311,7 @@
                 placeholderLink: "Paste TikTok link here...", placeholderUser: "Enter username (e.g., @zanyar)...",
                 paste: "Paste", download: "Download", noWm: "Download Video", music: "Download Audio (MP3)",
                 support: "Support Us ☕", supportBtn: "Other Support Options 💳 / 🪙",
-                errorEmpty: "Please enter something first!", errorFetch: "An error occurred! Please try pasting the direct URL instead.",
+                errorEmpty: "Please enter something first!", errorFetch: "An error occurred! Please check the link.",
                 loading: "Searching...", 
                 vipAdText: "The best and most famous video editor without rival! To check his masterworks, visit his profile.",
                 storyNoticeText: "To download stories or highlights, please paste the link directly into the URL Link section.",
@@ -480,7 +480,6 @@
                     const card = document.createElement('div');
                     card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group";
                     
-                    // لڤێرە ژی مە ئەتربیوتا download زێدەکر بۆ میدیایێن خودان ناڤ
                     card.innerHTML = `
                         <img src="${item.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>

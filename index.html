@@ -27,14 +27,9 @@
             50% { transform: translateY(-10px) scale(1.02); }
             100% { transform: translateY(0px) scale(1); }
         }
-        .animated-logo {
-            animation: float 4s ease-in-out infinite;
-        }
-        .neon-glow-text {
-            text-shadow: 0 0 12px rgba(236, 72, 153, 0.6), 0 0 25px rgba(124, 58, 237, 0.4);
-        }
+        .animated-logo { animation: float 4s ease-in-out infinite; }
+        .neon-glow-text { text-shadow: 0 0 12px rgba(236, 72, 153, 0.6), 0 0 25px rgba(124, 58, 237, 0.4); }
         
-        /* VIP Sponsor Glowing Effect */
         .vip-glow {
             box-shadow: 0 0 20px rgba(234, 179, 8, 0.15), inset 0 0 12px rgba(234, 179, 8, 0.05);
             animation: pulseGlow 3s infinite alternate;
@@ -44,7 +39,6 @@
             100% { border-color: rgba(147, 51, 234, 0.7); box-shadow: 0 0 25px rgba(147, 51, 234, 0.3); }
         }
     </style>
-    
     <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js"></script>
 </head>
 <body class="text-slate-100 min-h-screen flex flex-col justify-between antialiased selection:bg-pink-500 selection:text-white">
@@ -72,6 +66,7 @@
 
     <main class="container mx-auto px-4 max-w-3xl my-auto py-6">
         
+        <!-- VIP SPONSOR SECTION -->
         <div id="vipSponsorCard" class="w-full max-w-xl mx-auto mb-8 p-4 bg-gradient-to-r from-slate-950 via-purple-950/40 to-slate-950 rounded-2xl border vip-glow flex items-center justify-between gap-4 transition duration-300 transform hover:scale-[1.01]">
             <div class="flex items-center gap-3.5">
                 <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-purple-600 p-[2px] shadow-md">
@@ -106,21 +101,15 @@
             </p>
         </div>
 
+        <!-- Adsterra Banner 728x90 -->
         <div class="w-full flex justify-center mb-6" id="adTop">
             <script>
-              atOptions = {
-                'key' : '5afe380c3cb536afa245e51fd8b6e583',
-                'format' : 'iframe',
-                'height' : 90,
-                'width' : 728,
-                'params' : {}
-              };
+              atOptions = { 'key' : '5afe380c3cb536afa245e51fd8b6e583', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
             </script>
             <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
         </div>
 
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
-            
             <div class="flex gap-2 p-1 bg-slate-950/60 rounded-xl mb-4 border border-slate-800/80 max-w-xs mx-auto">
                 <button onclick="switchDownloadMode('link')" id="modeLink" class="flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow">
                     <i class="fa-solid fa-link"></i> URL Link
@@ -150,10 +139,10 @@
             <div id="storyNotice" class="hidden mt-3 text-[11px] text-amber-400 text-center font-medium bg-amber-500/10 py-2 px-4 rounded-xl border border-amber-500/20">
                 ⚠️ <span id="txtStoryNotice">بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.</span>
             </div>
-            
             <div id="errorMessage" class="hidden mt-4 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
         </div>
 
+        <!-- Multi-Tab User Results -->
         <div id="userResultsSection" class="hidden glass-card p-6 rounded-3xl shadow-2xl mb-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 border-b border-slate-800 pb-3">
                 <h4 id="userResultTitle" class="text-sm font-bold text-slate-400 flex items-center gap-2">
@@ -198,42 +187,91 @@
             </div>
         </div>
 
+        <!-- Adsterra Native Banner -->
         <div class="w-full flex justify-center my-6 glass-card p-4 rounded-2xl border border-slate-800/50">
             <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea" class="w-full min-h-[100px]">
                 <script async="async" data-cfasync="false" src="https://pl292920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
             </div>
         </div>
 
+        <!-- SUPPORT BUTTONS - CONNECTED TO YOUR CUSTOM MODAL POPUP -->
         <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
-            <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md">
+            <button onclick="openSupportModal()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
                 <i class="fa-solid fa-heart text-pink-500"></i>
                 <span id="txtSupport">پشتەڤانیا مە بکە ☕</span>
-            </a>
+            </button>
             
-            <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-amber-400 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-amber-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
+            <button onclick="openSupportModal()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-amber-400 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-amber-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
                 <i class="fa-solid fa-circle-dollar-to-slot"></i>
                 <span id="txtSupportBtn">ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙</span>
-            </a>
+            </button>
         </div>
     </main>
+
+    <!-- CUSTOM SUPPORT MODAL POPUP HTML -->
+    <div id="customSupportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+        <div class="glass-card w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-slate-700/50 bg-slate-950/95 relative">
+            <button onclick="closeSupportModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            
+            <h3 id="modalTitle" class="text-center font-bold text-lg text-slate-100 mb-5 mt-2">پشتەڤانیا مە بکە</h3>
+            
+            <!-- Tabs -->
+            <div class="flex gap-2 p-1 bg-slate-900 rounded-xl mb-5 border border-slate-800">
+                <button onclick="switchModalTab('fastpay')" id="tabFastPay" class="flex-1 py-2 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 flex items-center justify-center gap-1.5 transition cursor-pointer">
+                    💳 FastPay
+                </button>
+                <button onclick="switchModalTab('usdt')" id="tabUsdt" class="flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white flex items-center justify-center gap-1.5 transition cursor-pointer">
+                    🪙 USDT (TRC20)
+                </button>
+            </div>
+
+            <!-- FastPay Content -->
+            <div id="contentFastPay" class="flex flex-col items-center">
+                <div class="bg-white p-3 rounded-2xl mb-4 shadow-xl">
+                    <!-- لڤێرە دیشێی وێنێ QR Code یێ خۆ یێ دروست دابنی -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=%2B9647506045491" alt="FastPay QR" class="w-36 h-36">
+                </div>
+                <p id="modalInstruction" class="text-[11px] text-slate-400 mb-3 text-center">بارکۆدی سەبکەن یان ژمارەیا خوارێ کۆپی بکە</p>
+                <div class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 flex justify-between items-center gap-2">
+                    <span class="text-amber-400 font-bold text-sm tracking-wide dir-ltr">+964 750 604 5491</span>
+                    <button onclick="copyToClipboard('+9647506045491')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2 rounded-lg text-xs transition cursor-pointer">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- USDT Content -->
+            <div id="contentUsdt" class="hidden flex flex-col items-center">
+                <div class="bg-white p-3 rounded-2xl mb-4 shadow-xl">
+                    <!-- لڤێرە دیشێی وێنێ QR Code یێ گونجای بۆ ئەدرێسێ خۆ دابنی -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=VwnjyT2KUa9xnBreT32YLLJEwACHpc" alt="USDT QR" class="w-36 h-36">
+                </div>
+                <p id="modalUsdtNotice" class="text-[11px] text-emerald-400 mb-3 text-center">تەنیا پارەی ل سەر هێلا TRC-20 بفرێژە</p>
+                <div class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 flex justify-between items-center gap-2">
+                    <span class="text-emerald-400 font-medium text-xs truncate max-w-[200px] dir-ltr">VwnjyT2KUa9xnBreT32YLLJEwACHpc</span>
+                    <button onclick="copyToClipboard('VwnjyT2KUa9xnBreT32YLLJEwACHpc')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 p-2 rounded-lg text-xs transition cursor-pointer">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="container mx-auto px-4 py-6 text-center text-xs text-slate-500 font-medium">
         &copy; 2026 TIKJET. All rights reserved.
     </footer>
 
     <script>
-        // Automatic Advertisement Expiration Logic (30 Days Timer)
         function checkSponsorExpiry() {
             const startDate = new Date(2026, 5, 27); 
             const currentDate = new Date();
             const diffTime = Math.abs(currentDate - startDate);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-            
             if (diffDays > 30) {
                 const sponsorCard = document.getElementById('vipSponsorCard');
-                if(sponsorCard) {
-                    sponsorCard.remove();
-                }
+                if(sponsorCard) sponsorCard.remove();
             }
         }
         window.addEventListener('DOMContentLoaded', checkSponsorExpiry);
@@ -244,76 +282,54 @@
                 subtitle: "لینکی دانێ، کلیک بکە، و د چەند چرکەکا دا ب بەرزترین کوالێتی دابەزینە.",
                 placeholderLink: "لینکی ڤیدیۆیێ لڤێرە دانێ...",
                 placeholderUser: "ناڤێ حسابێ بنڤیسە (نموونە: @zanyar)...",
-                paste: "پێوەکە",
-                download: "دابەزینە",
-                noWm: "Download Video",
-                music: "دابەزاندنا دەنگی (MP3)",
-                support: "پشتەڤانیا مە بکە ☕",
-                supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
-                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!",
-                errorFetch: "چ کێشە د نڤیسینا تە دا هەیە یان ڤیدیۆ یا تایبەتە!",
+                paste: "پێوەکە", download: "دابەزینە", noWm: "Download Video", music: "دابەزاندنا دەنگی (MP3)",
+                support: "پشتەڤانیا مە بکە ☕", supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
+                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "چ کێشە د نڤیسینا تە دا هەیە یان ڤیدیۆ یا تایبەتە!",
                 loading: "لێگەریان...", 
                 vipAdText: "باشترین و بلیمەتترین ئیدیتۆرێ بێ ڕکابەر! بۆ دیتنا کارێن شاکار، سەرەدانا پڕۆفایلی بکە.",
                 storyNoticeText: "بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.",
-                userResultsTitle: "ئەنجامێن هژمارێ:",
-                dir: "rtl"
+                userResultsTitle: "ئەنجامێن هژمارێ:", modalTitle: "پشتەڤانیا مە بکە",
+                modalInstruction: "بارکۆدی سەبکەن یان ژمارەیا خوارێ کۆپی بکە", modalUsdtNotice: "تەنیا پارەی ل سەر هێلا TRC-20 بفرێژە", dir: "rtl"
             },
             sorani: {
                 title: "داگرتنی ڤیدیۆ و ستۆری تیکتۆک بێ لۆگۆ",
                 subtitle: "لینکی دابنێ, کلیک بکە، و لە چەند چرکەیەکدا بە بەرزترین کوالێتی دایبەزێنە.",
                 placeholderLink: "لینکی ڤیدیۆکە لێرە دابنێ...",
                 placeholderUser: "ناوی حیسابەکە بنووسە (نموونە: @zanyar)...",
-                paste: "پەیست",
-                download: "دایبگرە",
-                noWm: "Download Video",
-                music: "داگرتنی دەنگ (MP3)",
-                support: "پشتیوانیمان بکە ☕",
-                supportBtn: "ڕێگاکانی تری پشتیوانی 💳 / 🪙",
-                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!",
-                errorFetch: "کێشەیەک لە نووسینەکەدا هەیە یاخود ڤیدیۆکە تایبەتە!",
+                paste: "پەیست", download: "دایبگرە", noWm: "Download Video", music: "داگرتنی دەنگ (MP3)",
+                support: "پشتیوانیمان بکە ☕", supportBtn: "ڕێگاکانی تری پشتیوانی 💳 / 🪙",
+                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!", errorFetch: "کێشەیەک لە نووسینەکەدا هەیە یاخود ڤیدیۆکە تایبەتە!",
                 loading: "گەڕان...", 
                 vipAdText: "باشترین و بەناوبانگترین ئیدیتۆری بێ ڕکابەر! بۆ دیتنی کارە شاکارەکانی, سەردانی پڕۆفایلەکەی بکە.",
                 storyNoticeText: "بۆ داگرتنی ستۆری یاخود هایڵایت، تکایە لینکەکەی ڕاستەوخۆ لە بەشی URL Link دابنێ.",
-                userResultsTitle: "ئەنجامەکانی حیساب:",
-                dir: "rtl"
+                userResultsTitle: "ئەنجامەکانی حیساب:", modalTitle: "پشتیوانیمان بکە",
+                modalInstruction: "بارکۆدەکە سکان بکە یاخود ژمارەی خوارەوە کۆپی بکە", modalUsdtNotice: "تەنها پارە لەسەر هێڵی TRC-20 بنێرە", dir: "rtl"
             },
             ar: {
                 title: "تحميل فيديوهات وستوري تيك توك بدون علامة مائية",
                 subtitle: "ضع الرابط، اضغط تحميل، واحصل على الفيديو بأعلى جودة في ثوانٍ.",
-                placeholderLink: "أدخل رابط تيك توك هنا...",
-                placeholderUser: "أدخل اسم المستخدم (مثال: @zanyar)...",
-                paste: "لصق",
-                download: "تحميل",
-                noWm: "Download Video",
-                music: "تحميل الصوت (MP3)",
-                support: "ادعمنا ☕",
-                supportBtn: "طرق الدعم الأخرى 💳 / 🪙",
-                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!",
-                errorFetch: "هناك خطأ في المدخلات أو أن الحساب خاص!",
+                placeholderLink: "أدخل رابط تيك توك هنا...", placeholderUser: "أدخل اسم المستخدم (مثال: @zanyar)...",
+                paste: "لصق", download: "تحميل", noWm: "Download Video", music: "تحميل الصوت (MP3)",
+                support: "ادعمنا ☕", supportBtn: "طرق الدعم الأخرى 💳 / 🪙",
+                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!", errorFetch: "هناك خطأ في المدخلات أو أن الحساب خاص!",
                 loading: "جاري البحث...", 
                 vipAdText: "أفضل ومحرر فيديوهات مبدع بلا منازع! لمشاهدة أعماله الأسطورية، قم بزيارة حسابه.",
                 storyNoticeText: "لتنزيل القصة (الستوري) أو الهايلايت، يرجى وضع الرابط مباشرة في قسم URL Link.",
-                userResultsTitle: "نتائج الحساب:",
-                dir: "rtl"
+                userResultsTitle: "نتائج الحساب:", modalTitle: "ادعمنا لو سمحت",
+                modalInstruction: "امسح الباركود أو انسخ الرقم في الأسفل", modalUsdtNotice: "يرجى إرسال العملات عبر شبكة TRC-20 فقط", dir: "rtl"
             },
             "en-us": {
                 title: "Download TikTok Videos & Stories Without Watermark",
                 subtitle: "Paste the link, click download, and grab your video in highest quality instantly.",
-                placeholderLink: "Paste TikTok link here...",
-                placeholderUser: "Enter username (e.g., @zanyar)...",
-                paste: "Paste",
-                download: "Download",
-                noWm: "Download Video",
-                music: "Download Audio (MP3)",
-                support: "Support Us ☕",
-                supportBtn: "Other Support Options 💳 / 🪙",
-                errorEmpty: "Please enter something first!",
-                errorFetch: "Invalid input or the account is private!",
+                placeholderLink: "Paste TikTok link here...", placeholderUser: "Enter username (e.g., @zanyar)...",
+                paste: "Paste", download: "Download", noWm: "Download Video", music: "Download Audio (MP3)",
+                support: "Support Us ☕", supportBtn: "Other Support Options 💳 / 🪙",
+                errorEmpty: "Please enter something first!", errorFetch: "Invalid input or the account is private!",
                 loading: "Searching...", 
                 vipAdText: "The best and most famous video editor without rival! To check his masterworks, visit his profile.",
                 storyNoticeText: "To download stories or highlights, please paste the link directly into the URL Link section.",
-                userResultsTitle: "Account Results:",
-                dir: "ltr"
+                userResultsTitle: "Account Results:", modalTitle: "Support Our Project",
+                modalInstruction: "Scan the QR code or copy the address below", modalUsdtNotice: "Send assets via TRC-20 network only", dir: "ltr"
             }
         };
 
@@ -324,15 +340,12 @@
         function changeLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('tikjet_lang', lang); 
-            
             const l = languages[lang];
+            
             document.getElementById('langSelect').value = lang;
             document.getElementById('mainTitle').innerText = l.title;
             document.getElementById('mainSubtitle').innerText = l.subtitle;
-            
-            const input = document.getElementById('tiktokUrl');
-            input.placeholder = (currentMode === 'link') ? l.placeholderLink : l.placeholderUser;
-            
+            document.getElementById('tiktokUrl').placeholder = (currentMode === 'link') ? l.placeholderLink : l.placeholderUser;
             document.getElementById('txtPasteBtn').innerText = l.paste;
             document.getElementById('txtDownloadBtn').innerText = l.download;
             document.getElementById('txtNoWatermark').innerText = l.noWm;
@@ -342,6 +355,11 @@
             if(document.getElementById('vipAdText')) document.getElementById('vipAdText').innerText = l.vipAdText;
             document.getElementById('txtStoryNotice').innerText = l.storyNoticeText;
             document.getElementById('userResultTitle').innerHTML = `<i class="fa-solid fa-clapperboard text-pink-500"></i> ${l.userResultsTitle}`;
+            
+            // Translate Modal content too
+            document.getElementById('modalTitle').innerText = l.modalTitle;
+            document.getElementById('modalInstruction').innerText = l.modalInstruction;
+            document.getElementById('modalUsdtNotice').innerText = l.modalUsdtNotice;
 
             const body = document.body;
             const resFlex = document.getElementById('resultFlex');
@@ -368,15 +386,15 @@
             const l = languages[currentLang];
 
             if(mode === 'link') {
-                btnLink.className = "flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow";
-                btnUser.className = "flex-1 text-xs font-bold py-2 rounded-lg text-slate-400 hover:text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5";
+                btnLink.className = "flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white flex items-center justify-center gap-1.5 shadow";
+                btnUser.className = "flex-1 text-xs font-bold py-2 rounded-lg text-slate-400 hover:text-white flex items-center justify-center gap-1.5";
                 input.placeholder = l.placeholderLink;
                 icon.className = "fa-solid fa-link absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-lg";
                 document.getElementById('btnPaste').classList.remove('hidden');
                 storyNotice.classList.add('hidden');
             } else {
-                btnUser.className = "flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow";
-                btnLink.className = "flex-1 text-xs font-bold py-2 rounded-lg text-slate-400 hover:text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5";
+                btnUser.className = "flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white flex items-center justify-center gap-1.5 shadow";
+                btnLink.className = "flex-1 text-xs font-bold py-2 rounded-lg text-slate-400 hover:text-white flex items-center justify-center gap-1.5";
                 input.placeholder = l.placeholderUser;
                 icon.className = "fa-solid fa-at absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-lg";
                 document.getElementById('btnPaste').classList.add('hidden');
@@ -405,17 +423,12 @@
             resultCard.classList.add('hidden');
             userResultsSection.classList.add('hidden');
 
-            if (!urlInput) {
-                showError(l.errorEmpty);
-                return;
-            }
+            if (!urlInput) { showError(l.errorEmpty); return; }
 
             btnDownload.disabled = true;
             document.getElementById('txtDownloadBtn').innerText = l.loading;
 
-            if (currentMode === 'username' && urlInput.startsWith('@')) {
-                urlInput = urlInput.substring(1);
-            }
+            if (currentMode === 'username' && urlInput.startsWith('@')) urlInput = urlInput.substring(1);
 
             try {
                 if (currentMode === 'link') {
@@ -430,9 +443,7 @@
                         document.getElementById('downloadBtnNoWm').href = data.video.no_watermark;
                         document.getElementById('downloadBtnMusic').href = data.video.music;
                         resultCard.classList.remove('hidden');
-                    } else {
-                        showError(l.errorFetch);
-                    }
+                    } else { showError(l.errorFetch); }
                 } 
                 else if (currentMode === 'username') {
                     let apiUrl = `https://www.tikwm.com/api/user/posts?unique_id=${encodeURIComponent(urlInput)}`;
@@ -441,20 +452,15 @@
 
                     if (data.code === 0) {
                         const allItems = data.data.videos || data.data || [];
-                        
                         cachedUserData.posts = allItems.filter(item => !item.is_story && !item.is_highlight) || allItems;
                         cachedUserData.stories = allItems.filter(item => item.is_story) || [];
                         cachedUserData.highlights = allItems.filter(item => item.is_highlight) || [];
-
                         userResultsSection.classList.remove('hidden');
                         filterUserMedia('posts');
-                    } else {
-                        showError(l.errorFetch);
-                    }
+                    } else { showError(l.errorFetch); }
                 }
-            } catch (error) {
-                showError("Error connecting to server.");
-            } finally {
+            } catch (error) { showError("Error connecting to server."); } 
+            finally {
                 btnDownload.disabled = false;
                 document.getElementById('txtDownloadBtn').innerText = l.download;
             }
@@ -464,11 +470,8 @@
             const tabs = ['posts', 'stories', 'highlights'];
             tabs.forEach(t => {
                 const btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
-                if (t === type) {
-                    btn.className = "flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg bg-pink-500 text-white transition";
-                } else {
-                    btn.className = "flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition";
-                }
+                if (t === type) btn.className = "flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg bg-pink-500 text-white";
+                else btn.className = "flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg text-slate-400 hover:text-white";
             });
 
             const grid = document.getElementById('userMediaGrid');
@@ -482,7 +485,7 @@
                     card.innerHTML = `
                         <img src="${item.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                        <a href="${item.play}" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer shadow text-center">
+                        <a href="${item.play}" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center">
                             <i class="fa-solid fa-download"></i> Download
                         </a>
                     `;
@@ -497,6 +500,36 @@
             const errorMessage = document.getElementById('errorMessage');
             errorMessage.innerText = msg;
             errorMessage.classList.remove('hidden');
+        }
+
+        // --- Custom Support Modal Logic ---
+        function openSupportModal() {
+            document.getElementById('customSupportModal').classList.remove('hidden');
+        }
+        function closeSupportModal() {
+            document.getElementById('customSupportModal').classList.add('hidden');
+        }
+        function switchModalTab(tab) {
+            const btnFastPay = document.getElementById('tabFastPay');
+            const btnUsdt = document.getElementById('tabUsdt');
+            const contentFastPay = document.getElementById('contentFastPay');
+            const contentUsdt = document.getElementById('contentUsdt');
+
+            if(tab === 'fastpay') {
+                btnFastPay.className = "flex-1 py-2 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 flex items-center justify-center gap-1.5 transition cursor-pointer";
+                btnUsdt.className = "flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white flex items-center justify-center gap-1.5 transition cursor-pointer";
+                contentFastPay.classList.remove('hidden');
+                contentUsdt.classList.add('hidden');
+            } else {
+                btnUsdt.className = "flex-1 py-2 rounded-lg text-xs font-bold bg-emerald-500 text-slate-950 flex items-center justify-center gap-1.5 transition cursor-pointer";
+                btnFastPay.className = "flex-1 py-2 rounded-lg text-xs font-bold text-slate-400 hover:text-white flex items-center justify-center gap-1.5 transition cursor-pointer";
+                contentUsdt.classList.remove('hidden');
+                contentFastPay.classList.add('hidden');
+            }
+        }
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert("کۆپی بوو! / Copied to clipboard!");
         }
 
         changeLanguage(currentLang);

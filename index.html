@@ -66,6 +66,7 @@
 
     <main class="container mx-auto px-4 max-w-3xl my-auto py-6">
         
+        <!-- VIP SPONSOR SECTION -->
         <div id="vipSponsorCard" class="w-full max-w-xl mx-auto mb-8 p-4 bg-gradient-to-r from-slate-950 via-purple-950/40 to-slate-950 rounded-2xl border vip-glow flex items-center justify-between gap-4 transition duration-300 transform hover:scale-[1.01]">
             <div class="flex items-center gap-3.5">
                 <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 p-[2px] shadow-md shadow-purple-500/10">
@@ -99,6 +100,7 @@
             </p>
         </div>
 
+        <!-- MAIN DOWNLOAD CARD -->
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
             <div class="flex gap-2 p-1 bg-slate-950/60 rounded-xl mb-4 border border-slate-800/80 max-w-xs mx-auto">
                 <button onclick="switchDownloadMode('link')" id="modeLink" class="flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow">
@@ -132,6 +134,7 @@
             <div id="errorMessage" class="hidden mt-4 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
         </div>
 
+        <!-- FIXED ADSTERRA BOX -->
         <div class="w-full flex justify-center mb-8 clear-both relative z-20 min-h-[95px] overflow-hidden" id="adTop">
             <script>
               atOptions = { 'key' : '5afe380c3cb536afa245e51fd8b6e583', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
@@ -139,6 +142,7 @@
             <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
         </div>
 
+        <!-- Multi-Tab User Results -->
         <div id="userResultsSection" class="hidden glass-card p-6 rounded-3xl shadow-2xl mb-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 border-b border-slate-800 pb-3">
                 <h4 id="userResultTitle" class="text-sm font-bold text-slate-400 flex items-center gap-2">
@@ -168,26 +172,28 @@
                     
                     <div class="flex flex-col gap-3">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <a id="downloadBtnNoWm" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer text-sm">
+                            <button id="downloadBtnNoWm" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer text-sm">
                                 <i class="fa-solid fa-cloud-arrow-down"></i>
                                 <span id="txtNoWatermark">Download Video</span>
-                            </a>
-                            <a id="downloadBtnMusic" target="_blank" rel="noopener noreferrer" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer">
+                            </button>
+                            <button id="downloadBtnMusic" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer">
                                 <i class="fa-solid fa-music"></i>
                                 <span id="txtMusic">دابەزاندنا دەنگی (MP3)</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Adsterra Native Banner -->
         <div class="w-full flex justify-center my-6 glass-card p-4 rounded-2xl border border-slate-800/50">
             <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea" class="w-full min-h-[100px]">
                 <script async="async" data-cfasync="false" src="https://pl292920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
             </div>
         </div>
 
+        <!-- SUPPORT BUTTONS -->
         <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
             <button onclick="openSupportModal()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
                 <i class="fa-solid fa-heart text-pink-500"></i>
@@ -201,6 +207,7 @@
         </div>
     </main>
 
+    <!-- CUSTOM SUPPORT MODAL POPUP -->
     <div id="customSupportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
         <div class="glass-card w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-slate-700/50 bg-slate-950/95 relative">
             <button onclick="closeSupportModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition cursor-pointer">
@@ -323,6 +330,7 @@
         let currentLang = localStorage.getItem('tikjet_lang') || 'badini';
         let currentMode = 'link'; 
         let cachedUserData = { posts: [], stories: [] };
+        let currentUrls = { video: "", music: "" };
 
         function changeLanguage(lang) {
             currentLang = lang;
@@ -397,6 +405,35 @@
             }
         }
 
+        // نویترین فۆنکشن بۆ دابەزاندنا ڕاستەوخۆ بێ ڤەکرنا لاپەڕەیەکێ نوو
+        function forceBlobDownload(url, filename) {
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const blobUrl = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = blobUrl;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(blobUrl);
+                    document.body.removeChild(a);
+                })
+                .catch(() => {
+                    // ئەگەر کێشەیەک د دۆمەینێ سەرەکی دا هەبیت، وەک پاشکەفتنەک ڕاستەوخۆ لینکێ دی ڤەدکەت
+                    window.open(url, '_blank');
+                });
+        }
+
+        document.getElementById('downloadBtnNoWm').addEventListener('click', () => {
+            if(currentUrls.video) forceBlobDownload(currentUrls.video, 'tiktok_video.mp4');
+        });
+
+        document.getElementById('downloadBtnMusic').addEventListener('click', () => {
+            if(currentUrls.music) forceBlobDownload(currentUrls.music, 'tiktok_audio.mp3');
+        });
+
         async function downloadVideo() {
             let urlInput = document.getElementById('tiktokUrl').value.trim();
             const btnDownload = document.getElementById('btnDownload');
@@ -428,14 +465,12 @@
                         document.getElementById('authorName').innerText = d.author.nickname || 'TikTok User';
                         document.getElementById('videoDesc').innerText = d.title || 'TikTok Media';
                         
-                        const dlBtn = document.getElementById('downloadBtnNoWm');
-                        const musicBtn = document.getElementById('downloadBtnMusic');
-                        
-                        dlBtn.href = d.play || d.wmplay;
-                        musicBtn.href = d.music || "#";
-                        
-                        dlBtn.setAttribute('download', `tiktok_video_${d.id}.mp4`);
-                        musicBtn.setAttribute('download', `tiktok_audio_${d.id}.mp3`);
+                        // پاراستنا لینکێن فۆڕماتی
+                        let basePlay = d.play || d.wmplay;
+                        let baseMusic = d.music || "";
+
+                        currentUrls.video = basePlay.startsWith('http') ? basePlay : `https://www.tikwm.com${basePlay}`;
+                        currentUrls.music = baseMusic ? (baseMusic.startsWith('http') ? baseMusic : `https://www.tikwm.com${baseMusic}`) : "";
 
                         resultCard.classList.remove('hidden');
                     } else { showError(l.errorFetch); }
@@ -480,12 +515,14 @@
                     const card = document.createElement('div');
                     card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group";
                     
+                    let mediaUrl = item.play.startsWith('http') ? item.play : `https://www.tikwm.com${item.play}`;
+
                     card.innerHTML = `
                         <img src="${item.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                        <a href="${item.play}" download="tiktok_media.mp4" target="_blank" rel="noopener noreferrer" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center">
+                        <button onclick="forceBlobDownload('${mediaUrl}', 'tiktok_media.mp4')" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center cursor-pointer">
                             <i class="fa-solid fa-download"></i> Download
-                        </a>
+                        </button>
                     `;
                     grid.appendChild(card);
                 });

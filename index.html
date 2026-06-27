@@ -145,10 +145,17 @@
                     </div>
                     
                     <div class="flex flex-col gap-3">
-                        <button id="downloadBtnNoWm" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer">
-                            <i class="fa-solid fa-cloud-arrow-down"></i>
-                            <span id="txtNoWatermark">دابەزاندن ب بێ لۆگۆ</span>
-                        </button>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button id="downloadBtnNoWm" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-1.5 cursor-pointer text-sm">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                <span id="txtNoWatermark">دابەزاندن ب بێ لۆگۆ</span>
+                            </button>
+                            <button id="viewBtnDirect" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-1.5 cursor-pointer text-sm">
+                                <i class="fa-solid fa-eye"></i>
+                                <span id="txtViewVideo">تەماشەکرن (View)</span>
+                            </button>
+                        </div>
+                        
                         <button id="downloadBtnMusic" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer">
                             <i class="fa-solid fa-music"></i>
                             <span id="txtMusic">دابەزاندنا دەنگی (MP3)</span>
@@ -187,7 +194,7 @@
             <div id="contentFastPay" class="block">
                 <div class="bg-white p-4 rounded-2xl inline-block mb-4 shadow-inner">
                     <svg viewBox="0 0 100 100" class="w-40 h-40 mx-auto">
-                        <path d="M0,0 h30 v10 h-20 v20 h-10 z M70,0 h30 v30 h-10 v-20 h-20 z M0,70 h10 v20 h-20 v-30 h10 z M100,100 h-30 v-10 h20 v-20 h10 z" fill="#0f172a"/>
+                        <path d="M0,0 h30 v10 h-20 v20 h-10 z M70,0 h30 v30 h-10 v-20 h-20 z M0,70 h10 v20 h-20 v-30 h10 z M100,100 h-30 v-10 h20 v-20 h-10 z" fill="#0f172a"/>
                         <rect x="15" y="15" width="20" height="20" fill="#0f172a"/>
                         <rect x="20" y="20" width="10" height="10" fill="#ffffff"/>
                         <rect x="65" y="15" width="20" height="20" fill="#0f172a"/>
@@ -211,7 +218,7 @@
             <div id="contentUsdt" class="hidden">
                 <div class="bg-white p-4 rounded-2xl inline-block mb-4 shadow-inner">
                     <svg viewBox="0 0 100 100" class="w-40 h-40 mx-auto">
-                        <path d="M0,0 h30 v10 h-20 v20 h-10 z M70,0 h30 v30 h-10 v-20 h-20 z M0,70 h10 v20 h-20 v-30 h10 z M100,100 h-30 v-10 h20 v-20 h10 z" fill="#0f172a"/>
+                        <path d="M0,0 h30 v10 h-20 v20 h-10 z M70,0 h30 v30 h-10 v-20 h-20 z M0,70 h10 v20 h-20 v-30 h10 z M100,100 h-30 v-10 h20 v-20 h-10 z" fill="#0f172a"/>
                         <rect x="12" y="12" width="22" height="22" fill="#0f172a"/>
                         <rect x="17" y="17" width="12" height="12" fill="#ffffff"/>
                         <rect x="66" y="12" width="22" height="22" fill="#0f172a"/>
@@ -247,7 +254,8 @@
                 placeholderUser: "ناڤێ حسابێ بنڤیسە (نموونە: @zanyar)...",
                 paste: "پێوەکە",
                 download: "دابەزینە",
-                noWm: "دابەزاندن ب بێ لۆگۆ",
+                noWm: "داونلۆد",
+                viewVideo: "تەماشەکرن (View)",
                 music: "دابەزاندنا دەنگی (MP3)",
                 support: "پشتەڤانیا مە بکە ☕",
                 supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
@@ -265,7 +273,8 @@
                 placeholderUser: "ناوی حیسابەکە بنووسە (نموونە: @zanyar)...",
                 paste: "پەیست",
                 download: "دایبگرە",
-                noWm: "داگرتن بێ لۆگۆ",
+                noWm: "داگرتن",
+                viewVideo: "تەماشاكردن (View)",
                 music: "داگرتنی دەنگ (MP3)",
                 support: "پشتیوانیمان بکە ☕",
                 supportBtn: "ڕێگاکانی تری پشتیوانی 💳 / 🪙",
@@ -278,16 +287,17 @@
             },
             ar: {
                 title: "تحميل فيديوهات وستوري تيك توك بدون علامة مائية",
-                subtitle: "ضع الرابط، اضغط تحميل، واحصل على الفيديو بأعلى جودة في ثوانٍ.",
+                subtitle: "ضع الرابط، اضغط تحميل، وافرغ على الفيديو بأعلى جودة في ثوانٍ.",
                 placeholderLink: "أدخل رابط تيك توك هنا...",
                 placeholderUser: "أدخل اسم المستخدم (مثال: @zanyar)...",
                 paste: "لصق",
                 download: "تحميل",
-                noWm: "تحميل بدون علامة مائية",
+                noWm: "تحميل",
+                viewVideo: "معاينة (View)",
                 music: "تحميل الصوت (MP3)",
                 support: "ادعمنا ☕",
                 supportBtn: "طرق الدعم الأخرى 💳 / 🪙",
-                errorEmpty: "يرجى إدخال مدخل صحيح أولاً!",
+                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!",
                 errorFetch: "هناك خطأ في المدخلات أو أن الحساب خاص!",
                 loading: "جاري البحث...", 
                 adText: "مساحتك الإعلانية شاغرة هنا! للإعلان معنا، يرجى التواصل معنا.",
@@ -301,7 +311,8 @@
                 placeholderUser: "Enter username (e.g., @zanyar)...",
                 paste: "Paste",
                 download: "Download",
-                noWm: "Download No Watermark",
+                noWm: "Download",
+                viewVideo: "View Video",
                 music: "Download Audio (MP3)",
                 support: "Support Us ☕",
                 supportBtn: "Other Support Options 💳 / 🪙",
@@ -314,15 +325,14 @@
             }
         };
 
-        // ٤. پاراستنا زمانێ هەڵبژارتی ب کارئینانا localStorage
         let currentLang = localStorage.getItem('tikjet_lang') || 'badini';
-        let currentMode = 'link'; // link یان username
+        let currentMode = 'link'; 
         let cachedVideoUrl = "";
         let cachedMusicUrl = "";
 
         function changeLanguage(lang) {
             currentLang = lang;
-            localStorage.setItem('tikjet_lang', lang); // خزنکرن بۆ هەمیشە
+            localStorage.setItem('tikjet_lang', lang); 
             
             const l = languages[lang];
             document.getElementById('langSelect').value = lang;
@@ -335,6 +345,7 @@
             document.getElementById('txtPasteBtn').innerText = l.paste;
             document.getElementById('txtDownloadBtn').innerText = l.download;
             document.getElementById('txtNoWatermark').innerText = l.noWm;
+            document.getElementById('txtViewVideo').innerText = l.viewVideo;
             document.getElementById('txtMusic').innerText = l.music;
             document.getElementById('txtSupport').innerText = l.support;
             document.getElementById('txtSupportBtn').innerText = l.supportBtn;
@@ -358,7 +369,6 @@
             }
         }
 
-        // ٢. گۆڕینی جۆرا گەڕیانێ ل سەر بنەمایا لینک یان ناڤێ حسابێ
         function switchDownloadMode(mode) {
             currentMode = mode;
             const btnLink = document.getElementById('modeLink');
@@ -448,7 +458,6 @@
             btnDownload.disabled = true;
             document.getElementById('txtDownloadBtn').innerText = l.loading;
 
-            // پاڵافتنا ناڤێ بەکارهێنەری ئەگەر سیمبۆلێ @ تێدا بیت
             if (currentMode === 'username' && urlInput.startsWith('@')) {
                 urlInput = urlInput.substring(1);
             }
@@ -456,7 +465,6 @@
             try {
                 let apiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(urlInput)}`;
                 
-                // ئەگەر مۆدێ Username بیت، لێنکێ تایبەت ب پڕۆفایلێ دهنێریتە ئەی پی ئای
                 if (currentMode === 'username') {
                     apiUrl = `https://www.tikwm.com/api/user/posts?unique_id=${encodeURIComponent(urlInput)}`;
                 }
@@ -466,7 +474,6 @@
 
                 if (data.code === 0 && data.data) {
                     if (currentMode === 'link') {
-                        // ئەنجامێ تاک فۆڕم (Single Video/Story)
                         const videoData = data.data;
                         document.getElementById('videoCover').src = videoData.cover;
                         document.getElementById('authorName').innerText = videoData.author.nickname || `@${videoData.author.unique_id}`;
@@ -476,20 +483,22 @@
                         cachedMusicUrl = videoData.music;
                         resultCard.classList.remove('hidden');
                     } else {
-                        // ئەنجامێن زۆربەی ستۆری و پۆستان ب ڕێکا Username
                         const posts = data.data.videos || data.data;
                         const grid = document.getElementById('userMediaGrid');
-                        grid.innerHTML = ""; // پاقژکرنا کادرێ کۆن
+                        grid.innerHTML = ""; 
 
                         if(posts && posts.length > 0) {
                             posts.slice(0, 9).forEach(post => {
                                 const card = document.createElement('div');
-                                card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group";
+                                card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 gap-1 group";
                                 card.innerHTML = `
                                     <img src="${post.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                                    <button onclick="triggerBlobDownload('${post.play}', 'tikjet_story.mp4')" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 cursor-pointer shadow">
-                                        <i class="fa-solid fa-download"></i> Download
+                                    <button onclick="triggerBlobDownload('${post.play}', 'tikjet_story.mp4')" class="relative z-10 w-full bg-emerald-500 hover:bg-emerald-600 text-white text-[11px] font-bold py-1 transition flex items-center justify-center gap-1 cursor-pointer rounded-md shadow">
+                                        <i class="fa-solid fa-download"></i> Down
+                                    </button>
+                                    <button onclick="openDirectUrl('${post.play}')" class="relative z-10 w-full bg-blue-500 hover:bg-blue-600 text-white text-[11px] font-bold py-1 transition flex items-center justify-center gap-1 cursor-pointer rounded-md shadow">
+                                        <i class="fa-solid fa-eye"></i> View
                                     </button>
                                 `;
                                 grid.appendChild(card);
@@ -507,6 +516,13 @@
             } finally {
                 btnDownload.disabled = false;
                 document.getElementById('txtDownloadBtn').innerText = l.download;
+            }
+        }
+
+        // بۆ تەماشەکرنا ڕاستەوخۆ ل سەر سیستەمێ ئایفۆنێ (بێ کێشەیا Blob)
+        function openDirectUrl(fileUrl) {
+            if(fileUrl) {
+                window.open(fileUrl, '_blank');
             }
         }
 
@@ -532,6 +548,10 @@
             if(cachedVideoUrl) triggerBlobDownload(cachedVideoUrl, 'tikjet_video.mp4');
         });
 
+        document.getElementById('viewBtnDirect').addEventListener('click', () => {
+            if(cachedVideoUrl) openDirectUrl(cachedVideoUrl);
+        });
+
         document.getElementById('downloadBtnMusic').addEventListener('click', () => {
             if(cachedMusicUrl) triggerBlobDownload(cachedMusicUrl, 'tikjet_audio.mp3');
         });
@@ -542,7 +562,6 @@
             errorMessage.classList.remove('hidden');
         }
 
-        // لێدانا زمانێ پاشکەفتکری ل دەستپێکا دەرکەفتنا سایتی
         changeLanguage(currentLang);
     </script>
 </body>

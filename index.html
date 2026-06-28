@@ -6,7 +6,6 @@
     <meta name="description" content="TIKJET - باشترین دابەزێنەری تیکتۆک">
     <title>TIKJET | دابەزێنەری تیکtۆک</title>
     
-    <!-- ═══ Social Bar (Adsterra) ═══ -->
     <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js" async></script>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -69,7 +68,6 @@
             box-shadow: 0 8px 40px rgba(245,158,11,0.5);
         }
 
-        /* ═══ VIP CARD ANIMATION ═══ */
         .vip-card {
             background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(168,85,247,0.05));
             border: 1px solid rgba(245,158,11,0.15);
@@ -88,17 +86,12 @@
             background: radial-gradient(circle, rgba(245,158,11,0.05), transparent 70%);
             animation: vipGlow 4s ease-in-out infinite;
         }
-        @shadow vipGlow {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(10%, 10%) scale(1.1); }
-        }
         @keyframes vipEntrance {
             0% { opacity: 0; transform: translateY(30px) scale(0.95); }
             100% { opacity: 1; transform: translateY(0) scale(1); }
         }
         .vip-card > * { position: relative; z-index: 1; }
 
-        /* ═══ MODE BUTTONS ═══ */
         .mode-btn {
             padding: 8px 16px;
             border-radius: 12px;
@@ -129,7 +122,6 @@
             color: #fff;
         }
 
-        /* ═══ INPUT ═══ */
         .input-main {
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.07);
@@ -192,7 +184,6 @@
             50% { text-shadow: 0 0 50px rgba(236,72,153,0.4), 0 0 80px rgba(168,85,247,0.2); }
         }
 
-        /* ═══ PREVIEW CARD ═══ */
         .preview-card {
             background: rgba(0,0,0,0.5);
             backdrop-filter: blur(20px);
@@ -215,7 +206,6 @@
             background: #0a0a1a;
         }
 
-        /* Preview Controls - Full featured */
         .preview-controls {
             display: flex;
             align-items: center;
@@ -291,7 +281,6 @@
             overflow: hidden;
         }
 
-        /* Download buttons inside preview */
         .preview-downloads {
             display: flex;
             flex-wrap: wrap;
@@ -333,7 +322,6 @@
             transform: translateY(-2px);
         }
 
-        /* ═══ PHOTO GRID ═══ */
         .photo-grid-item {
             position: relative;
             aspect-ratio: 9/16;
@@ -387,7 +375,6 @@
             transform: scale(1.05);
         }
 
-        /* ═══ SOCIAL ICONS ═══ */
         .social-icon {
             display: inline-flex;
             align-items: center;
@@ -457,7 +444,6 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* ═══ LIQUID PROGRESS ═══ */
         .liquid-progress {
             position: absolute;
             bottom: 0;
@@ -475,7 +461,6 @@
             100% { background-position: 400% 50%; }
         }
 
-        /* ═══ TOAST ═══ */
         .toast-container {
             position: fixed;
             top: 20px;
@@ -510,7 +495,6 @@
             to { transform: translateX(120%) scale(0.9); opacity: 0; }
         }
 
-        /* ═══ AD CONTAINERS ═══ */
         .ad-container {
             min-height: 90px;
             display: flex;
@@ -519,13 +503,11 @@
             overflow: hidden;
         }
 
-        /* ═══ SCROLLBAR ═══ */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
         ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #ec4899, #a855f7); border-radius: 10px; }
         ::selection { background: #ec4899; color: #fff; }
 
-        /* ═══ RESPONSIVE ═══ */
         @media (max-width: 640px) {
             .mode-btn { font-size: 11px; padding: 6px 12px; }
             .input-main { padding: 14px 16px 14px 70px; font-size: 13px; }
@@ -542,10 +524,8 @@
 </head>
 <body>
 
-    <!-- ═══ TOAST ═══ -->
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- ═══ SOCIAL HEADER BAR ═══ -->
     <div class="social-header-bar">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
@@ -572,13 +552,10 @@
         </div>
     </div>
 
-    <!-- ═══ SMARTLINK ═══ -->
     <div id="smartlink-container" style="display:none;"></div>
 
-    <!-- ═══ MAIN ═══ -->
     <div class="min-h-screen bg-main">
 
-        <!-- ═══ HEADER ═══ -->
         <header class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-3">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 to-violet-600 flex items-center justify-center shadow-lg shadow-pink-500/20">
@@ -596,10 +573,8 @@
             </div>
         </header>
 
-        <!-- ═══ MAIN CONTENT ═══ -->
         <main class="container mx-auto px-4 max-w-2xl py-4">
 
-            <!-- ═══ BANNER 728x90 (TOP) ═══ -->
             <div class="ad-container glass rounded-2xl p-2 mb-5 border border-slate-800/50" id="bannerTop">
                 <script>
                     atOptions = {
@@ -613,7 +588,6 @@
                 <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js" async></script>
             </div>
 
-            <!-- ═══ VIP SPONSOR CARD ═══ -->
             <div class="vip-card p-4 mb-5 flex flex-wrap items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <div class="relative w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-pink-500 p-[2px] flex-shrink-0">
@@ -647,7 +621,6 @@
                 </a>
             </div>
 
-            <!-- ═══ TITLE ═══ -->
             <div class="text-center mb-4">
                 <h1 id="mainTitle" class="text-2xl sm:text-3xl font-extrabold neon-title leading-tight">
                     دابەزاندنا ڤیدیۆ و ستۆریێن تیکتۆکێ بێ لۆگۆ
@@ -657,10 +630,8 @@
                 </p>
             </div>
 
-            <!-- ═══ MAIN CARD ═══ -->
             <div class="glass rounded-3xl p-5 shadow-2xl shadow-black/40">
 
-                <!-- Mode Buttons -->
                 <div class="flex gap-2 justify-center mb-4">
                     <button onclick="switchMode('link')" id="modeLink" class="mode-btn active">
                         <i class="fa-solid fa-link"></i> URL Link
@@ -670,7 +641,6 @@
                     </button>
                 </div>
 
-                <!-- Input -->
                 <div class="input-wrapper">
                     <i id="inputIcon" class="input-icon fa-solid fa-link"></i>
                     <input type="text" id="tiktokUrl" autocomplete="off" placeholder="لینکی ڤیدیۆیێ لڤێرە دانێ..."
@@ -681,36 +651,29 @@
                     </button>
                 </div>
 
-                <!-- Download Button -->
                 <button onclick="downloadVideo()" id="btnDownload" class="w-full mt-4 btn-pink text-white font-bold py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 cursor-pointer text-base">
                     <span id="txtDownload">دابەزینە</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </button>
 
-                <!-- Story Notice -->
                 <div id="storyNotice" class="hidden mt-3 text-[11px] text-amber-400 text-center font-medium bg-amber-500/10 py-2 px-4 rounded-xl border border-amber-500/20">
                     ⚠️ <span id="txtStoryNotice">بۆ دابەزاندنا ستۆری یان هایڵایتان، لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.</span>
                 </div>
 
-                <!-- Error -->
                 <div id="errorMessage" class="hidden mt-3 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
             </div>
 
-            <!-- ═══ PREVIEW CARD (Fully Featured) ═══ -->
             <div id="previewCard" class="hidden preview-card mt-5">
-                <!-- Video/Image Container -->
                 <div class="relative" id="previewMediaWrapper">
                     <video id="previewVideo" src="" class="w-full max-h-[400px] object-contain bg-black/50" playsinline></video>
                     <img id="previewImage" src="" alt="Preview" class="hidden w-full max-h-[400px] object-contain bg-black/50">
                 </div>
 
-                <!-- Info -->
                 <div class="preview-info">
                     <div class="author" id="previewAuthor">TikTok User</div>
                     <div class="desc" id="previewDescription"></div>
                 </div>
 
-                <!-- Controls: Play/Pause, Seek, Fullscreen, Time -->
                 <div class="preview-controls">
                     <button onclick="togglePreviewPlay()" id="previewPlayBtn" title="Play/Pause">
                         <i class="fa-solid fa-play"></i>
@@ -725,7 +688,6 @@
                     </button>
                 </div>
 
-                <!-- Download Buttons -->
                 <div class="preview-downloads">
                     <button class="btn-download-video" id="previewDownloadBtn">
                         <i class="fa-solid fa-cloud-arrow-down"></i> <span id="txtPreviewDownload">دابەزاندنا ڤیدیۆ</span>
@@ -736,7 +698,6 @@
                 </div>
             </div>
 
-            <!-- ═══ PHOTO ALBUM ═══ -->
             <div id="photoCard" class="hidden glass rounded-3xl p-5 mt-5 shadow-2xl shadow-black/40">
                 <div class="border-b border-slate-800 pb-3 mb-4 flex flex-wrap justify-between items-center gap-2">
                     <h4 class="text-sm font-bold text-slate-400 flex items-center gap-2">
@@ -749,13 +710,11 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="photoGrid"></div>
             </div>
 
-            <!-- ═══ NATIVE BANNER ═══ -->
             <div class="ad-container glass rounded-2xl p-3 mt-5 border border-slate-800/50" id="nativeBanner">
                 <script async="async" data-cfasync="false" src="https://pl29886920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
                 <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea"></div>
             </div>
 
-            <!-- ═══ SUPPORT ═══ -->
             <div class="flex flex-wrap justify-center gap-3 mt-5">
                 <button onclick="openSupport()" class="btn-pink text-white text-xs font-semibold px-5 py-3 rounded-2xl shadow-md transition flex items-center gap-2 cursor-pointer">
                     <i class="fa-solid fa-heart"></i> <span id="txtSupport">پشتەڤانیا مە بکە ☕</span>
@@ -765,7 +724,6 @@
                 </button>
             </div>
 
-            <!-- ═══ BANNER 728x90 (BOTTOM) ═══ -->
             <div class="ad-container glass rounded-2xl p-2 mt-5 border border-slate-800/50" id="bannerBottom">
                 <script>
                     atOptions = {
@@ -781,7 +739,6 @@
 
         </main>
 
-        <!-- ═══════ FOOTER ═══════ -->
         <footer class="container mx-auto px-4 py-5 mt-4">
             <div class="glass rounded-2xl p-5 border border-slate-700/40">
                 <div class="mb-4">
@@ -814,7 +771,6 @@
 
     </div>
 
-    <!-- ═══════ SUPPORT MODAL ═══════ -->
     <div id="supportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
         <div class="glass rounded-3xl p-6 shadow-2xl border border-slate-700/50 bg-slate-950/95 relative max-w-md w-full">
             <button onclick="closeSupport()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition">
@@ -846,13 +802,7 @@
         </div>
     </div>
 
-    <!-- ═══════════════════════════════════════════════ -->
-    <!-- ═══ SCRIPTS ═══ -->
-    <!-- ═══════════════════════════════════════════════ -->
     <script>
-        // ──────────────────────────────────────
-        // STATE
-        // ──────────────────────────────────────
         let currentLang = localStorage.getItem('tikjet_lang') || 'badini';
         let currentMode = 'link';
         let albumImages = [];
@@ -864,9 +814,6 @@
         let previewVideo = null;
         let isPreviewPlaying = false;
 
-        // ──────────────────────────────────────
-        // LANGUAGE DATA
-        // ──────────────────────────────────────
         const langData = {
             badini: {
                 title: 'دابەزاندنا ڤیدیۆ و ستۆریێن تیکتۆکێ بێ لۆگۆ',
@@ -942,9 +889,6 @@
             }
         };
 
-        // ──────────────────────────────────────
-        // LANGUAGE
-        // ──────────────────────────────────────
         function changeLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('tikjet_lang', lang);
@@ -968,9 +912,6 @@
             document.body.dir = lang === 'en' ? 'ltr' : 'rtl';
         }
 
-        // ──────────────────────────────────────
-        // MODE SWITCH
-        // ──────────────────────────────────────
         function switchMode(mode) {
             currentMode = mode;
             document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
@@ -996,9 +937,6 @@
             document.getElementById('photoCard').classList.add('hidden');
         }
 
-        // ──────────────────────────────────────
-        // TOAST
-        // ──────────────────────────────────────
         function toast(msg, icon = 'fa-circle-info') {
             const c = document.getElementById('toastContainer');
             const t = document.createElement('div');
@@ -1008,9 +946,6 @@
             setTimeout(() => t.remove(), 3200);
         }
 
-        // ──────────────────────────────────────
-        // COPY & PASTE
-        // ──────────────────────────────────────
         function copyText(text) {
             navigator.clipboard.writeText(text).then(() => toast('کۆپی بوو! ✅', 'fa-copy'));
         }
@@ -1024,28 +959,30 @@
             }
         }
 
-        // ──────────────────────────────────────
-        // DOWNLOAD (CHAKKRAWA BO IOS NATIVE MENU)
-        // ──────────────────────────────────────
+        // ══════════════════════════════════════
+        // 🛠️ فۆنکشنا چارەسەرکەرا داونلۆدێ بۆ iOS/Safari 
+        // ══════════════════════════════════════
         function forceDownload(url, filename) {
+            // ئەڤە سیستەمێ دابینکرنا مینیویا (View / Download) نەیتیڤە بۆ ئایفۆنێ بێ کردنەوەی تابا نوێ
             const a = document.createElement('a');
             a.href = url;
-            a.download = filename;
-            // Target _blank labردرا بۆ ئەوەی ڕاستەوخۆ مینیۆی نەیتیڤی سیستمەکە کاربکات
+            a.setAttribute('download', filename);
+            a.removeAttribute('target'); 
+            
+            // چارەسەرکرنا خەلەلا لێدانا خۆکار د ناڤ وێبگەرێ تێلیگرام و سەفاری دا
+            if (url.includes('tiktokcdn') || url.includes('tikwm.com')) {
+                // ئەگەر ڕاستەوخۆ داونلۆد نەبوو، ڕێڕەوی ڕاستەوخۆ ئاراستە دکەین بۆ سیستمێ نەیتیڤ
+                a.href = url + (url.includes('?') ? '&' : '?') + 'download=1';
+            }
+            
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
             
             downloadCount++;
             localStorage.setItem('tikjet_downloads', String(downloadCount));
-            history.unshift({ filename, url, date: new Date().toLocaleString() });
-            if (history.length > 50) history.pop();
-            localStorage.setItem('tikjet_history', JSON.stringify(history));
         }
 
-        // ──────────────────────────────────────
-        // PREVIEW CONTROLS - FULL FEATURED
-        // ──────────────────────────────────────
         function togglePreviewPlay() {
             const video = document.getElementById('previewVideo');
             if (!video || !video.src) return;
@@ -1098,9 +1035,6 @@
                 `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
         }
 
-        // ──────────────────────────────────────
-        // SHOW PREVIEW
-        // ──────────────────────────────────────
         function showPreview(data) {
             const card = document.getElementById('previewCard');
             const video = document.getElementById('previewVideo');
@@ -1135,7 +1069,7 @@
                 document.getElementById('previewDownloadBtn').onclick = () => {
                     if (data.videoUrl) {
                         forceDownload(data.videoUrl, 'tiktok_video.mp4');
-                        toast('ڤیدیۆ دابەزی! 🎉', 'fa-circle-check');
+                        toast('داونلۆد دەستی پێکرد! 📥', 'fa-circle-check');
                     }
                 };
                 document.getElementById('previewDownloadAudioBtn').onclick = () => {
@@ -1165,9 +1099,6 @@
             }
         }
 
-        // ──────────────────────────────────────
-        // SUPPORT MODAL
-        // ──────────────────────────────────────
         function openSupport() { document.getElementById('supportModal').classList.remove('hidden'); }
         function closeSupport() { document.getElementById('supportModal').classList.add('hidden'); }
         function switchPay(type) {
@@ -1188,9 +1119,6 @@
             }
         }
 
-        // ──────────────────────────────────────
-        // DOWNLOAD ALL PHOTOS
-        // ──────────────────────────────────────
         function downloadAllPhotos() {
             if (!albumImages.length) {
                 toast('هیچ وێنەیەک نییە!', 'fa-circle-exclamation');
@@ -1200,9 +1128,6 @@
             toast(`هەمی ${albumImages.length} وێنە دابەزین! 📸`, 'fa-rocket');
         }
 
-        // ──────────────────────────────────────
-        // MAIN DOWNLOAD
-        // ──────────────────────────────────────
         async function downloadVideo() {
             let input = document.getElementById('tiktokUrl').value.trim();
             const btn = document.getElementById('btnDownload');
@@ -1357,9 +1282,6 @@
             }
         }
 
-        // ──────────────────────────────────────
-        // KEYBOARD SHORTCUTS FOR PREVIEW
-        // ──────────────────────────────────────
         document.addEventListener('keydown', (e) => {
             const card = document.getElementById('previewCard');
             if (card.classList.contains('hidden')) return;
@@ -1384,21 +1306,12 @@
             }
         });
 
-        // ──────────────────────────────────────
-        // INIT
-        // ──────────────────────────────────────
         changeLanguage(currentLang);
         switchMode('link');
 
         document.getElementById('supportModal').addEventListener('click', (e) => {
             if (e.target === e.currentTarget) closeSupport();
         });
-
-        console.log('🚀 TIKJET v4.0 - باشترین دابەزێنەری تیکتۆک');
-        console.log('👑 Developed by Zaniar Al-Mazuri Al-Kurdi');
-        console.log('🎬 Preview with Full Controls ready!');
-        console.log('✅ Download layout issue fixed for iOS natively!');
     </script>
-
 </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="description" content="TIKJET - باشترین دابەزێنەری تیکتۆک">
     <title>TIKJET | دابەزێنەری تیکtۆک</title>
     
+    <!-- ═══ Social Bar (Adsterra) ═══ -->
     <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js" async></script>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -606,13 +607,7 @@
                         </div>
                         <p id="vipText" class="text-[11px] text-slate-300 font-medium leading-relaxed max-w-md">
                             <span class="text-amber-400 font-bold">"شاهکارێن ئیدیتێ و داهێنانێ بێ سنوور!</span>
-                            خودانێ کارێن هەرە پرۆفیشناڵ بلیمەت د جیهانا مۆنتاژ و دیزاینێ دا.
-                            هەر ڤیدیۆیەک دەستێ وی دەرکەوێت، دەبیتە بەرهەمەکا هونەری و تەکنیکی،
-                            بە کەربۆن، ڕەنگ، دەنگ کاریگەرییێن سەرنجڕاکێش.
-                            ئەو ئیدیتۆرە بەتوانا و خاوەن چێژ و بینینەکا تایبەتە،
-                            کە دەتوانیت لە بەرهەمێن وی دا هەستی بە ئاستەکا بەرز بکەی.
-                            <span class="text-purple-400 font-bold">بۆ دیتنا کارێن شاکار و تژی جیاوازی و ئیلهام،
-                            سەرەدانا پڕۆفایلی بکە و فۆڵۆ بکە! 💎✨</span>
+                            خودانێ کارێن هەرە پرۆفیشناڵ د جیهانا مۆنتاژ و دیزاینێ دا. بۆ دیتنا کارێن شاکار و تژی جیاوازی، سەرەدانا پڕۆفایلی بکە و فۆڵۆ بکە💎.
                         </p>
                     </div>
                 </div>
@@ -802,6 +797,7 @@
         </div>
     </div>
 
+    <!-- ═══ SCRIPTS ═══ -->
     <script>
         let currentLang = localStorage.getItem('tikjet_lang') || 'badini';
         let currentMode = 'link';
@@ -831,7 +827,7 @@
                 album: 'ئەلبومێن وێنەیان',
                 previewDownload: 'دابەزاندنا ڤیدیۆ',
                 previewAudio: 'دابەزاندنا دەنگی (MP3)',
-                footer: 'دێڤلوپەر <span style="background:linear-gradient(135deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">زانیار المزوري الکوردي</span>، هەمی ماف د پاراستینە.'
+                footer: 'دێڤلوپەر <span style="background:linear-gradient(135deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">زانیار المزوری الکوردی</span>، هەمی ماف د پاراستینە.'
             },
             sorani: {
                 title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تیکتۆک بێ لۆگۆ',
@@ -881,7 +877,7 @@
                 support: 'Support Us ☕',
                 supportBtn: 'Other Support Options 💳',
                 story: 'To download stories or highlights, paste the link directly into URL Link section.',
-                vip: 'شاهکارێن ئیدیتێ و داهێنانێ بێ سنوور! خودانێ کارێن هەرە پرۆفیشناڵ د جیهانا مۆنتاژ و دیزاینێ دا. بۆ دیتنا کارێن شاکار و تژی جیاوازی, سەرەدانا پڕۆفایلی بکە و فۆڵۆ بکە💎.',
+                vip: 'شاهکارێن ئیدیتێ و داهێنانێ بێ سنوور! خودانێ کارێن هەرە پرۆفیشناڵ د جیهانا مۆنتاژ و دیزاینێ دا. بۆ دیتنا کارێن شاکار و تژی جیاوازی، سەرەدانا پڕۆفایلی بکە و فۆڵۆ بکە💎.',
                 album: 'Photo Album',
                 previewDownload: 'Download Video',
                 previewAudio: 'Download Audio (MP3)',
@@ -959,21 +955,21 @@
             }
         }
 
-        // ══════════════════════════════════════
-        // 🛠️ فۆنکشنا چارەسەرکەرا داونلۆدێ بۆ iOS/Safari 
-        // ══════════════════════════════════════
+        // ═════════════════════════════════════════════════════
+        // 🚀 فۆنکشنا دابەزاندنێ یا پێشکەفتی بۆ ئایفۆنێ ب ڕێیا سێرڤەرێ دەرەکی (No-CORS Bypass)
+        // ═════════════════════════════════════════════════════
         function forceDownload(url, filename) {
-            // ئەڤە سیستەمێ دابینکرنا مینیویا (View / Download) نەیتیڤە بۆ ئایفۆنێ بێ کردنەوەی تابا نوێ
-            const a = document.createElement('a');
-            a.href = url;
-            a.setAttribute('download', filename);
-            a.removeAttribute('target'); 
+            if (!url) return;
             
-            // چارەسەرکرنا خەلەلا لێدانا خۆکار د ناڤ وێبگەرێ تێلیگرام و سەفاری دا
-            if (url.includes('tiktokcdn') || url.includes('tikwm.com')) {
-                // ئەگەر ڕاستەوخۆ داونلۆد نەبوو، ڕێڕەوی ڕاستەوخۆ ئاراستە دکەین بۆ سیستمێ نەیتیڤ
-                a.href = url + (url.includes('?') ? '&' : '?') + 'download=1';
-            }
+            // دروستکرنا لینکەکێ پرۆکسی یێ گشتی دا کو وێبگەر نەچار ببیت مینیویا داونلۆدێ دابین کەت
+            // ئەڤ پرۆکسییە ڕێگریێ ل لێدانا ڤیدیۆیێ دکەت و ڕاستەوخۆ دکەتە داونلۆد
+            const bypassUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+            
+            const a = document.createElement('a');
+            a.href = bypassUrl;
+            a.setAttribute('download', filename);
+            // ل سەر ئایفۆنێ، target=_blank جاران دێ ڤیدیۆیێ کەتەڤە، بەس لادانا وێ مینیویا View/Download دەردەخەت
+            a.target = '_self'; 
             
             document.body.appendChild(a);
             a.click();
@@ -1068,13 +1064,13 @@
                 };
                 document.getElementById('previewDownloadBtn').onclick = () => {
                     if (data.videoUrl) {
-                        forceDownload(data.videoUrl, 'tiktok_video.mp4');
+                        forceDownload(data.videoUrl, 'tikjet_video.mp4');
                         toast('داونلۆد دەستی پێکرد! 📥', 'fa-circle-check');
                     }
                 };
                 document.getElementById('previewDownloadAudioBtn').onclick = () => {
                     if (data.musicUrl) {
-                        forceDownload(data.musicUrl, 'tiktok_audio.mp3');
+                        forceDownload(data.musicUrl, 'tikjet_audio.mp3');
                         toast('دەنگ دابەزی! 🎵', 'fa-circle-check');
                     }
                 };
@@ -1086,13 +1082,13 @@
                 document.getElementById('previewTimeDisplay').textContent = '📸 Image';
                 document.getElementById('previewDownloadBtn').onclick = () => {
                     if (data.imageUrl) {
-                        forceDownload(data.imageUrl, 'tiktok_photo.jpg');
+                        forceDownload(data.imageUrl, 'tikjet_photo.jpg');
                         toast('وێنە دابەزی! 📸', 'fa-circle-check');
                     }
                 };
                 document.getElementById('previewDownloadAudioBtn').onclick = () => {
                     if (data.musicUrl) {
-                        forceDownload(data.musicUrl, 'tiktok_audio.mp3');
+                        forceDownload(data.musicUrl, 'tikjet_audio.mp3');
                         toast('دەنگ دابەزی! 🎵', 'fa-circle-check');
                     }
                 };
@@ -1124,7 +1120,7 @@
                 toast('هیچ وێنەیەک نییە!', 'fa-circle-exclamation');
                 return;
             }
-            albumImages.forEach((url, i) => setTimeout(() => forceDownload(url, `photo_${i+1}.jpg`), i * 400));
+            albumImages.forEach((url, i) => setTimeout(() => forceDownload(url, `photo_${i+1}.jpg`), i * 450));
             toast(`هەمی ${albumImages.length} وێنە دابەزین! 📸`, 'fa-rocket');
         }
 

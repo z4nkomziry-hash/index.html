@@ -66,7 +66,6 @@
 
     <main class="container mx-auto px-4 max-w-3xl my-auto py-6">
         
-        <!-- VIP SPONSOR SECTION -->
         <div id="vipSponsorCard" class="w-full max-w-xl mx-auto mb-8 p-4 bg-gradient-to-r from-slate-950 via-purple-950/40 to-slate-950 rounded-2xl border vip-glow flex items-center justify-between gap-4 transition duration-300 transform hover:scale-[1.01]">
             <div class="flex items-center gap-3.5">
                 <div class="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 p-[2px] shadow-md shadow-purple-500/10">
@@ -100,7 +99,6 @@
             </p>
         </div>
 
-        <!-- MAIN DOWNLOAD CARD -->
         <div class="glass-card p-4 md:p-6 rounded-3xl shadow-2xl shadow-black/40 mb-6 transition-all duration-300">
             <div class="flex gap-2 p-1 bg-slate-950/60 rounded-xl mb-4 border border-slate-800/80 max-w-xs mx-auto">
                 <button onclick="switchDownloadMode('link')" id="modeLink" class="flex-1 text-xs font-bold py-2 rounded-lg bg-pink-500 text-white transition duration-200 cursor-pointer flex items-center justify-center gap-1.5 shadow">
@@ -114,7 +112,7 @@
             <div class="flex flex-col md:flex-row gap-3">
                 <div class="relative flex-1">
                     <i id="inputIcon" class="fa-solid fa-link absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 text-lg"></i>
-                    <input type="text" id="tiktokUrl" placeholder="لینکی ڤیدیۆیێ لڤێرە دانێ..." 
+                    <input type="text" id="tiktokUrl" autocomplete="off" placeholder="لینکی ڤیدیۆیێ لڤێرە دانێ..." 
                         class="w-full bg-slate-950/60 border border-slate-800 rounded-2xl py-4 pl-12 pr-24 text-white placeholder-slate-500 focus:outline-none focus:border-pink-500 text-left dir-ltr transition-all">
                     
                     <button onclick="pasteLink()" id="btnPaste" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold px-3 py-2 rounded-xl transition flex items-center gap-1 cursor-pointer">
@@ -134,7 +132,6 @@
             <div id="errorMessage" class="hidden mt-4 text-rose-400 text-sm text-center font-medium bg-rose-500/10 py-2.5 rounded-xl border border-rose-500/20"></div>
         </div>
 
-        <!-- FIXED ADSTERRA BOX -->
         <div class="w-full flex justify-center mb-8 clear-both relative z-20 min-h-[95px] overflow-hidden" id="adTop">
             <script>
               atOptions = { 'key' : '5afe380c3cb536afa245e51fd8b6e583', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
@@ -142,7 +139,6 @@
             <script src="https://www.highperformanceformat.com/5afe380c3cb536afa245e51fd8b6e583/invoke.js"></script>
         </div>
 
-        <!-- Multi-Tab User Results -->
         <div id="userResultsSection" class="hidden glass-card p-6 rounded-3xl shadow-2xl mb-6">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 border-b border-slate-800 pb-3">
                 <h4 id="userResultTitle" class="text-sm font-bold text-slate-400 flex items-center gap-2">
@@ -150,7 +146,7 @@
                 </h4>
                 <div class="flex gap-1 bg-slate-950/40 p-1 rounded-xl w-full sm:w-auto">
                     <button onclick="filterUserMedia('posts')" id="tabPosts" class="flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg bg-pink-500 text-white transition">Posts</button>
-                    <button onclick="filterUserMedia('stories')" id="tabStories" class="flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Stories</button>
+                    <button onclick="filterUserMedia('stories')" id="tabStories" class="flex-1 sm:flex-none text-[11px] font-bold px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Stories (24h)</button>
                 </div>
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="userMediaGrid"></div>
@@ -186,14 +182,27 @@
             </div>
         </div>
 
-        <!-- Adsterra Native Banner -->
+        <div id="photoModeCard" class="hidden glass-card p-6 rounded-3xl shadow-2xl transition-all duration-500 mb-6">
+            <div class="border-b border-slate-800 pb-3 mb-4">
+                <h4 class="text-sm font-bold text-slate-400 flex items-center gap-2">
+                    <i class="fa-solid fa-images text-pink-500"></i> ئەلبومێن وێنەیان / Photo Album Mode:
+                </h4>
+            </div>
+            <div id="photoAlbumGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4"></div>
+            <div class="w-full flex justify-center">
+                <button id="photoDownloadMusicBtn" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 px-6 rounded-xl transition flex items-center justify-center gap-2 text-xs cursor-pointer">
+                    <i class="fa-solid fa-music"></i>
+                    <span>دابەزاندنا پاشبنەما دەنگی (MP3)</span>
+                </button>
+            </div>
+        </div>
+
         <div class="w-full flex justify-center my-6 glass-card p-4 rounded-2xl border border-slate-800/50">
             <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea" class="w-full min-h-[100px]">
                 <script async="async" data-cfasync="false" src="https://pl292920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
             </div>
         </div>
 
-        <!-- SUPPORT BUTTONS -->
         <div class="w-full flex flex-col sm:flex-row justify-center items-center gap-3 mt-4">
             <button onclick="openSupportModal()" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 text-xs font-semibold px-5 py-3 rounded-2xl border border-slate-800 hover:border-pink-500/30 transition duration-300 flex items-center justify-center gap-2 shadow-md cursor-pointer">
                 <i class="fa-solid fa-heart text-pink-500"></i>
@@ -207,7 +216,6 @@
         </div>
     </main>
 
-    <!-- CUSTOM SUPPORT MODAL POPUP -->
     <div id="customSupportModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
         <div class="glass-card w-full max-w-sm rounded-3xl p-6 shadow-2xl border border-slate-700/50 bg-slate-950/95 relative">
             <button onclick="closeSupportModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white transition cursor-pointer">
@@ -253,11 +261,35 @@
         </div>
     </div>
 
+    <div id="photoPreviewModal" class="hidden fixed inset-0 z-[100] flex flex-col items-center justify-center p-4 bg-black/95 backdrop-blur-md select-none">
+        <button onclick="closePhotoPreview()" class="absolute top-6 right-6 text-white/70 hover:text-white bg-slate-900/60 p-3 rounded-full border border-slate-800 transition duration-200 z-50 cursor-pointer text-xl w-12 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button onclick="prevPreviewPhoto()" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-slate-900/60 p-4 rounded-full border border-slate-800 transition duration-200 z-50 cursor-pointer text-lg">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="nextPreviewPhoto()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white bg-slate-900/60 p-4 rounded-full border border-slate-800 transition duration-200 z-50 cursor-pointer text-lg">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="max-w-full max-h-[80vh] flex items-center justify-center p-2">
+            <img id="previewModalImg" src="" alt="Preview Mode" class="max-w-full max-h-[80vh] rounded-2xl object-contain shadow-2xl transition-all duration-300 transform scale-95">
+        </div>
+
+        <div id="previewImgCounter" class="mt-4 bg-slate-900/80 border border-slate-800 text-slate-400 text-xs font-bold px-4 py-1.5 rounded-full shadow tracking-wider">
+            1 / 1
+        </div>
+    </div>
+
     <footer class="container mx-auto px-4 py-6 text-center text-xs text-slate-500 font-medium">
         &copy; 2026 TIKJET. All rights reserved.
     </footer>
 
     <script>
+        let albumImagesArray = [];
+        let currentPreviewIndex = 0;
+
         function checkSponsorExpiry() {
             const startDate = new Date(2026, 5, 27); 
             const currentDate = new Date();
@@ -268,17 +300,22 @@
                 if(sponsorCard) sponsorCard.remove();
             }
         }
-        window.addEventListener('DOMContentLoaded', checkSponsorExpiry);
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            checkSponsorExpiry();
+            const urlInputBox = document.getElementById('tiktokUrl');
+            if(urlInputBox) urlInputBox.value = '';
+        });
 
         const languages = {
             badini: {
-                title: "دابەزاندنا ڤیدیۆ و ستۆریێن تیکتۆکێ بێ لۆگۆ",
+                title: "دابەزاندنا ڤیدیۆ و ستۆریێن تیکtۆکێ بێ لۆگۆ",
                 subtitle: "لینکی دانێ، کلیک بکە، و د چەند چرکەکا دا ب بەرزترین کوالێتی دابەزینە.",
                 placeholderLink: "لینکی ڤیدیۆیێ لڤێرە دانێ...",
                 placeholderUser: "ناڤێ حسابێ بنڤیسە (نموونە: @zanyar)...",
                 paste: "پێوەکە", download: "دابەزینە", noWm: "Download Video", music: "دابەزاندنا دەنگی (MP3)",
                 support: "پشتەڤانیا مە بکە ☕", supportBtn: "ڕێکێن دی یێن پشتەڤانیێ 💳 / 🪙",
-                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "کێشەیەک هەیە! یاخود لینک یێ شاشە.",
+                errorEmpty: "هیڤییە ل پێشدا نڤیسینەکێ دانی!", errorFetch: "کێشەیەک هەیە! یاخود لینک یێ شاشە یان پڕۆفایل یێ تایبەتە (Private).",
                 loading: "لێگەریان...", 
                 vipAdText: "باشترین و بلیمەتترین ئیدیتۆرێ بێ ڕکابەر! بۆ دیتنا کارێن شاکار، سەرەدانا پڕۆفایلی بکە.",
                 storyNoticeText: "بۆ دابەزاندنا ستۆری یان هایڵایتان، هیڤییە لینکا وێ ڕاستەوخۆ ل بەشێ URL Link دابنێ.",
@@ -292,7 +329,7 @@
                 placeholderUser: "ناوی حیسابەکە بنووسە (مثال: @zanyar)...",
                 paste: "پەیست", download: "دایبگرە", noWm: "Download Video", music: "داگرتنی دەنگ (MP3)",
                 support: "پشتیوانیمان بکە ☕", supportBtn: "ڕێگاکانی تری پشتیوانی 💳 / 🪙",
-                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!", errorFetch: "کێشەیەک هەیە! یاخود لینکەکە شاشە.",
+                errorEmpty: "تکایە سەرەتا نووسینێک دابنێ!", errorFetch: "کێشەیەک هەیە! یاخود لینکەکە شاشە یان حیسابەکە تایبەتە.",
                 loading: "گەڕان...", 
                 vipAdText: "باشترین و بەناوبانگترین ئیدیتۆری بێ ڕکابەر! بۆ دیتنی کارە شاکارەکانی, سەردانی پڕۆفایلەکەی بکە.",
                 storyNoticeText: "بۆ داگرتنی ستۆری یاخود هایڵایت، تکایە لینکەکەی ڕاستەوخۆ لە بەشی URL Link دابنێ.",
@@ -305,7 +342,7 @@
                 placeholderLink: "أدخل رابط تيك توك هنا...", placeholderUser: "أدخل اسم المستخدم (مثال: @zanyar)...",
                 paste: "لصق", download: "تحميل", noWm: "Download Video", music: "تحميل الصوت (MP3)",
                 support: "ادعمنا ☕", supportBtn: "طرق الدعم الأخرى 💳 / 🪙",
-                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!", errorFetch: "حدث خطأ ما! يرجى التأكد من الرابط.",
+                errorEmpty: "يرجى إدخل مدخل صحيح أولاً!", errorFetch: "حدث خطأ ما! يرجى التأكد من الحساب أو الرابط.",
                 loading: "جاري البحث...", 
                 vipAdText: "أفضل ومحرر فيديوهات مبدع بلا منازع! لمشاهدة أعماله الأسطورية، قم بزيارة حسابه.",
                 storyNoticeText: "لتنزيل القصة (الستوري) أو الهايلايت، يرجى وضع الرابط مباشرة في قسم URL Link.",
@@ -318,7 +355,7 @@
                 placeholderLink: "Paste TikTok link here...", placeholderUser: "Enter username (e.g., @zanyar)...",
                 paste: "Paste", download: "Download", noWm: "Download Video", music: "Download Audio (MP3)",
                 support: "Support Us ☕", supportBtn: "Other Support Options 💳 / 🪙",
-                errorEmpty: "Please enter something first!", errorFetch: "An error occurred! Please check the link.",
+                errorEmpty: "Please enter something first!", errorFetch: "An error occurred! Please check username or link.",
                 loading: "Searching...", 
                 vipAdText: "The best and most famous video editor without rival! To check his masterworks, visit his profile.",
                 storyNoticeText: "To download stories or highlights, please paste the link directly into the URL Link section.",
@@ -405,7 +442,6 @@
             }
         }
 
-        // نویترین فۆنکشن بۆ دابەزاندنا ڕاستەوخۆ بێ ڤەکرنا لاپەڕەیەکێ نوو
         function forceBlobDownload(url, filename) {
             fetch(url)
                 .then(response => response.blob())
@@ -421,7 +457,6 @@
                     document.body.removeChild(a);
                 })
                 .catch(() => {
-                    // ئەگەر کێشەیەک د دۆمەینێ سەرەکی دا هەبیت، وەک پاشکەفتنەک ڕاستەوخۆ لینکێ دی ڤەدکەت
                     window.open(url, '_blank');
                 });
         }
@@ -434,17 +469,74 @@
             if(currentUrls.music) forceBlobDownload(currentUrls.music, 'tiktok_audio.mp3');
         });
 
+        document.getElementById('photoDownloadMusicBtn').addEventListener('click', () => {
+            if(currentUrls.music) forceBlobDownload(currentUrls.music, 'tiktok_audio.mp3');
+        });
+
+        /* --- LIGHTBOX FUNCTIONS (PHOTO PREVIEW) --- */
+        function openPhotoPreview(index) {
+            currentPreviewIndex = index;
+            const modal = document.getElementById('photoPreviewModal');
+            const img = document.getElementById('previewModalImg');
+            
+            img.src = albumImagesArray[currentPreviewIndex];
+            updatePreviewCounter();
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => img.classList.remove('scale-95'), 50);
+        }
+
+        function closePhotoPreview() {
+            const modal = document.getElementById('photoPreviewModal');
+            const img = document.getElementById('previewModalImg');
+            img.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                img.src = "";
+            }, 150);
+        }
+
+        function nextPreviewPhoto() {
+            if(albumImagesArray.length === 0) return;
+            currentPreviewIndex = (currentPreviewIndex + 1) % albumImagesArray.length;
+            document.getElementById('previewModalImg').src = albumImagesArray[currentPreviewIndex];
+            updatePreviewCounter();
+        }
+
+        function prevPreviewPhoto() {
+            if(albumImagesArray.length === 0) return;
+            currentPreviewIndex = (currentPreviewIndex - 1 + albumImagesArray.length) % albumImagesArray.length;
+            document.getElementById('previewModalImg').src = albumImagesArray[currentPreviewIndex];
+            updatePreviewCounter();
+        }
+
+        function updatePreviewCounter() {
+            document.getElementById('previewImgCounter').innerText = `${currentPreviewIndex + 1} / ${albumImagesArray.length}`;
+        }
+
+        window.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('photoPreviewModal');
+            if(modal && !modal.classList.contains('hidden')) {
+                if(e.key === "Escape") closePhotoPreview();
+                if(e.key === "ArrowRight") nextPreviewPhoto();
+                if(e.key === "ArrowLeft") prevPreviewPhoto();
+            }
+        });
+
         async function downloadVideo() {
             let urlInput = document.getElementById('tiktokUrl').value.trim();
             const btnDownload = document.getElementById('btnDownload');
             const errorMessage = document.getElementById('errorMessage');
             const resultCard = document.getElementById('resultCard');
+            const photoModeCard = document.getElementById('photoModeCard');
             const userResultsSection = document.getElementById('userResultsSection');
             const l = languages[currentLang];
 
             errorMessage.classList.add('hidden');
             resultCard.classList.add('hidden');
+            photoModeCard.classList.add('hidden');
             userResultsSection.classList.add('hidden');
+            albumImagesArray = []; 
 
             if (!urlInput) { showError(l.errorEmpty); return; }
 
@@ -461,18 +553,46 @@
 
                     if (resJson.code === 0 && resJson.data) {
                         const d = resJson.data;
-                        document.getElementById('videoCover').src = d.cover;
-                        document.getElementById('authorName').innerText = d.author.nickname || 'TikTok User';
-                        document.getElementById('videoDesc').innerText = d.title || 'TikTok Media';
                         
-                        // پاراستنا لینکێن فۆڕماتی
-                        let basePlay = d.play || d.wmplay;
                         let baseMusic = d.music || "";
-
-                        currentUrls.video = basePlay.startsWith('http') ? basePlay : `https://www.tikwm.com${basePlay}`;
                         currentUrls.music = baseMusic ? (baseMusic.startsWith('http') ? baseMusic : `https://www.tikwm.com${baseMusic}`) : "";
 
-                        resultCard.classList.remove('hidden');
+                        if (d.images && d.images.length > 0) {
+                            const photoGrid = document.getElementById('photoAlbumGrid');
+                            photoGrid.innerHTML = "";
+
+                            d.images.forEach((imgUrl, index) => {
+                                const finalImgUrl = imgUrl.startsWith('http') ? imgUrl : `https://www.tikwm.com${imgUrl}`;
+                                albumImagesArray.push(finalImgUrl);
+
+                                const pCard = document.createElement('div');
+                                pCard.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group cursor-zoom-in";
+                                pCard.setAttribute('onclick', `if(event.target.tagName !== 'BUTTON' && event.target.tagName !== 'I') openPhotoPreview(${index})`);
+                                
+                                pCard.innerHTML = `
+                                    <img src="${finalImgUrl}" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-300">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200">
+                                        <i class="fa-solid fa-magnifying-glass-plus text-white text-2xl bg-black/40 p-3 rounded-full backdrop-blur-sm"></i>
+                                    </div>
+                                    <button onclick="event.stopPropagation(); forceBlobDownload('${finalImgUrl}', 'tiktok_photo_${index+1}.jpeg')" class="relative z-10 w-full bg-emerald-500 hover:bg-emerald-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center cursor-pointer">
+                                        <i class="fa-solid fa-download"></i> Image ${index + 1}
+                                    </button>
+                                `;
+                                photoGrid.appendChild(pCard);
+                            });
+
+                            photoModeCard.classList.remove('hidden');
+                        } 
+                        else {
+                            document.getElementById('videoCover').src = d.cover;
+                            document.getElementById('authorName').innerText = d.author.nickname || 'TikTok User';
+                            document.getElementById('videoDesc').innerText = d.title || 'TikTok Media';
+                            
+                            let basePlay = d.play || d.wmplay;
+                            currentUrls.video = basePlay.startsWith('http') ? basePlay : `https://www.tikwm.com${basePlay}`;
+
+                            resultCard.classList.remove('hidden');
+                        }
                     } else { showError(l.errorFetch); }
                 } 
                 else if (currentMode === 'username') {
@@ -481,12 +601,15 @@
                     const resJson = await response.json();
 
                     if (resJson.code === 0 && resJson.data) {
+                        // هندەک جار داتا د ناڤ بەشێ لایەنێ جودا دا دهێت، لڤێرە هەردوو لایەنا کۆنترۆڵ دکەین
                         const allItems = resJson.data.videos || resJson.data || [];
+                        
+                        // جوداکرنا پۆستان ژ ستۆریێن کو د ٢٤ دەمژمێرێن کێم دانە
                         cachedUserData.posts = allItems.filter(item => !item.is_story) || allItems;
                         cachedUserData.stories = allItems.filter(item => item.is_story) || [];
                         
                         userResultsSection.classList.remove('hidden');
-                        filterUserMedia('posts');
+                        filterUserMedia('posts'); // ب شێوەیەکێ خۆکار ل سەر پۆستان دەستپێ دکەت
                     } else { showError(l.errorFetch); }
                 }
             } catch (error) { 
@@ -511,23 +634,31 @@
             const items = cachedUserData[type];
 
             if (items && items.length > 0) {
-                items.forEach(item => {
+                albumImagesArray = []; // پاقژکرنا لیستێ بۆ پرێڤیۆیا نوو
+                
+                items.forEach((item, index) => {
                     const card = document.createElement('div');
-                    card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group";
+                    card.className = "relative aspect-[9/16] rounded-xl overflow-hidden bg-slate-950 shadow border border-slate-800 flex flex-col justify-end p-2 group cursor-zoom-in";
                     
                     let mediaUrl = item.play.startsWith('http') ? item.play : `https://www.tikwm.com${item.play}`;
+                    albumImagesArray.push(item.cover); // بۆ نیشاندانا کاڤەری د لایتبۆکسێ دا ئەگەر پێدڤی کر
+
+                    card.setAttribute('onclick', `if(event.target.tagName !== 'BUTTON' && event.target.tagName !== 'I') openPhotoPreview(${index})`);
 
                     card.innerHTML = `
                         <img src="${item.cover}" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-                        <button onclick="forceBlobDownload('${mediaUrl}', 'tiktok_media.mp4')" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center cursor-pointer">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200">
+                            <i class="fa-solid fa-magnifying-glass-plus text-white text-xl bg-black/40 p-2.5 rounded-full backdrop-blur-sm"></i>
+                        </div>
+                        <button onclick="event.stopPropagation(); forceBlobDownload('${mediaUrl}', 'tiktok_media.mp4')" class="relative z-10 w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] font-bold py-1.5 rounded-lg transition flex items-center justify-center gap-1 shadow text-center cursor-pointer">
                             <i class="fa-solid fa-download"></i> Download
                         </button>
                     `;
                     grid.appendChild(card);
                 });
             } else {
-                grid.innerHTML = `<div class="col-span-full text-center py-8 text-xs text-slate-500 font-medium">هیچ داتا ل ڤێرە نەهاتە دیتن / No items found.</div>`;
+                let noDataMsg = type === 'stories' ? "چو ستۆریێن کارا د ٢٤ دەمژمێرێن بوریدا ل سەر ڤێ حسابێ نەهاتنە دیتن." : "هیچ داتا ل ڤێرە نەهاتە دیتن.";
+                grid.innerHTML = `<div class="col-span-full text-center py-8 text-xs text-slate-500 font-medium">${noDataMsg}</div>`;
             }
         }
 

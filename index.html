@@ -444,7 +444,7 @@
                 </button>
             </div>
 
-            <!-- ═══ Sponsorship & Donation Section (بەشێ سپۆنسەری و پشتەڤانیێ) ═══ -->
+            <!-- ═══ Sponsorship & Donation Section ═══ -->
             <div class="glass rounded-3xl p-5 mt-5 border border-amber-500/20">
                 <div class="flex items-center justify-between mb-3">
                     <div class="flex items-center gap-2">
@@ -462,7 +462,7 @@
                         <div>
                             <div class="flex items-center gap-1.5 flex-wrap">
                                 <span class="font-black text-sm text-amber-400">@zano.b22</span>
-                                <span class="text-[9px] font-bold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full" id="badgeSponsor">سپۆنسەر و ئیدیتۆرێ فەرمی</span>
+                                <span class="text-[9px] font-bold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full" id="badgeSponsor">¼پۆنسەر و ئیدیتۆرێ فەرمی</span>
                             </div>
                             <p class="text-[11px] text-slate-400 mt-0.5" id="descSponsor">خۆدانێ مەزنترین پەیجێ دیزاین و ئیدیتان، پشتەڤانێ سەرەکی یێ پڕۆژەی.</p>
                         </div>
@@ -481,9 +481,8 @@
                     بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ پارەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.
                 </p>
 
-                <!-- ══ New Interactive Donation Box (بوکسا پشتەڤانیا مە بۆمن) ══ -->
+                <!-- ══ New Interactive Donation Box ══ -->
                 <div class="mb-4">
-                    <!-- Toggle Trigger Button Box -->
                     <button onclick="toggleSupportBox()" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/15 hover:to-purple-500/15 border border-pink-500/30 rounded-2xl cursor-pointer transition-all shadow-sm">
                         <div class="flex items-center gap-2.5">
                             <span class="flex h-3 w-3 relative">
@@ -495,9 +494,7 @@
                         <i id="supportBoxIcon" class="fa-solid fa-chevron-down text-xs text-pink-400 transition-transform duration-300"></i>
                     </button>
 
-                    <!-- Inside Support Wallets Content (Hidden by default) -->
                     <div id="supportBoxContent" class="support-content space-y-2 mt-2">
-                        <!-- FastPay Box (Formatted from Left to Right) -->
                         <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
                             <div class="flex items-center gap-2 text-right">
                                 <span class="w-2 h-2 rounded-full bg-rose-500"></span>
@@ -511,7 +508,6 @@
                             </button>
                         </div>
 
-                        <!-- USDT TRC20 Box -->
                         <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
                             <div class="flex items-center gap-2 text-right w-[75%]">
                                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -558,7 +554,7 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4" id="vipPostGrid"></div>
             </div>
 
-            <!-- Dynamic Preview Section -->
+            <!-- Dynamic Preview & Quality Selector Section -->
             <div id="previewCard" class="hidden glass rounded-3xl p-5 mt-5">
                 <video id="previewVideo" class="w-full max-h-[350px] object-contain rounded-xl bg-black" controls></video>
                 <img id="previewImage" class="hidden w-full max-h-[350px] object-contain rounded-xl bg-black">
@@ -566,9 +562,30 @@
                     <h3 id="previewAuthor" class="font-bold text-sm"></h3>
                     <p id="previewDescription" class="text-xs text-slate-400 mt-1"></p>
                 </div>
-                <div class="flex gap-2 mt-4">
-                    <button id="previewDownloadBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold"><i class="fa-solid fa-download"></i> ڤیدیۆ</button>
-                    <button id="previewDownloadAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold"><i class="fa-solid fa-music"></i> MP3</button>
+                
+                <!-- ═══ 🆕 Quality Options Download System ═══ -->
+                <div class="mt-4 border-t border-white/5 pt-4">
+                    <span class="text-xs font-bold text-pink-500 block mb-2"><i class="fa-solid fa-sliders"></i> کواڵیتیا دابەزاندنێ هەلبژێرە:</span>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button onclick="downloadWithQuality('720p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                            <span>720p HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+                        </button>
+                        <button onclick="downloadWithQuality('1080p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                            <span>1080p Full HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+                        </button>
+                        <button onclick="downloadWithQuality('4K')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                            <span>4K Ultra HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+                        </button>
+                        <!-- Ad-Locked Premium Quality Mode -->
+                        <button onclick="downloadPremiumQuality()" class="border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 py-2.5 px-3 rounded-xl text-xs font-black flex items-center justify-between animate-pulse">
+                            <span class="flex items-center gap-1">🔒 4K HDR Dolby Vision</span> <i class="fa-solid fa-bolt"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 mt-4 border-t border-white/5 pt-3">
+                    <button id="previewDownloadBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold"><i class="fa-solid fa-download"></i> داونلۆدا بلەز</button>
+                    <button id="previewDownloadAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold"><i class="fa-solid fa-music"></i> MP3 دەنگ</button>
                 </div>
             </div>
 
@@ -590,15 +607,13 @@
                 <div id="historyContainer" class="space-y-2"></div>
             </div>
 
-            <!-- ═══ 🆕 NEW ADS AREA (پشتی لێگەڕیان و پێش FAQs) ═══ -->
+            <!-- ═══ NEW ADS AREA (پشتی لێگەڕیان و پێش FAQs) ═══ -->
             <div class="mt-5 space-y-4">
-                <!-- 1. Native Banner Ad -->
                 <div class="glass rounded-2xl p-2 flex justify-center overflow-hidden border border-white/5 max-w-full">
                     <script async="async" data-cfasync="false" src="https://pl29886920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
                     <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea"></div>
                 </div>
 
-                <!-- 2. Smartlink Premium Highlight Button -->
                 <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a" target="_blank" class="w-full btn-pink text-white font-black py-3.5 rounded-2xl shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm tracking-wide animate-pulse">
                     <i class="fa-solid fa-gift text-lg"></i>
                     <span>🚀 خەڵات و دیاریێن ئەڤڕۆ (کلیک بکە)</span>
@@ -663,7 +678,7 @@
                 <p id="rateThanks" class="hidden text-xs text-emerald-400 mt-2 font-bold">سوپاس بۆ دەنگدان و پشتەڤانیا تە! 🌟</p>
             </div>
 
-            <!-- ═══ 🆕 728x90 Large Banner Ad Area (ل بەشێ خوارێ یێ پەیجێ بۆ ڕێکخستنا جوانتر) ═══ -->
+            <!-- ═══ 728x90 Large Banner Ad Area ═══ -->
             <div class="mt-5 flex justify-center overflow-hidden rounded-xl bg-white/5 border border-white/5 p-1 max-w-full">
                 <script>
                   atOptions = {
@@ -690,6 +705,7 @@
         let currentMode = 'link';
         let albumImages = [];
         let searchHistory = JSON.parse(localStorage.getItem('tikjet_history') || '[]');
+        let currentActiveVideoUrl = ''; // Global backup for active media link
 
         const langData = {
             badini: {
@@ -708,7 +724,7 @@
                 album: 'ئەلبومێن وێنەیان',
                 history: 'دوایین لێگەرینەکان',
                 sponsorTitle: 'پشتەڤانیا مە بکە (Sponsorship)',
-                sponsorDesc: 'بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ探ەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.',
+                sponsorDesc: 'بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ پارەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.',
                 contactSponsor: 'پەیوەندی بکە',
                 badgeSponsor: 'سپۆنسەر و ئیدیتۆرێ فەرمی',
                 descSponsor: 'خۆدانێ مەزنترین پەیجێ دیزاین و ئیدیتان، پشتەڤانێ سەرەکی یێ پڕۆژەی.',
@@ -748,7 +764,7 @@
                 placeholderUser: 'أدخل اسم المستخدم...',
                 paste: 'لصق',
                 download: 'تحميل',
-                quickQ: 'كيف يمكنني تحميل الفيديو والستوري؟',
+                quickQ: 'كيف يمكنني تحميل الفيديو والستوري？',
                 guideT: 'دليل التحميل السريع',
                 rateText: 'قيم موقعنا',
                 faqHead: 'الأسئلة الشائعة',
@@ -794,15 +810,12 @@
             }
         };
 
-        // Theme Toggle (Light / Dark)
         function toggleTheme() {
             const body = document.body;
             const icon = document.getElementById('themeIcon');
             const txt = document.getElementById('txtTheme');
-            
             body.classList.toggle('light-mode');
             const isLight = body.classList.contains('light-mode');
-            
             localStorage.setItem('tikjet_theme', isLight ? 'light' : 'dark');
             icon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
             txt.textContent = isLight ? 'مۆدی ڕووناك' : 'مۆدی تاریك';
@@ -815,11 +828,9 @@
         }
 
         function toggleQuickGuide() {
-            const box = document.getElementById('quickGuideBox');
-            box.classList.toggle('hidden');
+            document.getElementById('quickGuideBox').classList.toggle('hidden');
         }
 
-        // Support Box Toggle System
         function toggleSupportBox() {
             const content = document.getElementById('supportBoxContent');
             const icon = document.getElementById('supportBoxIcon');
@@ -867,7 +878,6 @@
             document.getElementById('txtAlbum').textContent = l.album;
             document.getElementById('txtHistoryTitle').textContent = l.history;
             
-            // Sponsor Section Translations
             document.getElementById('txtSponsorTitle').textContent = l.sponsorTitle;
             document.getElementById('txtSponsorDesc').textContent = l.sponsorDesc;
             document.getElementById('txtContactSponsor').textContent = l.contactSponsor;
@@ -877,7 +887,6 @@
             document.getElementById('txtSupportTitle').textContent = l.supportTitle;
             
             document.querySelectorAll('.txtCopyBtn').forEach(b => b.textContent = l.copyText);
-            
             document.getElementById('tiktokUrl').placeholder = currentMode === 'link' ? l.placeholder : l.placeholderUser;
         }
 
@@ -921,7 +930,6 @@
             navigator.clipboard.writeText(text).then(() => {
                 const l = langData[currentLang] || langData['badini'];
                 toast(`${name} هاتە کۆپیکردن! 📋`, 'fa-copy');
-                
                 const btn = event.currentTarget;
                 const span = btn.querySelector('.txtCopyBtn');
                 span.textContent = l.copiedText;
@@ -1006,6 +1014,28 @@
             }
         }
 
+        // ═══ 🆕 New Custom Quality Functions ═══
+        function downloadWithQuality(quality) {
+            if (!currentActiveVideoUrl) return toast('هیچ میدیا مەکەتە دەستپێشخەری!', 'fa-times');
+            toast(`کوالێتیا ${quality} دهێتە حازرکرن... 🚀`, 'fa-circle-notch fa-spin');
+            setTimeout(() => {
+                forceDownload(currentActiveVideoUrl, `TIKJET_${quality}_video.mp4`);
+            }, 1000);
+        }
+
+        function downloadPremiumQuality() {
+            toast('بۆ دابەزاندنا 4K HDR، دێ هێیە ڕەوانەکرن بۆ لاپەڕێ ڕیکلامێ... 🔒', 'fa-lock');
+            setTimeout(() => {
+                // Instantly open the Smartlink code in a new tab to capture ad revenue
+                window.open('https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a', '_blank');
+                
+                // Immediately deliver the payload file download right afterwards
+                if (currentActiveVideoUrl) {
+                    forceDownload(currentActiveVideoUrl, 'TIKJET_4K_HDR_DolbyVision.mp4');
+                }
+            }, 1500);
+        }
+
         function downloadAllPhotos() {
             if (albumImages.length === 0) return;
             albumImages.forEach((url, i) => {
@@ -1053,6 +1083,7 @@
                             });
                             document.getElementById('photoCard').classList.remove('hidden');
                         } else {
+                            currentActiveVideoUrl = d.play; // Cache current video file link
                             const pCard = document.getElementById('previewCard');
                             pCard.classList.remove('hidden');
                             document.getElementById('previewImage').classList.add('hidden');
@@ -1102,12 +1133,11 @@
                 }
             } catch (err) {
                 toast('کێشەیەک هەیە د تۆرێ دا!', 'fa-times');
-            } finally {
+            } {
                 btn.disabled = false;
             }
         }
 
-        // Initialize App
         changeLanguage(currentLang);
         document.getElementById('langSelect').value = currentLang;
         renderHistory();

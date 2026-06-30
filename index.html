@@ -6,6 +6,11 @@
     <meta name="description" content="TIKJET - باشترین دابەزێنەری تیکتۆک">
     <title>TIKJET | دابەزێنەری تیکtۆک</title>
     
+    <!-- ═══ ئەڤە لۆگۆیێ تە یێ نوو یە بۆ Add To Home Screen ═══ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
+    
     <!-- ═══ Social Bar (Adsterra) ═══ -->
     <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js" async></script>
     
@@ -724,7 +729,7 @@
                 album: 'ئەلبومێن وێنەیان',
                 history: 'دوایین لێگەرینەکان',
                 sponsorTitle: 'پشتەڤانیا مە بکە (Sponsorship)',
-                sponsorDesc: 'بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ پارەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.',
+                sponsorDesc: 'بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ探ەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.',
                 contactSponsor: 'پەیوەندی بکە',
                 badgeSponsor: 'سپۆنسەر و ئیدیتۆرێ فەرمی',
                 descSponsor: 'خۆدانێ مەزنترین پەیجێ دیزاین و ئیدیتان، پشتەڤانێ سەرەکی یێ پڕۆژەی.',
@@ -1026,10 +1031,7 @@
         function downloadPremiumQuality() {
             toast('بۆ دابەزاندنا 4K HDR، دێ هێیە ڕەوانەکرن بۆ لاپەڕێ ڕیکلامێ... 🔒', 'fa-lock');
             setTimeout(() => {
-                // Instantly open the Smartlink code in a new tab to capture ad revenue
                 window.open('https://www.effectivecpmnetwork.com/pyz9djf0zb?key=dcd0c8354d3879fa5004da1d9fae683a', '_blank');
-                
-                // Immediately deliver the payload file download right afterwards
                 if (currentActiveVideoUrl) {
                     forceDownload(currentActiveVideoUrl, 'TIKJET_4K_HDR_DolbyVision.mp4');
                 }
@@ -1083,7 +1085,7 @@
                             });
                             document.getElementById('photoCard').classList.remove('hidden');
                         } else {
-                            currentActiveVideoUrl = d.play; // Cache current video file link
+                            currentActiveVideoUrl = d.play;
                             const pCard = document.getElementById('previewCard');
                             pCard.classList.remove('hidden');
                             document.getElementById('previewImage').classList.add('hidden');

@@ -2,22 +2,22 @@
 <html lang="ku" dir="rtl">
   <head>
     <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="TIKJET - باشترین دابەزێنەری تیکتۆک بێ لۆگۆ | أفضل موقع لتحميل فيديوهات تيك توك بدون علامة مائية | Best TikTok Video Downloader Without Watermark">
-          <meta name="keywords" content="TikTok downloader, tiktok no watermark, save tiktok, تیکتۆک بێ لۆگۆ, دابەزاندنا ڤیدیۆیا تیکتۆکێ, داگرتنی ڤیدیۆی تیکتۆک, تحميل فيديو تيك توك بدون علامة مائية, تنزيل فيديوهات تيكتوك">
-            <title>TIKJET | دابەزێنەری تیکتۆک</title>
-            <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
-              <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
-                <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
-                  <link rel="manifest" href="manifest.json">
-                    <meta name="apple-mobile-web-app-capable" content="yes">
-                      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-                        <meta name="apple-mobile-web-app-title" content="TikJet">
-                          <meta name="application-name" content="TikJet">
-                            <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js" async></script>
-                            <script src="https://cdn.tailwindcss.com"></script>
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-                              <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KrdDown - باشترین دابەزێنەری ڤیدیۆ و ستۆریێن تۆڕێن جڤاکی | أفضل موقع لتحميل الفيديوهات | Best Social Media Downloader">
+    <meta name="keywords" content="KrdDown, downloader, tiktok no watermark, instagram downloader, facebook video, snapchat download, pinterest save">
+    <title>KrdDown | دابەزێنەری گشتی</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="KrdDown">
+    <meta name="application-name" content="KrdDown">
+    <script src="https://pl29886983.effectivecpmnetwork.com/d3/93/40/d3934077e9523de11fad986c4fc273e4.js" async></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;500;700;900&display=swap');
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -290,12 +290,6 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.5);
         }
 
-        .donation-item { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); transition: all 0.3s ease; }
-        .light-mode .donation-item { background: rgba(15,23,42,0.02); }
-        .donation-item:hover { background: rgba(255,255,255,0.05); border-color: rgba(236,72,153,0.2); }
-
-        .support-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-
         .about-social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
         .about-social-btn {
             display: flex;
@@ -371,7 +365,6 @@
             animation: ledPulse 1.6s infinite ease-in-out;
         }
 
-        /* --- STYLES FOR THE NEW ADVANCED MEDIA GALLERY POPUP --- */
         .custom-gallery-modal {
             display: none;
             position: fixed;
@@ -424,7 +417,7 @@
             transform: translateY(-50%);
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.08);
-            color: #white;
+            color: white;
             width: 45px;
             height: 45px;
             border-radius: 50%;
@@ -444,6 +437,55 @@
         .custom-gallery-prev { right: -60px; }
         .custom-gallery-next { left: -60px; }
         
+        /* --- NEW STYLES FOR CHOSEN MODALS & BUTTON EFFECTS --- */
+        .welcome-modal {
+            display: flex;
+            position: fixed;
+            inset: 0;
+            z-index: 9999999;
+            background: rgba(5, 5, 12, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .welcome-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .welcome-content {
+            transform: scale(0.8);
+            transition: all 0.3s ease-in-out;
+        }
+        .welcome-modal.show .welcome-content {
+            transform: scale(1);
+        }
+        .network-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .network-btn:hover {
+            transform: scale(1.08);
+        }
+        .net-tiktok:hover { box-shadow: 0 0 20px rgba(255, 0, 80, 0.6); border-color: #ff0050; }
+        .net-instagram:hover { box-shadow: 0 0 20px rgba(225, 48, 108, 0.6); border-color: #e1306c; }
+        .net-snapchat:hover { box-shadow: 0 0 20px rgba(255, 252, 0, 0.6); border-color: #fffc00; }
+        .net-facebook:hover { box-shadow: 0 0 20px rgba(24, 119, 242, 0.6); border-color: #1877f2; }
+        .net-pinterest:hover { box-shadow: 0 0 20px rgba(230, 0, 35, 0.6); border-color: #e60023; }
+
+        .dev-card-modern {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+            transition: all 0.3s ease;
+        }
+        .dev-card-modern:hover {
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.4), 0 0 25px rgba(59, 130, 246, 0.4);
+            border-color: #a855f7;
+        }
+
         @media (max-width: 640px) {
             .custom-gallery-content { max-width: 90%; padding: 10px; }
             .custom-gallery-prev { right: 5px; }
@@ -456,558 +498,526 @@
             .about-social-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
-                            </head>
-                            <body>
-                              <div class="toast-container" id="toastContainer">
-                              </div>
-                              <div id="pwaBanner" class="p-4 flex items-center justify-between gap-4 backdrop-blur-xl">
-                                <div class="flex items-center gap-3">
-                                  <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white text-xl shadow-md flex-shrink-0">
-                                    <i class="fa-brands fa-tiktok">
-                                    </i>
-                                  </div>
-                                  <div>
-                                    <h4 class="text-xs font-black text-white">TikJet App</h4>
-                                    <p id="txtPwaDesc" class="text-[10px] text-slate-400 mt-0.5">داخستن و جێگیرکرنا مالپەری وەک ئەپلیکەسیۆن ل سەر شاشێ.</p>
-                                  </div>
-                                </div>
-                                <div class="flex items-center gap-2 flex-shrink-0">
-                                  <button onclick="dismissPwa()" id="txtPwaLater" class="text-xs text-slate-400 hover:text-white px-2 py-1">پاشان</button>
-                                  <button onclick="installPwa()" id="btnPwaInstall" class="btn-pink text-white text-xs font-black px-4 py-2 rounded-xl shadow-sm">جێگیرکە</button>
-                                </div>
-                              </div>
-                              <div id="iosPwaBanner" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[450px] bg-slate-950/95 border border-pink-500/30 backdrop-blur-xl rounded-3xl p-5 z-[99999] shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(236,72,153,0.15)] animate-bounce-short">
-                                <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
-                                  <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white text-lg shadow-md">
-                                      <i class="fa-brands fa-tiktok">
-                                      </i>
-                                    </div>
-                                    <div>
-                                      <h4 class="text-xs font-black text-white" id="txtIosTitle">TikJet دابەزێنە وەک ئەپ</h4>
-                                      <p class="text-[10px] text-slate-400 mt-0.5" id="txtIosSubtitle">تایبەت بۆ سیستەمێ iOS / iPhone</p>
-                                    </div>
-                                  </div>
-                                  <button onclick="dismissIosBanner()" class="w-7 h-7 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white text-xs transition-all">
-                                    <i class="fa-solid fa-xmark">
-                                    </i>
-                                  </button>
-                                </div>
-                                <div class="space-y-3 text-xs text-slate-300">
-                                  <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
-                                    <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">١</span>
-                                    <p id="txtIosStep1">ل خوارێ کلیک ل سەر دوگمەیا بارکردنێ <span class="bg-white/10 px-2 py-1 rounded mx-1 text-white">
-                                      <i class="fa-solid fa-share-square text-sky-400">
-                                      </i> Share</span> بکە.</p>
-                                    </div>
-                                    <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
-                                      <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">٢</span>
-                                      <p id="txtIosStep2">پاشان بەرەو خوار بڕۆ و کلیک ل سەر <span class="text-white font-bold">
-                                        <i class="fa-solid fa-plus-square text-pink-400">
-                                        </i> Add to Home Screen</span> بکە.</p>
-                                      </div>
-                                      <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
-                                        <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">٣</span>
-                                        <p id="txtIosStep3">ل سەرێ ل لایێ ڕاست کورتەبڕی <span class="text-pink-500 font-bold">Add</span> بکە بۆ جێگیرکرنێ.</p>
-                                      </div>
-                                    </div>
-                                    <div class="mt-4 pt-2 border-t border-white/5 flex justify-end">
-                                      <button onclick="dismissIosBanner()" id="txtIosThanks" class="text-[11px] text-slate-400 hover:text-white px-4 py-2 font-bold bg-white/5 hover:bg-white/10 rounded-xl transition-all">سۆپاس، تێگەهشتم</button>
-                                    </div>
-                                  </div>
-                                  <div class="social-header-bar bg-black/20 border-b border-white/5 py-2">
-                                    <div class="container mx-auto px-4 flex justify-between items-center">
-                                      <div class="flex gap-4">
-                                        <a href="https://t.me/z_14x" target="_blank" class="text-white/60 hover:text-white text-lg">
-                                          <i class="fa-brands fa-telegram">
-                                          </i>
-                                        </a>
-                                        <a href="https://snapchat.com/t/VbQXoMHz" target="_blank" class="text-white/60 hover:text-white text-lg">
-                                          <i class="fa-brands fa-snapchat">
-                                          </i>
-                                        </a>
-                                      </div>
-                                      <div class="flex items-center gap-3">
-                                        <span class="server-animated-badge text-[11px] font-black px-3 py-1.5 rounded-xl flex items-center gap-2 text-slate-200">
-                                          <span class="led-dot">
-                                          </span>Server: <span class="text-emerald-400">Online</span>
-                                        </span>
-                                        <button onclick="toggleTheme()" class="glass-light text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-2 cursor-pointer text-pink-500">
-                                          <i id="themeIcon" class="fa-solid fa-moon">
-                                          </i> <span id="txtTheme">مۆدی تاریك</span>
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="min-h-screen">
-                                    <header class="container mx-auto px-4 py-4 flex justify-between items-center">
-                                      <div class="flex items-center gap-3">
-                                        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 to-violet-600 flex items-center justify-center shadow-lg shadow-pink-500/20">
-                                          <i class="fa-brands fa-tiktok text-white text-xl">
-                                          </i>
-                                        </div>
-                                        <span class="text-2xl font-extrabold neon-title">TIK<span class="text-pink-500">JET</span>
-                                      </span>
-                                    </div>
-                                    <div>
-                                      <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-slate-900/80 border border-white/10 text-white text-sm rounded-xl px-3 py-2 focus:outline-none cursor-pointer">
-                                        <option value="badini">🌍 کوردی (بەهدینی)</option>
-                                        <option value="sorani">🌍 کوردی (سۆرانی)</option>
-                                        <option value="ar">🇸🇦 العربية</option>
-                                        <option value="en">🇺🇸 English</option>
-                                      </select>
-                                    </div>
-                                  </header>
-                                  <main class="container mx-auto px-4 max-w-2xl py-4">
-                                    <div class="mb-4 flex justify-center overflow-hidden rounded-xl bg-white/5 border border-white/5 p-1 max-w-full">
-                                      <script type="text/javascript">
+  </head>
+  <body>
+    <!-- WELCOME MODAL FOR 5 SOCIAL NETWORKS -->
+    <div id="welcomeModal" class="welcome-modal">
+        <div class="welcome-content glass w-[90%] max-w-[450px] p-6 rounded-3xl text-center border border-white/10 shadow-2xl">
+            <h2 class="text-xl font-black text-white mb-2 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-pink-500"></i> بەخێرهاتی بۆ KrdDown
+            </h2>
+            <p class="text-xs text-slate-400 mb-5">تکایە ئەو تۆڕە جڤاکیە دیار بکە کو دێ ڤیدیۆیێ ژێ دابەزینی:</p>
+            <div class="flex flex-col gap-3">
+                <button onclick="selectNetwork('TikTok', 'linear-gradient(135deg, #ff0050, #000000)')" class="network-btn net-tiktok w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-tiktok text-lg text-rose-500"></i> TikTok (تیک تۆک)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+                <button onclick="selectNetwork('Instagram', 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)')" class="network-btn net-instagram w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-instagram text-lg text-pink-500"></i> Instagram (ئینستاگرام)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+                <button onclick="selectNetwork('Snapchat', 'linear-gradient(135deg, #fffc00, #f1e400)')" class="network-btn net-snapchat w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-snapchat text-lg text-amber-400"></i> Snapchat (سناپ چات)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+                <button onclick="selectNetwork('Facebook', 'linear-gradient(135deg, #1877f2, #0056b3)')" class="network-btn net-facebook w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-facebook text-lg text-sky-500"></i> Facebook (فەیسبووک)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+                <button onclick="selectNetwork('Pinterest', 'linear-gradient(135deg, #e60023, #b3001b)')" class="network-btn net-pinterest w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-pinterest text-lg text-red-600"></i> Pinterest (پینترێست)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+            </div>
+            <div class="mt-4 p-3 bg-white/5 rounded-2xl border border-white/5 text-right">
+                <p class="text-[11px] text-slate-400 leading-relaxed"><i class="fa-solid fa-lightbulb text-amber-400 ml-1"></i> <b>فێرکاری کورت:</b> تەنها لینکی پۆستێ کۆپیکری ل هەر تۆڕەکێ بگری و ل کادرا ژوورێ دابنێ دا کو پرۆسێسا داونلۆدێ دەست پێ بکەت.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT POPUP MODAL -->
+    <div id="contactModal" class="welcome-modal" onclick="closeContactModal(event)">
+        <div class="welcome-content glass w-[90%] max-w-[400px] p-6 rounded-3xl text-center border border-white/10 shadow-2xl relative">
+            <button onclick="document.getElementById('contactModal').classList.remove('show')" class="absolute top-4 left-4 w-7 h-7 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white text-xs transition-all">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-base font-black text-white mb-4"><i class="fa-solid fa-envelope-open-text text-purple-400"></i> ڕێگەیێن پەیوەندیێ</h3>
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://www.instagram.com/z44nko" target="_blank" class="about-social-btn as-ig"><i class="fab fa-instagram text-lg"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@z44nko" target="_blank" class="about-social-btn as-tt"><i class="fab fa-tiktok text-lg"></i> TikTok</a>
+                <a href="https://snapchat.com/t/VmOzLBj3" target="_blank" class="about-social-btn as-snap"><i class="fab fa-snapchat-ghost text-lg"></i> Snapchat</a>
+                <a href="https://t.me/z_14x" target="_blank" class="about-social-btn as-tg"><i class="fab fa-telegram-plane text-lg"></i> Telegram</a>
+                <a href="https://www.threads.com/@zaniyar_dildar" target="_blank" class="about-social-btn as-threads"><i class="fa-brands fa-threads text-lg"></i> Threads</a>
+                <a href="mailto:zaniyar.mzuri@email.com" class="about-social-btn bg-blue-600/10 hover:bg-blue-600 hover:text-white"><i class="fa-solid fa-envelope text-lg"></i> Email</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <div id="pwaBanner" class="p-4 flex items-center justify-between gap-4 backdrop-blur-xl">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white text-xl shadow-md flex-shrink-0">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+        </div>
+        <div>
+          <h4 class="text-xs font-black text-white">KrdDown App</h4>
+          <p id="txtPwaDesc" class="text-[10px] text-slate-400 mt-0.5">داخستن و جێگیرکرنا مالپەری وەک ئەپلیکەسیۆن ل سەر شاشێ.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <button onclick="dismissPwa()" id="txtPwaLater" class="text-xs text-slate-400 hover:text-white px-2 py-1">پاشان</button>
+        <button onclick="installPwa()" id="btnPwaInstall" class="btn-pink text-white text-xs font-black px-4 py-2 rounded-xl shadow-sm">جێگیرکە</button>
+      </div>
+    </div>
+
+    <div id="iosPwaBanner" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-[450px] bg-slate-950/95 border border-pink-500/30 backdrop-blur-xl rounded-3xl p-5 z-[99999] shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(236,72,153,0.15)] animate-bounce-short">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white text-lg shadow-md">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-black text-white" id="txtIosTitle">KrdDown دابەزێنە وەک ئەپ</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5" id="txtIosSubtitle">تایبەت بۆ سیستەمێ iOS / iPhone</p>
+          </div>
+        </div>
+        <button onclick="dismissIosBanner()" class="w-7 h-7 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white text-xs transition-all">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="space-y-3 text-xs text-slate-300">
+        <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
+          <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">١</span>
+          <p id="txtIosStep1">ل خوارێ کلیک ل سەر دوگمەیا بارکردنێ <span class="bg-white/10 px-2 py-1 rounded mx-1 text-white"><i class="fa-solid fa-share-square text-sky-400"></i> Share</span> بکە.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
+          <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">٢</span>
+          <p id="txtIosStep2">پاشان بەرەو خوار بڕۆ و کلیک ل سەر <span class="text-white font-bold"><i class="fa-solid fa-plus-square text-pink-400"></i> Add to Home Screen</span> بکە.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-white/5 p-2.5 rounded-xl border border-white/5">
+          <span class="w-6 h-6 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-[11px]">٣</span>
+          <p id="txtIosStep3">ل سەرێ ل لایێ ڕاست کورتەبڕی <span class="text-pink-500 font-bold">Add</span> بکە بۆ جێگیرکرنێ.</p>
+        </div>
+      </div>
+      <div class="mt-4 pt-2 border-t border-white/5 flex justify-end">
+        <button onclick="dismissIosBanner()" id="txtIosThanks" class="text-[11px] text-slate-400 hover:text-white px-4 py-2 font-bold bg-white/5 hover:bg-white/10 rounded-xl transition-all">سۆپاس، تێگەهشتم</button>
+      </div>
+    </div>
+
+    <div class="social-header-bar bg-black/20 border-b border-white/5 py-2">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="flex gap-4">
+          <a href="https://t.me/z_14x" target="_blank" class="text-white/60 hover:text-white text-lg">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://snapchat.com/t/VbQXoMHz" target="_blank" class="text-white/60 hover:text-white text-lg">
+            <i class="fa-brands fa-snapchat"></i>
+          </a>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="server-animated-badge text-[11px] font-black px-3 py-1.5 rounded-xl flex items-center gap-2 text-slate-200">
+            <span class="led-dot"></span>Server: <span class="text-emerald-400">Online</span>
+          </span>
+          <button onclick="toggleTheme()" class="glass-light text-xs font-bold px-3 py-1.5 rounded-xl flex items-center gap-2 cursor-pointer text-pink-500">
+            <i id="themeIcon" class="fa-solid fa-moon"></i> <span id="txtTheme">مۆدی تاریك</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="min-h-screen">
+      <header class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-pink-500 to-violet-600 flex items-center justify-center shadow-lg shadow-pink-500/20">
+            <i class="fa-solid fa-bolt text-white text-xl"></i>
+          </div>
+          <span class="text-2xl font-extrabold neon-title">Krd<span class="text-pink-500">Down</span></span>
+        </div>
+        <div>
+          <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-slate-900/80 border border-white/10 text-white text-sm rounded-xl px-3 py-2 focus:outline-none cursor-pointer">
+            <option value="badini">🌍 کوردی (بەهدینی)</option>
+            <option value="sorani">🌍 کوردی (سۆرانی)</option>
+            <option value="ar">🇸🇦 العربية</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </div>
+      </header>
+
+      <main class="container mx-auto px-4 max-w-2xl py-4">
+        <div class="mb-4 flex justify-center overflow-hidden rounded-xl bg-white/5 border border-white/5 p-1 max-w-full">
+          <script type="text/javascript">
               atOptions = { 'key' : 'eec99607831f2bc88b770b3f548d42d3', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
           </script>
-                                      <script type="text/javascript" src="//www.highperformanceformat.com/eec99607831f2bc88b770b3f548d42d3/invoke.js"></script>
-                                    </div>
-                                    <div class="text-center mb-6">
-                                      <h1 id="mainTitle" class="text-2xl sm:text-3xl font-extrabold neon-title leading-tight">دابەزاندنا ڤیدیۆ و ستۆریێن تیکتۆکێ بێ لۆگۆ</h1>
-                                      <button onclick="toggleQuickGuide()" class="mt-2 text-xs font-bold text-pink-500 hover:underline flex items-center justify-center gap-1.5 mx-auto cursor-pointer bg-pink-500/10 px-3 py-1.5 rounded-full">
-                                        <i class="fa-solid fa-circle-play">
-                                        </i> <span id="txtQuickQuestion">دێ چەوا ڤیدیۆ و ستۆری دابەزێنم؟</span>
-                                      </button>
-                                      <div id="quickGuideBox" class="hidden glass rounded-2xl p-4 mt-3 text-right border border-pink-500/20 transition-all">
-                                        <div class="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
-                                          <i class="fa-solid fa-circle-info text-pink-500">
-                                          </i> <span class="text-xs font-bold" id="txtGuideTitle">ڕێبەرێ دابەزاندنێ یێ بلەز</span>
-                                        </div>
-                                        <ul class="text-xs space-y-2.5 text-slate-400">
-                                          <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">1</span>
-                                            <p id="step1">ل ئەپڵیکەسیۆنا <b>TikTok</b>، پەیست یان کۆپی پۆستی بکە (Copy Link).</p>
-                                          </li>
-                                          <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">2</span>
-                                            <p id="step2">لینکێ ل کادرا ژوورێ دابنێ (پێوەکە) یان ناڤێ پڕۆفایلی بنڤیسە.</p>
-                                          </li>
-                                          <li class="flex items-start gap-2">
-                                            <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">3</span>
-                                            <p id="step3">کلیک ل سەر دوگمەیا <b>دابەزینە</b> بکە و میدیا خۆ ب کوالێتیا بەرز پاشکەفت بکە.</p>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    <div class="glass rounded-3xl p-5 shadow-2xl">
-                                      <div class="flex gap-2 justify-center mb-4">
-                                        <button onclick="switchMode('link')" id="modeLink" class="mode-btn active">
-                                          <i class="fa-solid fa-link">
-                                          </i> URL Link</button>
-                                          <button onclick="switchMode('username')" id="modeUsername" class="mode-btn">
-                                            <i class="fa-solid fa-at">
-                                            </i> Username</button>
-                                          </div>
-                                          <div class="input-wrapper">
-                                            <i id="inputIcon" class="input-icon fa-solid fa-link">
-                                            </i>
-                                            <input type="text" id="tiktokUrl" placeholder="لینکی ڤیدیۆیێ لڤێرە دانێ..." class="input-main">
-                                              <div class="liquid-progress" id="liquidProgressBar">
-                                              </div>
-                                              <button onclick="clearInputField()" id="btnClearInput" class="clear-input-btn">
-                                                <i class="fa-solid fa-circle-xmark"></i>
-                                              </button>
-                                              <button onclick="pasteLink()" id="btnPaste" class="paste-btn">
-                                                <i class="fa-solid fa-paste">
-                                                </i> <span id="txtPaste">پێوەکە</span>
-                                              </button>
-                                            </div>
-                                            <button onclick="downloadVideo()" id="btnDownload" class="w-full mt-4 btn-pink text-white font-bold py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-pointer">
-                                              <span id="txtDownload">دابەزینە</span> <i class="fa-solid fa-arrow-down">
-                                            </i>
-                                          </button>
-                                          
-                                          <div class="mt-5 pt-4 border-t border-white/5">
-                                            <span id="txtShareSectionTitle" class="text-xs font-bold text-violet-400 block mb-2">Share our website link with your friends:</span>
-                                            <div class="grid grid-cols-2 gap-2">
-                                              <button onclick="shareToSnapchat()" class="btn-snap py-3 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
-                                                <i class="fa-brands fa-snapchat text-base">
-                                                </i> Snapchat Share
-                                              </button>
-                                              <button onclick="shareToTelegram()" class="btn-tg py-3 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
-                                                <i class="fa-brands fa-telegram text-base">
-                                                </i> Telegram Share
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        
-                                        <!-- بەشی پشتگیری و پەیوەندی هێڵدراوەتەوە بەپێی وێنەکە -->
-                                        <div class="glass rounded-3xl p-5 mt-5 border border-pink-500/10">
-                                          <div class="mb-4">
-                                            <button onclick="toggleSupportBox()" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/15 hover:to-purple-500/15 border border-pink-500/30 rounded-2xl cursor-pointer transition-all shadow-sm">
-                                              <div class="flex items-center gap-2.5">
-                                                <span class="flex h-3 w-3 relative">
-                                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75">
-                                                  </span>
-                                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
-                                                  </span>
-                                                </span>
-                                                <span class="text-sm font-black text-pink-400" id="txtSupportTitle">پشتەڤانیا تە بومن 💎</span>
-                                              </div>
-                                              <i id="supportBoxIcon" class="fa-solid fa-chevron-down text-xs text-pink-400 transition-transform duration-300">
-                                              </i>
-                                            </button>
-                                            <div id="supportBoxContent" class="support-content space-y-2 mt-2">
-                                              <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
-                                                <div class="flex items-center gap-2 text-right">
-                                                  <span class="w-2 h-2 rounded-full bg-rose-500">
-                                                  </span>
-                                                  <div>
-                                                    <span class="text-[11px] font-bold block text-rose-400">FastPay</span>
-                                                    <span class="text-xs font-mono tracking-wider text-slate-200 block text-left" dir="ltr">+964 750 604 5491</span>
-                                                  </div>
-                                                </div>
-                                                <button onclick="copyToClipboard('+9647506045491', 'FastPay')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all">
-                                                  <i class="fa-solid fa-copy text-[10px]">
-                                                  </i> <span class="txtCopyBtn">کۆپی بکە</span>
-                                                </button>
-                                              </div>
-                                              <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
-                                                <div class="flex items-center gap-2 w-[75%]">
-                                                  <span class="w-2 h-2 rounded-full bg-emerald-500">
-                                                  </span>
-                                                  <div class="w-full truncate">
-                                                    <span class="text-[11px] font-bold block text-emerald-400">USDT (TRC20)</span>
-                                                    <span class="text-xs font-mono tracking-tight text-slate-200 block truncate" dir="ltr">TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc</span>
-                                                  </div>
-                                                </div>
-                                                <button onclick="copyToClipboard('TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc', 'USDT')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all flex-shrink-0">
-                                                  <i class="fa-solid fa-copy text-[10px]">
-                                                  </i> <span class="txtCopyBtn">کۆپی بکە</span>
-                                                </button>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="flex gap-2 flex-wrap">
-                                            <a href="https://t.me/z_14x" target="_blank" class="btn-gold flex-1 text-center py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
-                                              <i class="fa-brands fa-telegram">
-                                              </i> <span id="txtContactSponsor">پەیوەندی بکە</span>
-                                            </a>
-                                          </div>
-                                        </div>
-                                        
-                                        <div id="vipUserCard" class="hidden vip-card p-6 mt-5">
-                                          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                                            <div class="flex items-center gap-4">
-                                              <img id="vipAvatar" src="" class="w-16 h-16 rounded-2xl border-2 border-amber-400 object-cover">
-                                                <div>
-                                                  <h2 id="vipName" class="text-lg font-black text-amber-400">
-                                                  </h2>
-                                                  <p id="vipUsername" class="text-xs text-slate-400">
-                                                  </p>
-                                                </div>
-                                              </div>
-                                              <div class="flex gap-4 border-t border-white/5 pt-3 sm:pt-0 sm:border-none w-full sm:w-auto justify-center">
-                                                <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
-                                                  <span id="vipFollowers" class="block font-black text-sm text-white">
-                                                  </span>
-                                                  <span class="text-[9px] text-slate-400" id="txtFollowers">فۆڵۆوێرس</span>
-                                                </div>
-                                                <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
-                                                  <span id="vipHearts" class="block font-black text-sm text-white">
-                                                  </span>
-                                                  <span class="text-[9px] text-slate-400" id="txtHearts">لایکەکان</span>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4" id="vipPostGrid">
-                                            </div>
-                                          </div>
-                                          <div id="previewCard" class="hidden glass rounded-3xl p-5 mt-5">
-                                            <video id="previewVideo" class="w-full max-h-[350px] object-contain rounded-xl bg-black" controls>
-                                            </video>
-                                            <img id="previewImage" class="hidden w-full max-h-[350px] object-contain rounded-xl bg-black">
-                                              <div class="mt-3 flex flex-col gap-2">
-                                                <h3 id="previewAuthor" class="font-bold text-sm">
-                                                </h3>
-                                                <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
-                                                  <p id="previewDescription" class="text-xs text-slate-400 truncate max-w-[75%]">
-                                                  </p>
-                                                  <button onclick="copyCaptionText()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
-                                                    <i class="fa-solid fa-copy">
-                                                    </i> <span id="txtCopyCap">کۆپی بکە</span>
-                                                  </button>
-                                                </div>
-                                              </div>
-                                              <div class="mt-4 border-t border-white/5 pt-4">
-                                                <span class="text-xs font-bold text-pink-500 block mb-2" id="txtQualitySelect">
-                                                  <i class="fa-solid fa-sliders">
-                                                  </i> کواڵیتیا دابەزاندنێ هەلبژێرە:</span>
-                                                  <div class="grid grid-cols-2 gap-2">
-                                                    <button onclick="downloadWithQuality('720p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                      <span>720p HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                                    </i>
-                                                  </button>
-                                                  <button onclick="downloadWithQuality('1080p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                    <span>1080p Full HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                                  </i>
-                                                </button>
-                                                <button onclick="downloadWithQuality('4K')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                      <span>4K Ultra HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                                    </i>
-                                                  </button>
-                                                  <button onclick="downloadPremiumQuality()" class="border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 py-2.5 px-3 rounded-xl text-xs font-black flex items-center justify-between animate-pulse">
-                                                    <span class="flex items-center gap-1">🔒 4K HDR Dolby Vision</span> <i class="fa-solid fa-bolt">
-                                                  </i>
-                                            </button>
-                                          </div>
-                                        </div>
-                                        <div class="flex gap-2 mt-4 border-t border-white/5 pt-3">
-                                          <button id="previewDownloadBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold">
-                                            <i class="fa-solid fa-download">
-                                            </i> <span id="txtQuickDl">داونلۆدا بلەز</span>
-                                          </button>
-                                          <button id="previewDownloadAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold">
-                                            <i class="fa-solid fa-music">
-                                            </i> <span id="txtAudioDl">MP3 دەنگ</span>
-                                          </button>
-                                        </div>
-                                      </div>
-                                      <div id="photoCard" class="hidden glass rounded-3xl p-5 mt-5">
-                                        <div class="flex justify-between items-center mb-3">
-                                          <span id="txtAlbum" class="text-sm font-bold">ئەلبومێن وێنەیان</span>
-                                          <button onclick="downloadAllPhotos()" id="txtDlAll" class="text-xs bg-pink-500 text-white px-3 py-1 rounded-lg">هەمی دابەزینە</button>
-                                        </div>
-                                        <div class="grid grid-cols-3 gap-2" id="photoGrid">
-                                        </div>
-                                      </div>
-                                      <div id="historySection" class="hidden glass rounded-3xl p-5 mt-5">
-                                        <div class="flex justify-between items-center mb-3">
-                                          <span id="txtHistoryTitle" class="text-xs font-bold text-slate-400">دوایین لێگەرینەکان</span>
-                                          <button onclick="clearHistory()" id="btnClearHistory" class="text-[10px] text-rose-400 cursor-pointer">
-                                            <i class="fa-solid fa-trash">
-                                            </i> پاککرنەوە
-                                          </button>
-                                        </div>
-                                        <div id="historyContainer" class="space-y-2">
-                                        </div>
-                                      </div>
-                                      <div class="glass rounded-3xl p-5 mt-5 border border-pink-500/10">
-                                        <h3 class="text-sm font-black text-pink-500 mb-3 flex items-center gap-2">
-                                          <i class="fa-solid fa-fire-flame-curved text-orange-500">
-                                          </i> <span id="txtTrendingSectionTitle">ڤیدیۆیێن ترێند یێن کوردی (Trending Reels)</span>
-                                        </h3>
-                                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                          <div class="bg-white/5 rounded-xl overflow-hidden p-2 border border-white/5 cursor-pointer hover:border-pink-500/30 transition-all" onclick="loadTrendingVideo('https://www.tiktok.com/@z44nko/video/7311111111')">
-                                            <div class="aspect-[9/14] bg-slate-800 rounded-lg relative overflow-hidden flex items-center justify-center">
-                                              <i class="fa-solid fa-play text-white/40 text-xl absolute">
-                                              </i>
-                                              <div class="absolute bottom-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-white">95K 🔥</div>
-                                            </div>
-                                            <span class="text-[10px] block mt-1.5 text-slate-300 font-bold truncate">Zanyar Design Premium</span>
-                                          </div>
-                                          <div class="bg-white/5 rounded-xl overflow-hidden p-2 border border-white/5 cursor-pointer hover:border-pink-500/30 transition-all" onclick="loadTrendingVideo('https://www.tiktok.com/@zano.b22/video/7322222222')">
-                                            <div class="aspect-[9/14] bg-slate-800 rounded-lg relative overflow-hidden flex items-center justify-center">
-                                              <i class="fa-solid fa-play text-white/40 text-xl absolute">
-                                              </i>
-                                              <div class="absolute bottom-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-white">140K 🔥</div>
-                                            </div>
-                                            <span class="text-[10px] block mt-1.5 text-slate-300 font-bold truncate">کوردستان مۆدێل ترێند</span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="glass rounded-3xl p-6 mt-5 border border-pink-500/10 text-center relative overflow-hidden">
-                                        <div class="w-24 h-24 rounded-full border-2 border-pink-500 p-1 mx-auto mb-3" style="background: linear-gradient(135deg, #e040fb, #00bcd4);">
-                                          <img src="profile.jpg" alt="Zanyar Al-Mzuri" class="w-full h-full rounded-full object-cover bg-slate-900">
-                                          </div>
-                                          <h2 class="text-xl font-black text-white">Zanyar Al-Mzuri</h2>
-                                          <div id="aboutRole" class="text-xs font-bold text-pink-400 mt-1">...</div>
-                                          <p id="aboutBio" class="text-xs text-slate-400 leading-relaxed max-w-md mx-auto mt-3 mb-5">...</p>
-                                          <div class="about-social-grid">
-                                            <a href="https://t.me/z_14x" target="_blank" class="about-social-btn as-tg">
-                                              <i class="fab fa-telegram-plane">
-                                              </i> Telegram</a>
-                                              <a href="https://www.tiktok.com/@z44nko" target="_blank" class="about-social-btn as-tt">
-                                                <i class="fab fa-tiktok">
-                                                </i> TikTok</a>
-                                                <a href="https://www.instagram.com/z44nko" target="_blank" class="about-social-btn as-ig">
-                                                  <i class="fab fa-instagram">
-                                                  </i> Instagram</a>
-                                                  <a href="https://snapchat.com/t/VmOzLBj3" target="_blank" class="about-social-btn as-snap">
-                                                    <i class="fab fa-snapchat-ghost">
-                                                    </i> Snapchat</a>
-                                                    <a href="https://www.threads.com/@zaniyar_dildar" target="_blank" class="about-social-btn as-threads">
-                                                      <i class="fa-brands fa-threads">
-                                                      </i> Threads</a>
-                                                    </div>
-                                                  </div>
-                                                  <div class="mt-5 space-y-4">
-                                                    <div class="glass rounded-2xl p-2 flex justify-center overflow-hidden border border-white/5 max-w-full">
-                                                      <script async="async" data-cfasync="false" src="https://pl29886920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
-                                                      <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea">
-                                                      </div>
-                                                    </div>
-                                                    <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb" target="_blank" class="w-full btn-pink text-white font-black py-3.5 rounded-2xl shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm tracking-wide animate-pulse">
-                                                      <i class="fa-solid fa-gift text-lg">
-                                                      </i> <span id="txtPromoBtn">🚀 خەڵات و دیاریێن ئەڤڕۆ (کلیک بکە)</span> <i class="fa-solid fa-circle-arrow-right text-xs">
-                                                    </i>
-                                                  </a>
-                                                </div>
-                                                <div class="glass rounded-3xl p-5 mt-5">
-                                                  <h3 class="text-sm font-bold text-pink-500 mb-2 flex items-center gap-1.5">
-                                                    <i class="fa-solid fa-circle-question">
-                                                    </i> <span id="txtFaqHeader">پرسیارێن بەربڵاو (FAQs)</span>
-                                                  </h3>
-                                                  <div class="faq-item">
-                                                    <button class="faq-trigger" onclick="toggleFaq(this)">
-                                                      <span id="faqQ1">ئەرێ دابەزاندنا ڤیدیۆیان پارەیە؟</span> <i class="fa-solid fa-chevron-down text-xs text-slate-500">
-                                                    </i>
-                                                  </button>
-                                                  <div class="faq-content">
-                                                    <p class="pb-3" id="faqA1">نەخێر، خزمەتگوزاریا TIKJET ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.</p>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <div class="glass rounded-3xl p-5 mt-5 text-center">
-                                                <div class="star-rating">
-                                                  <input type="radio" id="5-stars" name="rating" value="5" onclick="submitRate(5)" />
-                                                  <label for="5-stars" class="fas fa-star">
-                                                  </label>
-                                                  <input type="radio" id="4-stars" name="rating" value="4" onclick="submitRate(4)" />
-                                                  <label for="4-stars" class="fas fa-star">
-                                                  </label>
-                                                  <input type="radio" id="3-stars" name="rating" value="3" onclick="submitRate(3)" />
-                                                  <label for="3-stars" class="fas fa-star">
-                                                  </label>
-                                                  <input type="radio" id="2-stars" name="rating" value="2" onclick="submitRate(2)" />
-                                                  <label for="2-stars" class="fas fa-star">
-                                                  </label>
-                                                  <input type="radio" id="1-star" name="rating" value="1" onclick="submitRate(1)" />
-                                                  <label for="1-star" class="fas fa-star">
-                                                  </label>
-                                                </div>
-                                                <p id="rateThanks" class="hidden text-xs text-emerald-400 mt-2 font-bold">...</p>
-                                              </div>
-                                            </main>
-                                            <footer class="container mx-auto px-4 py-6 text-center text-[10px] text-slate-500">
-                                              <p id="footerCredit">© 2026 TIKJET. گەشەپێدەر زانیار المزوري الکوردي، هەموو مافەکان پارێزراون.</p>
-                                            </footer>
-                                          </div>
+          <script type="text/javascript" src="//www.highperformanceformat.com/eec99607831f2bc88b770b3f548d42d3/invoke.js"></script>
+        </div>
 
-                                          <div id="customGalleryModal" class="custom-gallery-modal">
-                                              <div class="custom-gallery-content">
-                                                  <button onclick="closeCustomGallery()" class="custom-gallery-close">
-                                                      <i class="fa-solid fa-xmark"></i>
-                                                  </button>
-                                                  <button onclick="navigateCustomGallery(-1)" class="custom-gallery-nav custom-gallery-prev">
-                                                      <i class="fa-solid fa-chevron-right"></i>
-                                                  </button>
-                                                  <div class="w-full bg-slate-900/90 rounded-3xl border border-white/10 p-4 shadow-2xl">
-                                                      <video id="galleryPopupVideo" class="w-full max-h-[70vh] object-contain rounded-xl bg-black" controls></video>
-                                                      <div class="mt-3 flex flex-col gap-2">
-                                                          <h3 id="galleryPopupAuthor" class="font-bold text-sm text-pink-500"></h3>
-                                                          <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
-                                                              <p id="galleryPopupDesc" class="text-xs text-slate-300 truncate max-w-[75%]"></p>
-                                                              <button onclick="copyGalleryCaption()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
-                                                                  <i class="fa-solid fa-copy"></i>
-                                                              </button>
-                                                          </div>
-                                                      </div>
-                                                      <div class="flex gap-2 mt-4 pt-3 border-t border-white/5">
-                                                          <button id="galleryPopupDlBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md">
-                                                              <i class="fa-solid fa-download"></i> داونلۆدا بلەز
-                                                          </button>
-                                                          <button id="galleryPopupAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5">
-                                                              <i class="fa-solid fa-music"></i> MP3 دەنگ
-                                                          </button>
-                                                      </div>
-                                                  </div>
-                                                  <button onclick="navigateCustomGallery(1)" class="custom-gallery-nav custom-gallery-next">
-                                                      <i class="fa-solid fa-chevron-left"></i>
-                                                  </button>
-                                              </div>
-                                          </div>
+        <div class="text-center mb-6">
+          <h1 id="mainTitle" class="text-2xl sm:text-3xl font-extrabold neon-title leading-tight">دابەزاندنا ڤیدیۆ و ستۆریێن تۆڕێن جڤاکی بێ لۆگۆ</h1>
+          <button onclick="toggleQuickGuide()" class="mt-2 text-xs font-bold text-pink-500 hover:underline flex items-center justify-center gap-1.5 mx-auto cursor-pointer bg-pink-500/10 px-3 py-1.5 rounded-full">
+            <i class="fa-solid fa-circle-play"></i> <span id="txtQuickQuestion">دێ چەوا میدیا دابەزێنم؟</span>
+          </button>
+          
+          <div id="quickGuideBox" class="hidden glass rounded-2xl p-4 mt-3 text-right border border-pink-500/20 transition-all">
+            <div class="flex items-center gap-2 mb-3 border-b border-white/5 pb-2">
+              <i class="fa-solid fa-circle-info text-pink-500"></i> <span class="text-xs font-bold" id="txtGuideTitle">ڕێبەرێ دابەزاندنێ یێ بلەز</span>
+            </div>
+            <ul class="text-xs space-y-2.5 text-slate-400">
+              <li class="flex items-start gap-2">
+                <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">1</span>
+                <p id="step1">لینکێ پۆست یان ڤیدیۆیێ ژ هەر ئەپەکێ کۆپی بکە (Copy Link).</p>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">2</span>
+                <p id="step2">لینکێ ل کadرا ژوورێ دابنێ (پێوەکە) یان ناڤێ پڕۆفایلی بنڤیسە.</p>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-5 h-5 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold text-[10px] flex-shrink-0 mt-0.5">3</span>
+                <p id="step3">کلیک ل سەر دوگمەیا <b>دابەزینە</b> بکە و میدیا خۆ پاشکەفت بکە.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-                                          <script>
+        <div class="glass rounded-3xl p-5 shadow-2xl">
+          <div class="flex gap-2 justify-center mb-4">
+            <button onclick="switchMode('link')" id="modeLink" class="mode-btn active"><i class="fa-solid fa-link"></i> URL Link</button>
+            <button onclick="switchMode('username')" id="modeUsername" class="mode-btn"><i class="fa-solid fa-at"></i> Username</button>
+          </div>
+          
+          <div class="input-wrapper">
+            <i id="inputIcon" class="input-icon fa-solid fa-link"></i>
+            <input type="text" id="tiktokUrl" placeholder="لینکی ڤیدیۆیێ لڤێرە دانێ..." class="input-main">
+            <div class="liquid-progress" id="liquidProgressBar"></div>
+            <button onclick="clearInputField()" id="btnClearInput" class="clear-input-btn">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+            <button onclick="pasteLink()" id="btnPaste" class="paste-btn">
+              <i class="fa-solid fa-paste"></i> <span id="txtPaste">پێوەکە</span>
+            </button>
+          </div>
+          
+          <button id="btnDownload" onclick="downloadVideo()" class="w-full mt-4 btn-pink text-white font-bold py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+            <span id="txtDownload">دابەزینە</span> <i class="fa-solid fa-arrow-down"></i>
+          </button>
+          
+          <div class="mt-5 pt-4 border-t border-white/5">
+            <span id="txtShareSectionTitle" class="text-xs font-bold text-violet-400 block mb-2">Share our website link with your friends:</span>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="shareToSnapchat()" class="btn-snap py-3 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                <i class="fa-brands fa-snapchat text-base"></i> Snapchat Share
+              </button>
+              <button onclick="shareToTelegram()" class="btn-tg py-3 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
+                <i class="fa-brands fa-telegram text-base"></i> Telegram Share
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- NEW MODERN DEVELOPER CARD WITH GLOW EFFECTS -->
+        <div class="dev-card-modern p-5 mt-5 rounded-3xl text-right">
+            <h4 class="text-sm font-black text-purple-400 flex items-center gap-2 mb-2">
+                گەشەپێدەرێ KrdDown 🚀
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                ئەڤ پلاتفۆرمە ژ لایێ <b>Zaniyar</b> ڤە هاتیە دیزاینکرن و گەشەپێدان. ئارمانجا من پێشکەشکرنا خزمەتگوزاریەکا خێرا، سادە و بێبەرامبەرە بۆ هەمی بکارهێنەران.
+            </p>
+            <div class="flex gap-3 text-xs border-t border-white/5 pt-3">
+                <a href="https://github.com" target="_blank" class="text-purple-400 hover:text-blue-400 flex items-center gap-1"><i class="fa-brands fa-github"></i> گیتهاپێ من</a>
+                <span class="text-slate-600">|</span>
+                <button onclick="openContactModal()" class="text-purple-400 hover:text-blue-400 flex items-center gap-1"><i class="fa-solid fa-envelope"></i> پەیوەندی</button>
+            </div>
+        </div>
+        
+        <div id="vipUserCard" class="hidden vip-card p-6 mt-5">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <img id="vipAvatar" src="" class="w-16 h-16 rounded-2xl border-2 border-amber-400 object-cover">
+              <div>
+                <h2 id="vipName" class="text-lg font-black text-amber-400"></h2>
+                <p id="vipUsername" class="text-xs text-slate-400"></p>
+              </div>
+            </div>
+            <div class="flex gap-4 border-t border-white/5 pt-3 sm:pt-0 sm:border-none w-full sm:w-auto justify-center">
+              <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
+                <span id="vipFollowers" class="block font-black text-sm text-white"></span>
+                <span class="text-[9px] text-slate-400" id="txtFollowers">فۆڵۆوێرس</span>
+              </div>
+              <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
+                <span id="vipHearts" class="block font-black text-sm text-white"></span>
+                <span class="text-[9px] text-slate-400" id="txtHearts">لایکەکان</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4" id="vipPostGrid"></div>
+        </div>
+
+        <div id="previewCard" class="hidden glass rounded-3xl p-5 mt-5">
+          <video id="previewVideo" class="w-full max-h-[350px] object-contain rounded-xl bg-black" controls></video>
+          <img id="previewImage" class="hidden w-full max-h-[350px] object-contain rounded-xl bg-black">
+          <div class="mt-3 flex flex-col gap-2">
+            <h3 id="previewAuthor" class="font-bold text-sm"></h3>
+            <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
+              <p id="previewDescription" class="text-xs text-slate-400 truncate max-w-[75%]"></p>
+              <button onclick="copyCaptionText()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
+                <i class="fa-solid fa-copy"></i> <span id="txtCopyCap">کۆپی بکە</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="mt-4 border-t border-white/5 pt-4">
+            <span class="text-xs font-bold text-pink-500 block mb-2" id="txtQualitySelect">
+              <i class="fa-solid fa-sliders"></i> کواڵیتیا دابەزاندنێ هەلبژێرە:</span>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="downloadWithQuality('720p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                <span>720p HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+              </button>
+              <button onclick="downloadWithQuality('1080p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                <span>1080p Full HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+              </button>
+              <button onclick="downloadWithQuality('4K')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                <span>4K Ultra HD</span> <i class="fa-solid fa-circle-down opacity-60"></i>
+              </button>
+              <button onclick="downloadPremiumQuality()" class="border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 py-2.5 px-3 rounded-xl text-xs font-black flex items-center justify-between animate-pulse">
+                <span class="flex items-center gap-1">🔒 4K HDR Dolby Vision</span> <i class="fa-solid fa-bolt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex gap-2 mt-4 border-t border-white/5 pt-3">
+            <button id="previewDownloadBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold">
+              <i class="fa-solid fa-download"></i> <span id="txtQuickDl">داونلۆدا بلەز</span>
+            </button>
+            <button id="previewDownloadAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold">
+              <i class="fa-solid fa-music"></i> <span id="txtAudioDl">MP3 دەنگ</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="photoCard" class="hidden glass rounded-3xl p-5 mt-5">
+          <div class="flex justify-between items-center mb-3">
+            <span id="txtAlbum" class="text-sm font-bold">ئەلبومێن وێنەیان</span>
+            <button onclick="downloadAllPhotos()" id="txtDlAll" class="text-xs bg-pink-500 text-white px-3 py-1 rounded-lg">هەمی دابەزینە</button>
+          </div>
+          <div class="grid grid-cols-3 gap-2" id="photoGrid"></div>
+        </div>
+
+        <div id="historySection" class="hidden glass rounded-3xl p-5 mt-5">
+          <div class="flex justify-between items-center mb-3">
+            <span id="txtHistoryTitle" class="text-xs font-bold text-slate-400">دوایین لێگەرینەکان</span>
+            <button onclick="clearHistory()" id="btnClearHistory" class="text-[10px] text-rose-400 cursor-pointer">
+              <i class="fa-solid fa-trash"></i> پاککرنەوە
+            </button>
+          </div>
+          <div id="historyContainer" class="space-y-2"></div>
+        </div>
+
+        <div class="glass rounded-3xl p-5 mt-5 border border-pink-500/10">
+          <h3 class="text-sm font-black text-pink-500 mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-fire-flame-curved text-orange-500"></i> <span id="txtTrendingSectionTitle">ڤیدیۆیێن ترێند یێن کوردی (Trending Reels)</span>
+          </h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="bg-white/5 rounded-xl overflow-hidden p-2 border border-white/5 cursor-pointer hover:border-pink-500/30 transition-all" onclick="loadTrendingVideo('https://www.tiktok.com/@z44nko/video/7311111111')">
+              <div class="aspect-[9/14] bg-slate-800 rounded-lg relative overflow-hidden flex items-center justify-center">
+                <i class="fa-solid fa-play text-white/40 text-xl absolute"></i>
+                <div class="absolute bottom-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-white">95K 🔥</div>
+              </div>
+              <span class="text-[10px] block mt-1.5 text-slate-300 font-bold truncate">Zanyar Design Premium</span>
+            </div>
+            <div class="bg-white/5 rounded-xl overflow-hidden p-2 border border-white/5 cursor-pointer hover:border-pink-500/30 transition-all" onclick="loadTrendingVideo('https://www.tiktok.com/@zano.b22/video/7322222222')">
+              <div class="aspect-[9/14] bg-slate-800 rounded-lg relative overflow-hidden flex items-center justify-center">
+                <i class="fa-solid fa-play text-white/40 text-xl absolute"></i>
+                <div class="absolute bottom-2 right-2 bg-black/60 px-2 py-0.5 rounded text-[9px] text-white">140K 🔥</div>
+              </div>
+              <span class="text-[10px] block mt-1.5 text-slate-300 font-bold truncate">کوردستان مۆدێل ترێند</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 space-y-4">
+          <div class="glass rounded-2xl p-2 flex justify-center overflow-hidden border border-white/5 max-w-full">
+            <script async="async" data-cfasync="false" src="https://pl29886920.effectivecpmnetwork.com/1b40e5144435adc6e0a8d84f4c5c1eea/invoke.js"></script>
+            <div id="container-1b40e5144435adc6e0a8d84f4c5c1eea"></div>
+          </div>
+          <a href="https://www.effectivecpmnetwork.com/pyz9djf0zb" target="_blank" class="w-full btn-pink text-white font-black py-3.5 rounded-2xl shadow-md flex items-center justify-center gap-2 cursor-pointer text-sm tracking-wide animate-pulse">
+            <i class="fa-solid fa-gift text-lg"></i> <span id="txtPromoBtn">🚀 خەڵات و دیاریێن ئەڤڕۆ (کلیک بکە)</span> <i class="fa-solid fa-circle-arrow-right text-xs"></i>
+          </a>
+        </div>
+
+        <div class="glass rounded-3xl p-5 mt-5">
+          <h3 class="text-sm font-bold text-pink-500 mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-question"></i> <span id="txtFaqHeader">پرسیارێن بەربڵاو (FAQs)</span>
+          </h3>
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">
+              <span id="faqQ1">ئەرێ دابەزاندنا ڤیدیۆیان پارەیە؟</span> <i class="fa-solid fa-chevron-down text-xs text-slate-500"></i>
+            </button>
+            <div class="faq-content">
+              <p class="pb-3" id="faqA1">نەخێر، خزمەتگوزاریا KrdDown ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-5 mt-5 text-center">
+          <div class="star-rating">
+            <input type="radio" id="5-stars" name="rating" value="5" onclick="submitRate(5)" />
+            <label for="5-stars" class="fas fa-star"></label>
+            <input type="radio" id="4-stars" name="rating" value="4" onclick="submitRate(4)" />
+            <label for="4-stars" class="fas fa-star"></label>
+            <input type="radio" id="3-stars" name="rating" value="3" onclick="submitRate(3)" />
+            <label for="3-stars" class="fas fa-star"></label>
+            <input type="radio" id="2-stars" name="rating" value="2" onclick="submitRate(2)" />
+            <label for="2-stars" class="fas fa-star"></label>
+            <input type="radio" id="1-star" name="rating" value="1" onclick="submitRate(1)" />
+            <label for="1-star" class="fas fa-star"></label>
+          </div>
+          <p id="rateThanks" class="hidden text-xs text-emerald-400 mt-2 font-bold">...</p>
+        </div>
+      </main>
+
+      <footer class="container mx-auto px-4 py-6 text-center text-[10px] text-slate-500">
+        <p id="footerCredit">© 2026 KrdDown. گەشەپێدەر زانیار المزوري الکوردي، هەموو مافەکان پارێزراون.</p>
+      </footer>
+    </div>
+
+    <!-- ADVANCED USER GALLERY LAYER -->
+    <div id="customGalleryModal" class="custom-gallery-modal">
+        <div class="custom-gallery-content">
+            <button onclick="closeCustomGallery()" class="custom-gallery-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button onclick="navigateCustomGallery(-1)" class="custom-gallery-nav custom-gallery-prev">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="w-full bg-slate-900/90 rounded-3xl border border-white/10 p-4 shadow-2xl">
+                <video id="galleryPopupVideo" class="w-full max-h-[70vh] object-contain rounded-xl bg-black" controls></video>
+                <div class="mt-3 flex flex-col gap-2">
+                    <h3 id="galleryPopupAuthor" class="font-bold text-sm text-pink-500"></h3>
+                    <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
+                        <p id="galleryPopupDesc" class="text-xs text-slate-300 truncate max-w-[75%]"></p>
+                        <button onclick="copyGalleryCaption()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-2 mt-4 pt-3 border-t border-white/5">
+                    <button id="galleryPopupDlBtn" class="flex-1 btn-pink text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 shadow-md">
+                        <i class="fa-solid fa-download"></i> داونلۆدا بلەز
+                    </button>
+                    <button id="galleryPopupAudioBtn" class="flex-1 bg-white/10 text-white py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-music"></i> MP3 دەنگ
+                    </button>
+                </div>
+            </div>
+            <button onclick="navigateCustomGallery(1)" class="custom-gallery-nav custom-gallery-next">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
         let currentLang = localStorage.getItem('tikjet_lang') || '';
         let currentMode = 'link';
         let albumImages = [];
         let searchHistory = JSON.parse(localStorage.getItem('tikjet_history') || '[]');
         let currentActiveVideoUrl = '';
         let deferredPrompt;
-
-        // Global state for username list preview mode
         let activeGalleryList = [];
         let activeGalleryIndex = 0;
 
         const langData = {
             badini: {
-                title: 'دابەزاندنا ڤیدیۆ و ستۆریێن تیکتۆکێ بێ لۆگۆ',
+                title: 'دابەزاندنا ڤیدیۆ و ستۆریێن تۆڕێن جڤاکی بێ لۆگۆ',
                 placeholder: 'لینکی ڤیدیۆیێ لڤێرە دانێ...', placeholderUser: 'ناڤێ حسابێ بنڤیسە...',
-                paste: 'پێوەکە', download: 'دابەزینە', quickQ: 'دێ چەوا ڤیدیۆ و ستۆری دابەزێنم？',
-                guideT: 'ڕێبەرێ دابەزاندنێ یێ بلەز', rateText: 'نرخاندنا مالپەری بکە (Rate TIKJET)',
+                paste: 'پێوەکە', download: 'دابەزینە', quickQ: 'دێ چەوا میدیا دابەزێنم؟',
+                guideT: 'ڕێبەرێ دابەزاندنێ یێ بلەز', rateText: 'نرخاندنا مالپەری بکە',
                 faqHead: 'پرسیارێن بەربڵاو (FAQs)', thanks: 'سوپاس بۆ دەنگدان و پشتەڤانیا تە! 🌟',
                 followers: 'فۆڵۆوێرس', hearts: 'لایکەکان', album: 'ئەلبومێن وێنەیان', history: 'دوایین لێگەرینەکان',
                 visitSponsor: 'سەردان بکە', copyText: 'کۆپی بکە', copiedText: 'کۆپی بوو! ✅', supportTitle: 'پشتەڤانیا تە بومن 💎',
-                aboutRole: 'گەشەپێدەر & چێکەرێ ناڤەڕۆکێ', aboutBio: 'بناخەدانەر و گەشەپێدەرێ وێبسایتێ TikJet. ئەز کار دکەم بۆ پێشکەشکرنا باشترین و خێراترین کەرەستەیێن تەکنیکی بۆ ئاسانکرنا کارێن جەماوەری.',
                 trendingTitle: 'ڤیدیۆیێن ترێند یێن کوردی (Trending Reels)', shareTitle: 'لینکێ سایتێ مە بەڵاڤ بکە دگەل هەڤالێن خۆ:',
                 pwaDesc: 'داخستن و جێگیرکرنا مالپەری وەک ئەپلیکەسیۆن ل سەر شاشێ.', pwaLater: 'پاشان', pwaInstall: 'جێگیرکە',
-                iosTitle: 'TikJet دابەزێنە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمێ iOS / iPhone',
+                iosTitle: 'KrdDown دابەزێنە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمێ iOS / iPhone',
                 iosStep1: 'ل خوارێ کلیک ل سەر دوگمەیا بارکردنێ Share بکە.', iosStep2: 'پاشان کلیک ل سەر Add to Home Screen بکە.', iosStep3: 'ل لایێ ڕاست کلیک ل سەر Add بکە.', iosThanks: 'سۆپاس، تێگەهشتم',
                 qualitySel: 'کواڵیتیا دابەزاندنێ هەلبژێرە:', quickDl: 'داونلۆدا بلەز', audioDl: 'MP3 دەنگ', dlAll: 'هەمی دابەزینە',
                 clearHistory: 'پاککرنەوە', promoBtn: '🚀 خەڵات و دیاریێن ئەڤڕۆ (کلیک بکە)',
-                faqQ1: 'ئەرێ دابەزاندنا ڤیدیۆیان پارەیە？', faqA1: 'نەخێر، خزمەتگوزاریا TIKJET ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.',
-                footer: '© 2026 TIKJET. گەشەپێدەر زانیار المزوري الکوردي، هەموو مافەکان پارێزراون.'
+                faqQ1: 'ئەرێ دابەزاندنا ڤیدیۆیان پارەیە؟', faqA1: 'نەخێر، خزمەتگوزاریا KrdDown ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.',
+                footer: '© 2026 KrdDown. گەشەپێدەر زانیار المزوري الکوردي، هەموو مافەکان پارێزراون.'
             },
             sorani: {
-                title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تیکتۆک بێ لۆگۆ',
-                placeholder: 'لینکی ڤیدیۆکە لێرە dابنێ...', placeholderUser: 'ناوی ئەکاونتەکە بنووسە...',
-                paste: 'پەیست بکە', download: 'دایبەزێنە', quickQ: 'چۆن ڤیدیۆ و ستۆری دابگرم？',
+                title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تۆڕە جڤاکیەکان بێ لۆگۆ',
+                placeholder: 'لینکی ڤیدیۆکە لێرە دابنێ...', placeholderUser: 'ناوی ئەکاونتەکە بنووسە...',
+                paste: 'پەیست بکە', download: 'دایبەزێنە', quickQ: 'چۆن میدیا دابگرم؟',
                 guideT: 'ڕێبەری خێرای داگرتن', rateText: 'نرخاندنی ماڵپەڕەکە بکە',
                 faqHead: 'پرسیارە باوەکان (FAQs)', thanks: 'سوپاس بۆ دەنگدانەکەت! 🌟',
                 followers: 'فۆڵۆوێرس', hearts: 'لایکەکان', album: 'ئەلبومی وێنەکان', history: 'دوایین گەڕانەکان',
                 visitSponsor: 'سەردان بکە', copyText: 'کۆپی بکە', copiedText: 'کۆپی بوو! ✅', supportTitle: 'پشتگیری تۆ بۆ من 💎',
-                aboutRole: 'گەشەپێدەر & دروستکەری ناوەڕۆک', aboutBio: 'دامەزرێنەر و گەشەپێدەری ماڵپەڕی TikJet. کاردەکەم بۆ پێشکەشکردنی باشترین ئامرازەکان.',
                 trendingTitle: 'ڤیدیۆ ترێندە کوردییەکان (Trending Reels)', shareTitle: 'لینکی ماڵپەڕەکەمان بڵاو بکەرەوە لەگەڵ هاوڕێکانت:',
                 pwaDesc: 'داگرتن و جێگیرکردنی ماڵپەڕەکە وەک ئەپ بۆ سەر شاشەی سەرەکی.', pwaLater: 'پاشان', pwaInstall: 'جێگیرکە',
-                iosTitle: 'TikJet داگرە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمی iOS / iPhone',
+                iosTitle: 'KrdDown داگرە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمی iOS / iPhone',
                 iosStep1: 'لە خوارەوە کلیک لەسەر دوگمەی Share بکە.', iosStep2: 'پاشان کلیک لەسەر Add to Home Screen بکە.', iosStep3: 'لە لای ڕاست کلیک لەسەر Add بکە.', iosThanks: 'سوپاس، تێگەیشتم',
                 qualitySel: 'کوالێتی داگرتن هەڵبژێرە:', quickDl: 'داگرتنی خێرا', audioDl: 'دەنگی MP3', dlAll: 'هەموو دابەزێنە',
                 clearHistory: 'پاککردنەوە', promoBtn: '🚀 خەڵات و دیارییەکانی ئەمڕۆ (کلیک بکە)',
-                faqQ1: 'ئایا داگرتنی ڤیدیۆکان پارەیە？', faqA1: 'نەخێر، خزمەتگوزاری TIKJET بە تەواوی بێبەرامبەرە و تۆ دەتوانیت بێ سنوور ڤیدیۆکان دابگریت.',
-                footer: '© 2026 TIKJET. گەشەپێدەر زانیار المزوري الکوردی، هەموو مافەکان پارێزراون.'
+                faqQ1: 'ئایا داگرتنی ڤیدیۆکان پارەیە؟', faqA1: 'نەخێر، خزمەتگوزاری KrdDown بە تەواوی بێبەرامبەرە و تۆ دەتوانیت بێ سنوور ڤیدیۆکان دابگریت.',
+                footer: '© 2026 KrdDown. گەشەپێدەر زانیار المزوري الکوردی، هەموو مافەکان پارێزراون.'
             },
             ar: {
-                title: 'تحميل فيديوهات وقصص تيك توك بدون علامة مائية',
+                title: 'تحميل فيديوهات وقصص منصات التواصل بدون علامة مائية',
                 placeholder: 'ضع رابط الفيديو هنا...', placeholderUser: 'أدخل اسم المستخدم...',
-                paste: 'لصق', download: 'تحميل', quickQ: 'كيف يمكنني تحميل الفيديو والستوري؟',
+                paste: 'لصق', download: 'تحميل', quickQ: 'كيف يمكنني تحميل الميديا؟',
                 guideT: 'دليل التحميل السريع', rateText: 'قيّم موقعنا',
                 faqHead: 'الأسئلة الشائعة (FAQs)', thanks: 'شكراً لتقييمك ودعمك! 🌟',
                 followers: 'متابعين', hearts: 'إعجابات', album: 'ألبوم الصور', history: 'آخر عمليات البحث',
                 visitSponsor: 'زيارة الحساب', copyText: 'نسخ', copiedText: 'تم النسخ! ✅', supportTitle: 'دعمك لي 💎',
-                aboutRole: 'مطور ومنشئ محتوى', aboutBio: 'مؤسس ومطور موقع TikJet. أعمل على تقديم أفضل وأسرع الأدوات التقنية لتسهيل الاستخدام للجميع.',
                 trendingTitle: 'الفيديوهات الكردية الرائجة (Trending Reels)', shareTitle: 'شارك رابط موقعنا مع أصدقائك:',
                 pwaDesc: 'تثبيت وتحميل الموقع كتطبيق مباشر على شاشة هاتفك.', pwaLater: 'لاحقاً', pwaInstall: 'تثبيت',
-                iosTitle: 'تحميل TikJet كتطبيق', iosSubtitle: 'مخصص لأنظمة iOS / iPhone',
+                iosTitle: 'تحميل KrdDown كتطبيق', iosSubtitle: 'مخصص لأنظمة iOS / iPhone',
                 iosStep1: 'في الأسفل انقر على زر المشاركة Share.', iosStep2: 'ثم اختر إضافة إلى الشاشة الرئيسية Add to Home Screen.', iosStep3: 'في الأعلى انقر على إضافة Add.', iosThanks: 'شكراً، فهمت',
                 qualitySel: 'اختر جودة التحميل:', quickDl: 'تحميل سريع', audioDl: 'صوت MP3', dlAll: 'تحميل الكل',
                 clearHistory: 'مسح السجل', promoBtn: '🚀 جوائز وهدايا اليوم (اضغط هنا)',
-                faqQ1: 'هل تحميل الفيديوهات مدفوع؟', faqA1: 'لا، خدمة TIKJET مجانية تماماً ويمكنك تحميل الفيديوهات بلا حدود.',
-                footer: '© 2026 TIKJET. المطور زانيار المزوري الكردي، جميع الحقوق محفوظة.'
+                faqQ1: 'هل تحميل الفيديوهات مدفوع؟', faqA1: 'لا، خدمة KrdDown مجانية تماماً ويمكنك تحميل الفيديوهات بلا حدود.',
+                footer: '© 2026 KrdDown. المطور زانيار المزوري الكردي، جميع الحقوق محفوظة.'
             },
             en: {
-                title: 'Download TikTok Videos & Stories Without Watermark',
+                title: 'Download Social Media Videos & Stories Without Watermark',
                 placeholder: 'Paste video link here...', placeholderUser: 'Enter username...',
-                paste: 'Paste', download: 'Download', quickQ: 'How to download video and story?',
+                paste: 'Paste', download: 'Download', quickQ: 'How to download media?',
                 guideT: 'Quick Download Guide', rateText: 'Rate our website',
                 faqHead: 'Frequently Asked Questions', thanks: 'Thanks for your rating and support! 🌟',
                 followers: 'Followers', hearts: 'Likes', album: 'Photo Album', history: 'Recent Searches',
                 visitSponsor: 'Visit Profile', copyText: 'Copy', copiedText: 'Copied! ✅', supportTitle: 'Your Support Me 💎',
-                aboutRole: 'Developer & Content Creator', aboutBio: 'Founder and developer of TikJet. Working to provide the best and fastest technical tools for public convenience.',
                 trendingTitle: 'Trending Kurdish Videos (Reels)', shareTitle: 'Share our website link with your friends:',
                 pwaDesc: 'Install and add this website as an app on your home screen.', pwaLater: 'Later', pwaInstall: 'Install',
-                iosTitle: 'Download TikJet as App', iosSubtitle: 'Exclusive for iOS / iPhone devices',
+                iosTitle: 'Download KrdDown as App', iosSubtitle: 'Exclusive for iOS / iPhone devices',
                 iosStep1: 'At the bottom, click on the Share button.', iosStep2: 'Then scroll down and click Add to Home Screen.', iosStep3: 'At the top right, click on Add.', iosThanks: 'Thanks, I got it',
                 qualitySel: 'Select Download Quality:', quickDl: 'Quick Download', audioDl: 'MP3 Audio', dlAll: 'Download All',
                 clearHistory: 'Clear History', promoBtn: '🚀 Today\'s Rewards & Gifts (Click Here)',
-                faqQ1: 'Is downloading videos free?', faqA1: 'No, TIKJET service is completely free and you can download videos without any limitations.',
-                footer: '© 2026 TIKJET. Developed by Zanyar Al-Mzuri Al-Kurdi, All Rights Reserved.'
+                faqQ1: 'Is downloading videos free?', faqA1: 'No, KrdDown service is completely free and you can download videos without any limitations.',
+                footer: '© 2026 KrdDown. Developed by Zanyar Al-Mzuri Al-Kurdi, All Rights Reserved.'
             }
         };
+
+        // Trigger welcome popup once layout loads
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('welcomeModal').classList.add('show');
+            }, 600);
+        });
+
+        function selectNetwork(name, gradient) {
+            document.getElementById('welcomeModal').classList.remove('show');
+            const downloadBtn = document.getElementById('btnDownload');
+            downloadBtn.style.background = gradient;
+            toast(`تۆڕێ ${name} هاتە هەڵبژاردن! 🚀`, 'fa-circle-check');
+        }
+
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('show');
+        }
+
+        function closeContactModal(e) {
+            if(e.target.id === 'contactModal') {
+                document.getElementById('contactModal').classList.remove('show');
+            }
+        }
 
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -1066,9 +1076,9 @@
         window.addEventListener('focus', () => {
             if (typeof navigator.clipboard !== 'undefined' && typeof navigator.clipboard.readText === 'function') {
                 navigator.clipboard.readText().then(text => {
-                    if (text && (text.includes('tiktok.com') || text.includes('vt.tiktok.com')) && document.getElementById('tiktokUrl').value === '') {
+                    if (text && (text.includes('tiktok.com') || text.includes('instagram.com')) && document.getElementById('tiktokUrl').value === '') {
                         document.getElementById('tiktokUrl').value = text;
-                        toast('لینکێ کۆپیکری خۆکارانە پەیست بوو! 📋', 'fa-paste');
+                        toast('لینکێ خۆکارانە پەیست بوو! 📋', 'fa-paste');
                     }
                 }).catch(() => { });
             }
@@ -1076,9 +1086,9 @@
 
         function copyCaptionText() {
             const desc = document.getElementById('previewDescription').textContent;
-            if(!desc.trim()) return toast('چ دەق لڤێرە nینە!', 'fa-exclamation-triangle');
+            if(!desc.trim()) return toast('چ دەق لڤێرە نینە!', 'fa-exclamation-triangle');
             navigator.clipboard.writeText(desc).then(() => {
-                toast('وەسف و هاشتاگ هاتنە کۆپیکردن! 📋', 'fa-copy');
+                toast('وەسف هاتە کۆپیکردن! 📋', 'fa-copy');
                 const btnSpan = document.getElementById('txtCopyCap');
                 btnSpan.textContent = 'کۆپی بوو! ✅';
                 setTimeout(() => { btnSpan.textContent = 'کۆپی بکە'; }, 2000);
@@ -1091,14 +1101,14 @@
         }
 
         function shareToTelegram() {
-            window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent("باشترین سایت بۆ دابەزاندنا ڤیدیۆیێن تیکتۆکێ بێ لۆگۆ! 🚀")}`, '_blank');
+            window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent("باشترین سایت بۆ دابەزاندنا ڤیدیۆیان! 🚀")}`, '_blank');
             toast('ڕەوانەی تێلێگرامێ بوو! 💙', 'fa-telegram');
         }
 
         function loadTrendingVideo(url) {
             switchMode('link');
             document.getElementById('tiktokUrl').value = url;
-            toast('ڤیدیۆیا ترێند هاتە جێگیرکرن، کلیک ل دابەزینە بکە!', 'fa-fire');
+            toast('ڤیدیۆیا ترێند هاتە جێگیرکرن!', 'fa-fire');
             document.getElementById('tiktokUrl').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1118,12 +1128,7 @@
         }
 
         function toggleQuickGuide() { document.getElementById('quickGuideBox').classList.toggle('hidden'); }
-        function toggleSupportBox() {
-            const content = document.getElementById('supportBoxContent');
-            const icon = document.getElementById('supportBoxIcon');
-            if (content.style.maxHeight) { content.style.maxHeight = null; icon.style.transform = "rotate(0deg)"; }
-            else { content.style.maxHeight = content.scrollHeight + "px"; icon.style.transform = "rotate(180deg)"; }
-        }
+        
         function toggleFaq(btn) {
             const content = btn.nextElementSibling;
             const icon = btn.querySelector('i');
@@ -1146,7 +1151,6 @@
             const l = langData[lang] || langData['badini'];
             
             document.documentElement.dir = (lang === 'en' || lang === 'badini' || lang === 'sorani') ? ((lang === 'en') ? 'ltr' : 'rtl') : 'rtl';
-            if (lang === 'en') { document.documentElement.dir = 'ltr'; } else { document.documentElement.dir = 'rtl'; }
             
             document.getElementById('mainTitle').textContent = l.title;
             document.getElementById('txtPaste').textContent = l.paste;
@@ -1159,10 +1163,6 @@
             document.getElementById('txtHearts').textContent = l.hearts;
             document.getElementById('txtAlbum').textContent = l.album;
             document.getElementById('txtHistoryTitle').textContent = l.history;
-            document.getElementById('btnVisitSponsor').textContent = l.visitSponsor;
-            document.getElementById('txtSupportTitle').textContent = l.supportTitle;
-            document.getElementById('aboutRole').textContent = l.aboutRole;
-            document.getElementById('aboutBio').textContent = l.aboutBio;
             document.getElementById('txtTrendingSectionTitle').textContent = l.trendingTitle;
             document.getElementById('txtShareSectionTitle').textContent = l.shareTitle;
             document.getElementById('txtPwaDesc').textContent = l.pwaDesc;
@@ -1187,7 +1187,6 @@
             document.getElementById('faqA1').textContent = l.faqA1;
             document.getElementById('footerCredit').textContent = l.footer;
             
-            document.querySelectorAll('.txtCopyBtn').forEach(b => b.textContent = l.copyText);
             document.getElementById('tiktokUrl').placeholder = currentMode === 'link' ? l.placeholder : l.placeholderUser;
         }
 
@@ -1224,20 +1223,7 @@
                     document.getElementById('tiktokUrl').value = text;
                     toast('لینک پەیست بوو 📋', 'fa-paste');
                 }).catch(() => { toast('دەستەیری نینە بۆ پەیستکرنێ!', 'fa-exclamation-triangle'); });
-            } else {
-                toast('ئەو بەرنامەیە ڕێگە بە دەستگەیشتن نادات!', 'fa-exclamation-triangle');
             }
-        }
-
-        function copyToClipboard(text, name) {
-            navigator.clipboard.writeText(text).then(() => {
-                const l = langData[currentLang] || langData['badini'];
-                toast(`${name} هاتە کۆپیکردن! 📋`, 'fa-copy');
-                const btn = event.currentTarget;
-                const span = btn.querySelector('.txtCopyBtn');
-                span.textContent = l.copiedText;
-                setTimeout(() => { span.textContent = l.copyText; }, 2000);
-            });
         }
 
         function animateProgress() {
@@ -1294,25 +1280,24 @@
         }
 
         function downloadWithQuality(quality) {
-            if (!currentActiveVideoUrl) return toast('هیچ میدیا مەکەتە دەستپێشخەری!', 'fa-times');
+            if (!currentActiveVideoUrl) return toast('هیچ میدیا نینە!', 'fa-times');
             toast(`کواڵیتیا ${quality} دهێتە حازرکرن... 🚀`, 'fa-circle-notch fa-spin');
-            setTimeout(() => { forceDownload(currentActiveVideoUrl, `TIKJET_${quality}_video.mp4`); }, 1000);
+            setTimeout(() => { forceDownload(currentActiveVideoUrl, `KrdDown_${quality}_video.mp4`); }, 1000);
         }
 
         function downloadPremiumQuality() {
-            toast('بۆ دابەزاندنا 4K HDR، دێ هێیە ڕەوانەکرن بۆ لاپەڕێ ڕیکلامێ... 🔒', 'fa-lock');
+            toast('بۆ دابەزاندنا 4K HDR، دێ هێیە ڕەوانەکرن... 🔒', 'fa-lock');
             setTimeout(() => {
                 window.open('https://www.effectivecpmnetwork.com/pyz9djf0zb', '_blank');
-                if (currentActiveVideoUrl) { forceDownload(currentActiveVideoUrl, 'TIKJET_4K_HDR_DolbyVision.mp4'); }
+                if (currentActiveVideoUrl) { forceDownload(currentActiveVideoUrl, 'KrdDown_4K_HDR.mp4'); }
             }, 1500);
         }
 
         function downloadAllPhotos() {
             if (albumImages.length === 0) return;
-            albumImages.forEach((url, i) => { setTimeout(() => forceDownload(url, `TIKJET_Image_${i+1}.jpg`), i * 400); });
+            albumImages.forEach((url, i) => { setTimeout(() => forceDownload(url, `KrdDown_Image_${i+1}.jpg`), i * 400); });
         }
 
-        /* --- FUNCTIONS FOR SYSTEM MODAL INTERFACE GALLERY (BACK, NEXT, CLOSE) --- */
         async function openCustomGallery(index) {
             if(!activeGalleryList || activeGalleryList.length === 0) return;
             activeGalleryIndex = index;
@@ -1323,9 +1308,7 @@
         async function loadVideoInGalleryPopup() {
             const currentItem = activeGalleryList[activeGalleryIndex];
             const videoElement = document.getElementById('galleryPopupVideo');
-            videoElement.pause();
-            videoElement.src = '';
-
+            videoElement.pause(); videoElement.src = '';
             document.getElementById('galleryPopupAuthor').textContent = "...";
             document.getElementById('galleryPopupDesc').textContent = "دهێتە حازرکرن / Loading...";
 
@@ -1338,16 +1321,15 @@
                     const d = json.data;
                     videoElement.src = d.play;
                     videoElement.play().catch(()=>{});
-                    document.getElementById('galleryPopupAuthor').textContent = d.author.nickname || 'TikTok User';
+                    document.getElementById('galleryPopupAuthor').textContent = d.author.nickname || 'User';
                     document.getElementById('galleryPopupDesc').textContent = d.title || '';
-                    
-                    document.getElementById('galleryPopupDlBtn').onclick = () => forceDownload(d.play, `TIKJET_${d.id}.mp4`);
-                    document.getElementById('galleryPopupAudioBtn').onclick = () => forceDownload(d.music, `TIKJET_AUDIO_${d.id}.mp3`);
+                    document.getElementById('galleryPopupDlBtn').onclick = () => forceDownload(d.play, `KrdDown_${d.id}.mp4`);
+                    document.getElementById('galleryPopupAudioBtn').onclick = () => forceDownload(d.music, `KrdDown_AUDIO_${d.id}.mp3`);
                 } else {
-                    document.getElementById('galleryPopupDesc').textContent = "میدیا نەهاتە دیتن! / Media Not Found";
+                    document.getElementById('galleryPopupDesc').textContent = "میدیا نەهاتە دیتن!";
                 }
-            } catch(e) {
-                document.getElementById('galleryPopupDesc').textContent = "کێشەیەک د تۆرێ دا هەیە / Network Error";
+            } catch {
+                document.getElementById('galleryPopupDesc').textContent = "کێشەیەک د تۆرێ دا هەیە";
             }
         }
 
@@ -1366,12 +1348,9 @@
 
         function copyGalleryCaption() {
             const desc = document.getElementById('galleryPopupDesc').textContent;
-            if(!desc || desc.startsWith("دهێتە")) return toast('چ دەق لڤێرە نینە!', 'fa-exclamation-triangle');
-            navigator.clipboard.writeText(desc).then(() => {
-                toast('وەسف و هاشتاگ هاتنە کۆپیکردن! 📋', 'fa-copy');
-            });
+            if(!desc || desc.startsWith("دهێتە")) return toast('چ دەق نینە!', 'fa-exclamation-triangle');
+            navigator.clipboard.writeText(desc).then(() => { toast('دەق هاتە کۆپیکردن! 📋', 'fa-copy'); });
         }
-        /* ------------------------------------------------------------------------ */
 
         async function downloadVideo() {
             let input = document.getElementById('tiktokUrl').value.trim();
@@ -1412,7 +1391,7 @@
                             const pCard = document.getElementById('previewCard'); pCard.classList.remove('hidden');
                             document.getElementById('previewImage').classList.add('hidden'); document.getElementById('previewVideo').classList.remove('hidden');
                             document.getElementById('previewVideo').src = d.play;
-                            document.getElementById('previewAuthor').textContent = d.author.nickname || 'TikTok User';
+                            document.getElementById('previewAuthor').textContent = d.author.nickname || 'User';
                             document.getElementById('previewDescription').textContent = d.title || '';
                             document.getElementById('previewDownloadBtn').onclick = () => forceDownload(d.play, 'video.mp4');
                             document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(d.music, 'music.mp3');
@@ -1425,10 +1404,7 @@
                             document.getElementById('vipFollowers').textContent = 'N/A'; document.getElementById('vipHearts').textContent = 'N/A';
                             
                             const grid = document.getElementById('vipPostGrid'); grid.innerHTML = '';
-                            
-                            activeGalleryList = posts.map(p => ({
-                                url: `https://www.tiktok.com/@${user.unique_id}/video/${p.video_id}`
-                            }));
+                            activeGalleryList = posts.map(p => ({ url: `https://www.tiktok.com/@${user.unique_id}/video/${p.video_id}` }));
 
                             posts.forEach((p, idx) => {
                                 const item = document.createElement('div');
@@ -1441,7 +1417,7 @@
                         } else { toast('چو پۆست نەهاتنە دیتن!', 'fa-times'); }
                     }
                     toast('سەرکەفتی بوو! 🎉', 'fa-check');
-                } else { toast('میدیا یان حساب نەهاتە دیتن!', 'fa-times'); }
+                } else { toast('میدیا نەهاتە دیتن!', 'fa-times'); }
             } catch { toast('کێشەیەک هەیە د تۆرێ دا!', 'fa-times'); }
             finally { btn.disabled = false; }
         }
@@ -1458,5 +1434,5 @@
         document.getElementById('langSelect').value = currentLang;
         renderHistory();
     </script>
-                                    </body>
-                                  </html>
+  </body>
+</html>

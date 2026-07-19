@@ -906,7 +906,7 @@
             sorani: {
                 title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تۆڕە جڤاکیەکان بێ لۆگۆ',
                 placeholder: 'لینکی ڤیدیۆکە لێرە دابنێ...', placeholderUser: 'ناوی ئەکاونتەکە بنووسە...',
-                paste: 'پەیست بکە', download: 'دایبەزێنە', quickQ: 'چۆن میدیا دابگرم؟',
+                paste: 'پەیست بکە', download: 'دایبەزێنە', quickQ: 'چۆن میدیا دابگرم？',
                 guideT: 'ڕێبەری خێرای داگرتن', rateText: 'نرخاندنی ماڵپەڕەکە بکە',
                 faqHead: 'پرسیارە باوەکان (FAQs)', thanks: 'سوپاس بۆ دەنگدانەکەت! 🌟',
                 followers: 'فۆڵۆوێرس', hearts: 'لایکەکان', album: 'ئەلبومی وێنەکان', history: 'دوایین گەڕانەکان',
@@ -923,7 +923,7 @@
             ar: {
                 title: 'تحميل فيديوهات وقصص منصات التواصل بدون علامة مائية',
                 placeholder: 'ضع رابط الفيديو هنا...', placeholderUser: 'أدخل اسم المستخدم...',
-                paste: 'لصق', download: 'تحميل', quickQ: 'كيف يمكنني تحميل الميديا？',
+                paste: 'لصق', download: 'تحميل', quickQ: 'كيف يمكنني تحميل الميديا؟',
                 guideT: 'دليل التحميل السريع', rateText: 'قيّم موقعنا',
                 faqHead: 'الأسئلة الشائعة (FAQs)', thanks: 'شكراً لتقييمك ودعمك! 🌟',
                 followers: 'متابعين', hearts: 'إعجابات', album: 'ألبوم الصور', history: 'آخر عمليات البحث',
@@ -1036,7 +1036,7 @@
         window.addEventListener('focus', () => {
             if (navigator.clipboard && typeof navigator.clipboard.readText === 'function') {
                 navigator.clipboard.readText().then(text => {
-                    if (text && (text.includes('tiktok.com') || text.includes('instagram.com')) && document.getElementById('tiktokUrl').value === '') {
+                    if (text && (text.includes('tiktok.com') || text.includes('instagram.com') || text.includes('facebook.com') || text.includes('pinterest.com') || text.includes('snapchat.com')) && document.getElementById('tiktokUrl').value === '') {
                         document.getElementById('tiktokUrl').value = text;
                         toast('لینکێ خۆکارانە پەیست بوو! 📋', 'fa-paste');
                     }
@@ -1329,6 +1329,59 @@
             document.getElementById('photoCard').classList.add('hidden');
             document.getElementById('vipUserCard').classList.add('hidden');
             
+            // ئەگەر لینکەکە هی تۆڕەکانی تر بێت جگە لە تیکتۆک، لە ڕێگەی Cobalt API چارەسەر دەکرێت
+            if (currentMode === 'link' && (!input.includes('tiktok.com') && !input.includes('vmt.io'))) {
+                try {
+                    const response = await fetch('https://api.cobalt.tools/api/json', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({ url: input, videoQuality: '720', filenamePattern: 'basic' })
+                    });
+                    const result = await response.json();
+                    
+                    if (result.status === 'redirect' || result.status === 'stream') {
+                        saveToHistory(input, currentMode);
+                        currentActiveVideoUrl = result.url;
+                        
+                        const pCard = document.getElementById('previewCard'); 
+                        pCard.classList.remove('hidden');
+                        document.getElementById('previewImage').classList.add('hidden'); 
+                        document.getElementById('previewVideo').classList.remove('hidden');
+                        
+                        document.getElementById('previewVideo').src = result.url;
+                        document.getElementById('previewAuthor').textContent = 'Social Media Media';
+                        document.getElementById('previewDescription').textContent = 'Ready to Download';
+                        document.getElementById('previewDownloadBtn').onclick = () => forceDownload(result.url, 'download.mp4');
+                        document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(result.url, 'audio.mp3');
+                        
+                        toast('سەرکەفتی بوو! 🎉', 'fa-check');
+                    } else if (result.status === 'picker' && result.picker && result.picker.length > 0) {
+                        saveToHistory(input, currentMode);
+                        albumImages = result.picker.map(item => item.url);
+                        const grid = document.getElementById('photoGrid'); 
+                        grid.innerHTML = '';
+                        
+                        albumImages.forEach((url, i) => {
+                            const proxyUrl = `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
+                            const container = document.createElement('div');
+                            container.className = "relative group rounded-lg overflow-hidden";
+                            container.innerHTML = `<img src="${proxyUrl}" class="w-full aspect-square object-cover" alt="Image"><button onclick="forceDownload('${url}', 'img_${i}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
+                            grid.appendChild(container);
+                        });
+                        document.getElementById('photoCard').classList.remove('hidden');
+                        toast('سەرکەفتی بوو! 🎉', 'fa-check');
+                    } else {
+                        toast('میدیا نەهاتە دیتن یان بلۆک کراوە!', 'fa-times');
+                    }
+                } catch {
+                    toast('کێشەیەک هەیە د سێرڤەری گشتی دا!', 'fa-times');
+                } finally {
+                    btn.disabled = false;
+                }
+                return;
+            }
+
+            // لۆژیکی سەرەکی تیکتۆک بەبێ گۆڕانکاری
             try {
                 let apiUrl = currentMode === 'link' 
                     ? `https://www.tikwm.com/api/?url=${encodeURIComponent(input)}` 
@@ -1345,9 +1398,11 @@
                             albumImages = d.images;
                             const grid = document.getElementById('photoGrid'); grid.innerHTML = '';
                             d.images.forEach((url, i) => {
+                                // بەکارهێنانی Image Proxy بۆ چارەسەری CORS لە وێنەکانی تیکتۆکدا
+                                const proxyUrl = `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
                                 const container = document.createElement('div');
                                 container.className = "relative group rounded-lg overflow-hidden";
-                                container.innerHTML = `<img src="${url}" class="w-full aspect-square object-cover" alt="Album Image"><button onclick="forceDownload('${url}', 'img_${i}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
+                                container.innerHTML = `<img src="${proxyUrl}" class="w-full aspect-square object-cover" alt="Album Image"><button onclick="forceDownload('${url}', 'img_${i}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
                                 grid.appendChild(container);
                             });
                             document.getElementById('photoCard').classList.remove('hidden');

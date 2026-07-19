@@ -1,10 +1,10 @@
-const CACHE_NAME = 'tikjet-v1';
+const CACHE_NAME = 'krddown-v1';
 const ASSETS = [
   '/',
   '/index.html',
+  '/manifest.json',
   '/icon.png',
-  '/profile.jpg',
-  '/manifest.json'
+  '/profile.jpg'
 ];
 
 self.addEventListener('install', (e) => {

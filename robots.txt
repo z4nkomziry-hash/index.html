@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tikjet.vercel.app/sitemap.xml
+Sitemap: https://krddown.vercel.app/sitemap.xml

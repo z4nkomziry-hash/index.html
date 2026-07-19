@@ -634,156 +634,125 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <div class="glass rounded-3xl p-5 mt-5 border border-amber-500/20">
-                                          <div class="flex items-center justify-between mb-3">
-                                            <div class="flex items-center gap-2">
-                                              <i class="fa-solid fa-hand-holding-heart text-amber-500">
-                                              </i> <span id="txtSponsorTitle" class="text-sm font-bold text-amber-400">پشتەڤانیا مە بکە (Sponsorship)</span>
-                                            </div>
-                                          </div>
-                                          <div class="mb-4 bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-sm">
-                                            <div class="flex items-center gap-3 w-full sm:w-auto">
-                                              <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 flex items-center justify-center text-slate-900 text-xl font-bold flex-shrink-0">
-                                                <i class="fa-brands fa-tiktok">
-                                                </i>
+                                        
+                                        <!-- بەشی پشتگیری و پەیوەندی هێڵدراوەتەوە بەپێی وێنەکە -->
+                                        <div class="glass rounded-3xl p-5 mt-5 border border-pink-500/10">
+                                          <div class="mb-4">
+                                            <button onclick="toggleSupportBox()" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/15 hover:to-purple-500/15 border border-pink-500/30 rounded-2xl cursor-pointer transition-all shadow-sm">
+                                              <div class="flex items-center gap-2.5">
+                                                <span class="flex h-3 w-3 relative">
+                                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75">
+                                                  </span>
+                                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+                                                  </span>
+                                                </span>
+                                                <span class="text-sm font-black text-pink-400" id="txtSupportTitle">پشتەڤانیا تە بومن 💎</span>
                                               </div>
-                                              <div>
-                                                <div class="flex items-center gap-1.5 flex-wrap">
-                                                  <span class="font-black text-sm text-amber-400">zano.b22@</span>
-                                                  <span class="text-[9px] font-bold bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full" id="badgeSponsor">...</span>
+                                              <i id="supportBoxIcon" class="fa-solid fa-chevron-down text-xs text-pink-400 transition-transform duration-300">
+                                              </i>
+                                            </button>
+                                            <div id="supportBoxContent" class="support-content space-y-2 mt-2">
+                                              <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
+                                                <div class="flex items-center gap-2 text-right">
+                                                  <span class="w-2 h-2 rounded-full bg-rose-500">
+                                                  </span>
+                                                  <div>
+                                                    <span class="text-[11px] font-bold block text-rose-400">FastPay</span>
+                                                    <span class="text-xs font-mono tracking-wider text-slate-200 block text-left" dir="ltr">+964 750 604 5491</span>
+                                                  </div>
                                                 </div>
-                                                <p class="text-[11px] text-slate-400 mt-0.5" id="descSponsor">...</p>
+                                                <button onclick="copyToClipboard('+9647506045491', 'FastPay')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all">
+                                                  <i class="fa-solid fa-copy text-[10px]">
+                                                  </i> <span class="txtCopyBtn">کۆپی بکە</span>
+                                                </button>
+                                              </div>
+                                              <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
+                                                <div class="flex items-center gap-2 w-[75%]">
+                                                  <span class="w-2 h-2 rounded-full bg-emerald-500">
+                                                  </span>
+                                                  <div class="w-full truncate">
+                                                    <span class="text-[11px] font-bold block text-emerald-400">USDT (TRC20)</span>
+                                                    <span class="text-xs font-mono tracking-tight text-slate-200 block truncate" dir="ltr">TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc</span>
+                                                  </div>
+                                                </div>
+                                                <button onclick="copyToClipboard('TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc', 'USDT')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all flex-shrink-0">
+                                                  <i class="fa-solid fa-copy text-[10px]">
+                                                  </i> <span class="txtCopyBtn">کۆپی بکە</span>
+                                                </button>
                                               </div>
                                             </div>
-                                            <div class="flex items-center gap-3 justify-between w-full sm:w-auto border-t border-white/5 pt-2.5 sm:pt-0 sm:border-none">
-                                              <span class="text-xs font-black text-white bg-slate-800/80 px-3 py-1.5 rounded-xl border border-white/5 flex items-center gap-1">50k <span class="text-amber-400">💎</span>
-                                            </span>
-                                            <a href="https://www.tiktok.com/@zano.b22" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-[11px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-all shadow-md shadow-amber-500/10">
-                                              <span id="btnVisitSponsor">سەردان بکە</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]">
-                                            </i>
-                                          </a>
-                                        </div>
-                                      </div>
-                                      <p id="txtSponsorDesc" class="text-xs text-slate-400 leading-relaxed mb-4">...</p>
-                                      <div class="sponsor-description mb-4" id="vipSponsorBioBox" style="font-size: 0.95rem; line-height: 1.6; color: #d1d1e0; background: linear-gradient(145deg, #16162a, #1f1f3e); padding: 15px; border-radius: 10px; border-right: 4px solid #ffb703;">
-                                        <p style="margin: 0 0 10px 0; font-weight: bold; color: #fff;" id="txtVipSponsorHeader">...</p>
-                                        <p style="margin: 0;" id="txtVipSponsorText">...</p>
-                                      </div>
-                                      <div class="mb-4">
-                                        <button onclick="toggleSupportBox()" class="w-full flex items-center justify-between p-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10 hover:from-pink-500/15 hover:to-purple-500/15 border border-pink-500/30 rounded-2xl cursor-pointer transition-all shadow-sm">
-                                          <div class="flex items-center gap-2.5">
-                                            <span class="flex h-3 w-3 relative">
-                                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75">
-                                              </span>
-                                              <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
-                                              </span>
-                                            </span>
-                                            <span class="text-sm font-black text-pink-400" id="txtSupportTitle">پشتەڤانیا تە بومن 💎</span>
                                           </div>
-                                          <i id="supportBoxIcon" class="fa-solid fa-chevron-down text-xs text-pink-400 transition-transform duration-300">
-                                          </i>
-                                        </button>
-                                        <div id="supportBoxContent" class="support-content space-y-2 mt-2">
-                                          <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
-                                            <div class="flex items-center gap-2 text-right">
-                                              <span class="w-2 h-2 rounded-full bg-rose-500">
-                                              </span>
-                                              <div>
-                                                <span class="text-[11px] font-bold block text-rose-400">FastPay</span>
-                                                <span class="text-xs font-mono tracking-wider text-slate-200 block text-left" dir="ltr">+964 750 604 5491</span>
+                                          <div class="flex gap-2 flex-wrap">
+                                            <a href="https://t.me/z_14x" target="_blank" class="btn-gold flex-1 text-center py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
+                                              <i class="fa-brands fa-telegram">
+                                              </i> <span id="txtContactSponsor">پەیوەندی بکە</span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        
+                                        <div id="vipUserCard" class="hidden vip-card p-6 mt-5">
+                                          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                                            <div class="flex items-center gap-4">
+                                              <img id="vipAvatar" src="" class="w-16 h-16 rounded-2xl border-2 border-amber-400 object-cover">
+                                                <div>
+                                                  <h2 id="vipName" class="text-lg font-black text-amber-400">
+                                                  </h2>
+                                                  <p id="vipUsername" class="text-xs text-slate-400">
+                                                  </p>
+                                                </div>
+                                              </div>
+                                              <div class="flex gap-4 border-t border-white/5 pt-3 sm:pt-0 sm:border-none w-full sm:w-auto justify-center">
+                                                <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
+                                                  <span id="vipFollowers" class="block font-black text-sm text-white">
+                                                  </span>
+                                                  <span class="text-[9px] text-slate-400" id="txtFollowers">فۆڵۆوێرس</span>
+                                                </div>
+                                                <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
+                                                  <span id="vipHearts" class="block font-black text-sm text-white">
+                                                  </span>
+                                                  <span class="text-[9px] text-slate-400" id="txtHearts">لایکەکان</span>
+                                                </div>
                                               </div>
                                             </div>
-                                            <button onclick="copyToClipboard('+9647506045491', 'FastPay')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all">
-                                              <i class="fa-solid fa-copy text-[10px]">
-                                              </i> <span class="txtCopyBtn">کۆپی بکە</span>
-                                            </button>
+                                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4" id="vipPostGrid">
+                                            </div>
                                           </div>
-                                          <div class="donation-item flex items-center justify-between p-3 rounded-xl border">
-                                            <div class="flex items-center gap-2 w-[75%]">
-                                              <span class="w-2 h-2 rounded-full bg-emerald-500">
-                                              </span>
-                                              <div class="w-full truncate">
-                                                <span class="text-[11px] font-bold block text-emerald-400">USDT (TRC20)</span>
-                                                <span class="text-xs font-mono tracking-tight text-slate-200 block truncate" dir="ltr">TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc</span>
+                                          <div id="previewCard" class="hidden glass rounded-3xl p-5 mt-5">
+                                            <video id="previewVideo" class="w-full max-h-[350px] object-contain rounded-xl bg-black" controls>
+                                            </video>
+                                            <img id="previewImage" class="hidden w-full max-h-[350px] object-contain rounded-xl bg-black">
+                                              <div class="mt-3 flex flex-col gap-2">
+                                                <h3 id="previewAuthor" class="font-bold text-sm">
+                                                </h3>
+                                                <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
+                                                  <p id="previewDescription" class="text-xs text-slate-400 truncate max-w-[75%]">
+                                                  </p>
+                                                  <button onclick="copyCaptionText()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
+                                                    <i class="fa-solid fa-copy">
+                                                    </i> <span id="txtCopyCap">کۆپی بکە</span>
+                                                  </button>
+                                                </div>
                                               </div>
-                                            </div>
-                                            <button onclick="copyToClipboard('TKUfVwnjyT2KUa9xnBreT32YLLJEwACHpc', 'USDT')" class="text-xs bg-white/5 hover:bg-white/10 text-slate-300 px-2.5 py-1.5 rounded-lg font-bold flex items-center gap-1.5 transition-all flex-shrink-0">
-                                              <i class="fa-solid fa-copy text-[10px]">
-                                              </i> <span class="txtCopyBtn">کۆپی بکە</span>
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="flex gap-2 flex-wrap">
-                                        <a href="https://t.me/z_14x" target="_blank" class="btn-gold flex-1 text-center py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2">
-                                          <i class="fa-brands fa-telegram">
-                                          </i> <span id="txtContactSponsor">پەیوەندی بکە</span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                    <div id="vipUserCard" class="hidden vip-card p-6 mt-5">
-                                      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                                        <div class="flex items-center gap-4">
-                                          <img id="vipAvatar" src="" class="w-16 h-16 rounded-2xl border-2 border-amber-400 object-cover">
-                                            <div>
-                                              <h2 id="vipName" class="text-lg font-black text-amber-400">
-                                              </h2>
-                                              <p id="vipUsername" class="text-xs text-slate-400">
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div class="flex gap-4 border-t border-white/5 pt-3 sm:pt-0 sm:border-none w-full sm:w-auto justify-center">
-                                            <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
-                                              <span id="vipFollowers" class="block font-black text-sm text-white">
-                                              </span>
-                                              <span class="text-[9px] text-slate-400" id="txtFollowers">فۆڵۆوێرس</span>
-                                            </div>
-                                            <div class="text-center bg-white/5 px-4 py-2 rounded-xl min-w-[70px]">
-                                              <span id="vipHearts" class="block font-black text-sm text-white">
-                                              </span>
-                                              <span class="text-[9px] text-slate-400" id="txtHearts">لایکەکان</span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-4" id="vipPostGrid">
-                                        </div>
-                                      </div>
-                                      <div id="previewCard" class="hidden glass rounded-3xl p-5 mt-5">
-                                        <video id="previewVideo" class="w-full max-h-[350px] object-contain rounded-xl bg-black" controls>
-                                        </video>
-                                        <img id="previewImage" class="hidden w-full max-h-[350px] object-contain rounded-xl bg-black">
-                                          <div class="mt-3 flex flex-col gap-2">
-                                            <h3 id="previewAuthor" class="font-bold text-sm">
-                                            </h3>
-                                            <div class="bg-white/5 border border-white/5 rounded-xl p-3 flex items-center justify-between gap-4">
-                                              <p id="previewDescription" class="text-xs text-slate-400 truncate max-w-[75%]">
-                                              </p>
-                                              <button onclick="copyCaptionText()" class="text-[11px] bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1.5 rounded-lg font-bold flex items-center gap-1 hover:bg-pink-500 hover:text-white transition-all flex-shrink-0">
-                                                <i class="fa-solid fa-copy">
-                                                </i> <span id="txtCopyCap">کۆپی بکە</span>
-                                              </button>
-                                            </div>
-                                          </div>
-                                          <div class="mt-4 border-t border-white/5 pt-4">
-                                            <span class="text-xs font-bold text-pink-500 block mb-2" id="txtQualitySelect">
-                                              <i class="fa-solid fa-sliders">
-                                              </i> کواڵیتیا دابەزاندنێ هەلبژێرە:</span>
-                                              <div class="grid grid-cols-2 gap-2">
-                                                <button onclick="downloadWithQuality('720p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                  <span>720p HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                                </i>
-                                              </button>
-                                              <button onclick="downloadWithQuality('1080p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                <span>1080p Full HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                              </i>
-                                            </button>
-                                            <button onclick="downloadWithQuality('4K')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
-                                                  <span>4K Ultra HD</span> <i class="fa-solid fa-circle-down opacity-60">
-                                                </i>
-                                              </button>
-                                              <button onclick="downloadPremiumQuality()" class="border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 py-2.5 px-3 rounded-xl text-xs font-black flex items-center justify-between animate-pulse">
-                                                <span class="flex items-center gap-1">🔒 4K HDR Dolby Vision</span> <i class="fa-solid fa-bolt">
-                                              </i>
+                                              <div class="mt-4 border-t border-white/5 pt-4">
+                                                <span class="text-xs font-bold text-pink-500 block mb-2" id="txtQualitySelect">
+                                                  <i class="fa-solid fa-sliders">
+                                                  </i> کواڵیتیا دابەزاندنێ هەلبژێرە:</span>
+                                                  <div class="grid grid-cols-2 gap-2">
+                                                    <button onclick="downloadWithQuality('720p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                                                      <span>720p HD</span> <i class="fa-solid fa-circle-down opacity-60">
+                                                    </i>
+                                                  </button>
+                                                  <button onclick="downloadWithQuality('1080p')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                                                    <span>1080p Full HD</span> <i class="fa-solid fa-circle-down opacity-60">
+                                                  </i>
+                                                </button>
+                                                <button onclick="downloadWithQuality('4K')" class="bg-white/5 hover:bg-white/10 text-white py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-between">
+                                                      <span>4K Ultra HD</span> <i class="fa-solid fa-circle-down opacity-60">
+                                                    </i>
+                                                  </button>
+                                                  <button onclick="downloadPremiumQuality()" class="border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 py-2.5 px-3 rounded-xl text-xs font-black flex items-center justify-between animate-pulse">
+                                                    <span class="flex items-center gap-1">🔒 4K HDR Dolby Vision</span> <i class="fa-solid fa-bolt">
+                                                  </i>
                                             </button>
                                           </div>
                                         </div>
@@ -973,8 +942,6 @@
                 guideT: 'ڕێبەرێ دابەزاندنێ یێ بلەز', rateText: 'نرخاندنا مالپەری بکە (Rate TIKJET)',
                 faqHead: 'پرسیارێن بەربڵاو (FAQs)', thanks: 'سوپاس بۆ دەنگدان و پشتەڤانیا تە! 🌟',
                 followers: 'فۆڵۆوێرس', hearts: 'لایکەکان', album: 'ئەلبومێن وێنەیان', history: 'دوایین لێگەرینەکان',
-                sponsorTitle: 'پشتەڤانیا مە بکە (Sponsorship)', sponsorDesc: 'بۆ بەردەوامبوونا مالپەری بێ بەرامبەر و بێ کێشە، تو دشێی ب هەر برەکێ پارەی پشتەڤانیا مە بکەی یان ڕیکلاما خۆ ل سەر سایتێ مە دابنێی.',
-                contactSponsor: 'پەیوەندی بکە', badgeSponsor: 'سپۆنسەر و ئیدیتۆرێ فەرمی', descSponsor: 'خۆدانێ مەزنترین پەیجێ دیزاین و ئیدیتان, پشتەڤانێ سەرەکی یێ پڕۆژەی.',
                 visitSponsor: 'سەردان بکە', copyText: 'کۆپی بکە', copiedText: 'کۆپی بوو! ✅', supportTitle: 'پشتەڤانیا تە بومن 💎',
                 aboutRole: 'گەشەپێدەر & چێکەرێ ناڤەڕۆکێ', aboutBio: 'بناخەدانەر و گەشەپێدەرێ وێبسایتێ TikJet. ئەز کار دکەم بۆ پێشکەشکرنا باشترین و خێراترین کەرەستەیێن تەکنیکی بۆ ئاسانکرنا کارێن جەماوەری.',
                 trendingTitle: 'ڤیدیۆیێن ترێند یێن کوردی (Trending Reels)', shareTitle: 'لینکێ سایتێ مە بەڵاڤ بکە دگەل هەڤالێن خۆ:',
@@ -982,21 +949,17 @@
                 iosTitle: 'TikJet دابەزێنە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمێ iOS / iPhone',
                 iosStep1: 'ل خوارێ کلیک ل سەر دوگمەیا بارکردنێ Share بکە.', iosStep2: 'پاشان کلیک ل سەر Add to Home Screen بکە.', iosStep3: 'ل لایێ ڕاست کلیک ل سەر Add بکە.', iosThanks: 'سۆپاس، تێگەهشتم',
                 qualitySel: 'کواڵیتیا دابەزاندنێ هەلبژێرە:', quickDl: 'داونلۆدا بلەز', audioDl: 'MP3 دەنگ', dlAll: 'هەمی دابەزینە',
-                vipSponsorHeader: 'دەربارەی پێشەنگیا زانۆ (Zano):',
-                vipSponsorText: 'زانۆ نەک تنێ پشتەڤانەکێ دارایی یە، بەلکو **ئیدیتۆرەکێ بناڤودەنگ، پێشکەفتی و گەلەک ژێهاتییە** د جیهانا مۆنتاژێ دا. ئەو خودان شخصیتەکا داهێنەرە کو شێوازێ کارێ وی یێ مۆدێرن و لێهاتیانە سەرنجا هەر بینەرەکی ڕادکێشیت.',
                 clearHistory: 'پاککرنەوە', promoBtn: '🚀 خەڵات و دیاریێن ئەڤڕۆ (کلیک بکە)',
                 faqQ1: 'ئەرێ دابەزاندنا ڤیدیۆیان پارەیە？', faqA1: 'نەخێر، خزمەتگوزاریا TIKJET ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.',
                 footer: '© 2026 TIKJET. گەشەپێدەر زانیار المزوري الکوردي، هەموو مافەکان پارێزراون.'
             },
             sorani: {
                 title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تیکتۆک بێ لۆگۆ',
-                placeholder: 'لینکی ڤیدیۆکە لێرە دابنێ...', placeholderUser: 'ناوی ئەکاونتەکە بنووسە...',
+                placeholder: 'لینکی ڤیدیۆکە لێرە dابنێ...', placeholderUser: 'ناوی ئەکاونتەکە بنووسە...',
                 paste: 'پەیست بکە', download: 'دایبەزێنە', quickQ: 'چۆن ڤیدیۆ و ستۆری دابگرم？',
                 guideT: 'ڕێبەری خێرای داگرتن', rateText: 'نرخاندنی ماڵپەڕەکە بکە',
                 faqHead: 'پرسیارە باوەکان (FAQs)', thanks: 'سوپاس بۆ دەنگدانەکەت! 🌟',
                 followers: 'فۆڵۆوێرس', hearts: 'لایکەکان', album: 'ئەلبومی وێنەکان', history: 'دوایین گەڕانەکان',
-                sponsorTitle: 'پشتگیریمان بکە (Sponsorship)', sponsorDesc: 'بۆ بەردەوامبوونی ماڵپەڕەکە بە خۆڕایی و بەبێ کێشە، دەتوانیت پشتگیریمان بکەیت.',
-                contactSponsor: 'پەیوەندی بکە', badgeSponsor: 'سپۆنسەر و ئیدیتۆری فەرمی', descSponsor: 'خاوەنی گەورەترین پەیجی دیزاین، پشتگیریکەری سەرەکی پڕۆژەکە.',
                 visitSponsor: 'سەردان بکە', copyText: 'کۆپی بکە', copiedText: 'کۆپی بوو! ✅', supportTitle: 'پشتگیری تۆ بۆ من 💎',
                 aboutRole: 'گەشەپێدەر & دروستکەری ناوەڕۆک', aboutBio: 'دامەزرێنەر و گەشەپێدەری ماڵپەڕی TikJet. کاردەکەم بۆ پێشکەشکردنی باشترین ئامرازەکان.',
                 trendingTitle: 'ڤیدیۆ ترێندە کوردییەکان (Trending Reels)', shareTitle: 'لینکی ماڵپەڕەکەمان بڵاو بکەرەوە لەگەڵ هاوڕێکانت:',
@@ -1004,8 +967,6 @@
                 iosTitle: 'TikJet داگرە وەک ئەپ', iosSubtitle: 'تایبەت بۆ سیستەمی iOS / iPhone',
                 iosStep1: 'لە خوارەوە کلیک لەسەر دوگمەی Share بکە.', iosStep2: 'پاشان کلیک لەسەر Add to Home Screen بکە.', iosStep3: 'لە لای ڕاست کلیک لەسەر Add بکە.', iosThanks: 'سوپاس، تێگەیشتم',
                 qualitySel: 'کوالێتی داگرتن هەڵبژێرە:', quickDl: 'داگرتنی خێرا', audioDl: 'دەنگی MP3', dlAll: 'هەموو دابەزێنە',
-                vipSponsorHeader: 'دەربارەی پێشەنگیا زانۆ (Zano):',
-                vipSponsorText: 'زانۆ نەک تەنیا پشتگیریکەرێکی داراییە، بەڵکو **ئیدیتۆرێکی بەناوبانگ و لێهاتووە** لە جیهانی مۆنتاژدا. ئەو خاوەن کەسایەتییەکی داهێنەرە کە کارە مۆدێرنەکانی سەرنجی بینەر ڕادەکێشێت.',
                 clearHistory: 'پاککردنەوە', promoBtn: '🚀 خەڵات و دیارییەکانی ئەمڕۆ (کلیک بکە)',
                 faqQ1: 'ئایا داگرتنی ڤیدیۆکان پارەیە？', faqA1: 'نەخێر، خزمەتگوزاری TIKJET بە تەواوی بێبەرامبەرە و تۆ دەتوانیت بێ سنوور ڤیدیۆکان دابگریت.',
                 footer: '© 2026 TIKJET. گەشەپێدەر زانیار المزوري الکوردی، هەموو مافەکان پارێزراون.'
@@ -1017,8 +978,6 @@
                 guideT: 'دليل التحميل السريع', rateText: 'قيّم موقعنا',
                 faqHead: 'الأسئلة الشائعة (FAQs)', thanks: 'شكراً لتقييمك ودعمك! 🌟',
                 followers: 'متابعين', hearts: 'إعجابات', album: 'ألبوم الصور', history: 'آخر عمليات البحث',
-                sponsorTitle: 'إدعمنا (Sponsorship)', sponsorDesc: 'لاستمرار الموقع مجاناً وبدون مشاكل، يمكنك دعمنا بأي مبلغ أو وضع إعلانك هنا.',
-                contactSponsor: 'تواصل معنا', badgeSponsor: 'الراعي والمحرر الرسمي', descSponsor: 'صاحب أكبر صفحة للتصميم والمونتاج، الداعم الأساسي للمشروع.',
                 visitSponsor: 'زيارة الحساب', copyText: 'نسخ', copiedText: 'تم النسخ! ✅', supportTitle: 'دعمك لي 💎',
                 aboutRole: 'مطور ومنشئ محتوى', aboutBio: 'مؤسس ومطور موقع TikJet. أعمل على تقديم أفضل وأسرع الأدوات التقنية لتسهيل الاستخدام للجميع.',
                 trendingTitle: 'الفيديوهات الكردية الرائجة (Trending Reels)', shareTitle: 'شارك رابط موقعنا مع أصدقائك:',
@@ -1026,8 +985,6 @@
                 iosTitle: 'تحميل TikJet كتطبيق', iosSubtitle: 'مخصص لأنظمة iOS / iPhone',
                 iosStep1: 'في الأسفل انقر على زر المشاركة Share.', iosStep2: 'ثم اختر إضافة إلى الشاشة الرئيسية Add to Home Screen.', iosStep3: 'في الأعلى انقر على إضافة Add.', iosThanks: 'شكراً، فهمت',
                 qualitySel: 'اختر جودة التحميل:', quickDl: 'تحميل سريع', audioDl: 'صوت MP3', dlAll: 'تحميل الكل',
-                vipSponsorHeader: 'حول ريادة زانو (Zano):',
-                vipSponsorText: 'زانو ليس مجرد داعم مالي فحسب، بل هو **محرر مشهور ومتقدم وموهوب للغاية** في عالم المونتاج. يمتلك شخصية إبداعية تجذب أساليبه الحديثة والمحترفة انتباه أي مشاهد.',
                 clearHistory: 'مسح السجل', promoBtn: '🚀 جوائز وهدايا اليوم (اضغط هنا)',
                 faqQ1: 'هل تحميل الفيديوهات مدفوع؟', faqA1: 'لا، خدمة TIKJET مجانية تماماً ويمكنك تحميل الفيديوهات بلا حدود.',
                 footer: '© 2026 TIKJET. المطور زانيار المزوري الكردي، جميع الحقوق محفوظة.'
@@ -1039,8 +996,6 @@
                 guideT: 'Quick Download Guide', rateText: 'Rate our website',
                 faqHead: 'Frequently Asked Questions', thanks: 'Thanks for your rating and support! 🌟',
                 followers: 'Followers', hearts: 'Likes', album: 'Photo Album', history: 'Recent Searches',
-                sponsorTitle: 'Support Us (Sponsorship)', sponsorDesc: 'To keep the website running for free, you can support us with any amount or place your ad on our site.',
-                contactSponsor: 'Contact Us', badgeSponsor: 'Official Sponsor & Editor', descSponsor: 'Owner of the largest design and edit page, main supporter of the project.',
                 visitSponsor: 'Visit Profile', copyText: 'Copy', copiedText: 'Copied! ✅', supportTitle: 'Your Support Me 💎',
                 aboutRole: 'Developer & Content Creator', aboutBio: 'Founder and developer of TikJet. Working to provide the best and fastest technical tools for public convenience.',
                 trendingTitle: 'Trending Kurdish Videos (Reels)', shareTitle: 'Share our website link with your friends:',
@@ -1048,8 +1003,6 @@
                 iosTitle: 'Download TikJet as App', iosSubtitle: 'Exclusive for iOS / iPhone devices',
                 iosStep1: 'At the bottom, click on the Share button.', iosStep2: 'Then scroll down and click Add to Home Screen.', iosStep3: 'At the top right, click on Add.', iosThanks: 'Thanks, I got it',
                 qualitySel: 'Select Download Quality:', quickDl: 'Quick Download', audioDl: 'MP3 Audio', dlAll: 'Download All',
-                vipSponsorHeader: 'About Zano’s Leadership:',
-                vipSponsorText: 'Zano is not just a financial supporter, but a **renowned, advanced, and highly skilled editor** in the world of video editing. He possesses a creative personality whose modern and professional work style captures the attention of any viewer.',
                 clearHistory: 'Clear History', promoBtn: '🚀 Today\'s Rewards & Gifts (Click Here)',
                 faqQ1: 'Is downloading videos free?', faqA1: 'No, TIKJET service is completely free and you can download videos without any limitations.',
                 footer: '© 2026 TIKJET. Developed by Zanyar Al-Mzuri Al-Kurdi, All Rights Reserved.'
@@ -1206,11 +1159,6 @@
             document.getElementById('txtHearts').textContent = l.hearts;
             document.getElementById('txtAlbum').textContent = l.album;
             document.getElementById('txtHistoryTitle').textContent = l.history;
-            document.getElementById('txtSponsorTitle').textContent = l.sponsorTitle;
-            document.getElementById('txtSponsorDesc').textContent = l.sponsorDesc;
-            document.getElementById('txtContactSponsor').textContent = l.contactSponsor;
-            document.getElementById('badgeSponsor').textContent = l.badgeSponsor;
-            document.getElementById('descSponsor').textContent = l.descSponsor;
             document.getElementById('btnVisitSponsor').textContent = l.visitSponsor;
             document.getElementById('txtSupportTitle').textContent = l.supportTitle;
             document.getElementById('aboutRole').textContent = l.aboutRole;
@@ -1233,23 +1181,11 @@
             document.getElementById('txtAudioDl').textContent = l.audioDl;
             document.getElementById('txtDlAll').textContent = l.dlAll;
 
-            document.getElementById('txtVipSponsorHeader').textContent = l.vipSponsorHeader;
-            document.getElementById('txtVipSponsorText').innerHTML = l.vipSponsorText;
             document.getElementById('btnClearHistory').innerHTML = `<i class="fa-solid fa-trash"></i> ${l.clearHistory}`;
             document.getElementById('txtPromoBtn').textContent = l.promoBtn;
             document.getElementById('faqQ1').textContent = l.faqQ1;
             document.getElementById('faqA1').textContent = l.faqA1;
             document.getElementById('footerCredit').textContent = l.footer;
-
-            if (lang === 'en') {
-                document.getElementById('vipSponsorBioBox').style.textAlign = 'left';
-                document.getElementById('vipSponsorBioBox').style.borderRight = 'none';
-                document.getElementById('vipSponsorBioBox').style.borderLeft = '4px solid #ffb703';
-            } else {
-                document.getElementById('vipSponsorBioBox').style.textAlign = 'right';
-                document.getElementById('vipSponsorBioBox').style.borderLeft = 'none';
-                document.getElementById('vipSponsorBioBox').style.borderRight = '4px solid #ffb703';
-            }
             
             document.querySelectorAll('.txtCopyBtn').forEach(b => b.textContent = l.copyText);
             document.getElementById('tiktokUrl').placeholder = currentMode === 'link' ? l.placeholder : l.placeholderUser;

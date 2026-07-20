@@ -1,7 +1,7 @@
 {
   "name": "KrdDown Social Downloader",
   "short_name": "KrdDown",
-  "description": "Best Social Media Video and Stories Downloader",
+  "description": "Best Social Media Video and Stories Downloader - 4K HDR Support",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#0a0a1a",

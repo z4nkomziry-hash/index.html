@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KrdDown - باشترین دابەزێنەری ڤیدیۆ و ستۆریێن تۆڕێن جڤاکی | 4K HDR Downloader | Best Social Media Downloader">
-    <meta name="keywords" content="KrdDown, downloader, 4K downloader, tiktok no watermark, instagram downloader, facebook video, snapchat download, 4K HDR">
-    <title>KrdDown | دابەزێنەری 4K بێ واتەرمارک</title>
+    <meta name="description" content="KrdDown - باشترین دابەزێنەری ڤیدیۆ و ستۆریێن تۆڕێن جڤاکی | 4K HDR Downloader | TikTok Instagram Facebook YouTube Pinterest Downloader">
+    <meta name="keywords" content="KrdDown, downloader, 4K downloader, tiktok no watermark, instagram downloader, facebook video downloader, youtube downloader, pinterest downloader">
+    <title>KrdDown | دابەزێنەری 4K بێ واتەرمارک - هەموو تۆڕەکان</title>
     
     <!-- PWA Meta Tags -->
     <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
@@ -520,12 +520,12 @@
                     <span class="flex items-center gap-3"><i class="fa-brands fa-instagram text-lg text-pink-500"></i> Instagram (ئینستاگرام)</span>
                     <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
                 </button>
-                <button onclick="selectNetwork('Snapchat', 'linear-gradient(135deg, #fffc00, #f1e400)')" class="network-btn net-snapchat w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
-                    <span class="flex items-center gap-3"><i class="fa-brands fa-snapchat text-lg text-amber-400"></i> Snapchat (سناپ چات)</span>
-                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
-                </button>
                 <button onclick="selectNetwork('Facebook', 'linear-gradient(135deg, #1877f2, #0056b3)')" class="network-btn net-facebook w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
                     <span class="flex items-center gap-3"><i class="fa-brands fa-facebook text-lg text-sky-500"></i> Facebook (فەیسبووک)</span>
+                    <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
+                </button>
+                <button onclick="selectNetwork('YouTube', 'linear-gradient(135deg, #ff0000, #cc0000)')" class="network-btn net-pinterest w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
+                    <span class="flex items-center gap-3"><i class="fa-brands fa-youtube text-lg text-red-600"></i> YouTube (یوتیوب)</span>
                     <i class="fa-solid fa-chevron-left text-xs opacity-40"></i>
                 </button>
                 <button onclick="selectNetwork('Pinterest', 'linear-gradient(135deg, #e60023, #b3001b)')" class="network-btn net-pinterest w-full bg-slate-900/80 border border-white/5 py-3.5 px-4 rounded-2xl text-left flex items-center justify-between text-white text-sm font-bold">
@@ -815,13 +815,12 @@
           <div id="historyContainer" class="space-y-2"></div>
         </div>
 
-        <!-- پلانەکانی KrdDown (نوێ) -->
+        <!-- پلانەکانی KrdDown -->
         <div class="glass rounded-3xl p-5 mt-5">
             <h3 class="text-sm font-black text-amber-400 mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-crown"></i> <span id="txtPlanTitle">پلانێن مە</span>
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- پلانی بێبەرامبەر -->
                 <div class="plan-card plan-free rounded-2xl p-5">
                     <div class="flex items-center justify-between mb-3">
                         <h4 class="font-black text-white text-base">🆓 بێبەرامبەر</h4>
@@ -846,7 +845,6 @@
                     </button>
                 </div>
 
-                <!-- پلانی پرۆ -->
                 <div class="plan-card plan-pro rounded-2xl p-5 relative overflow-hidden">
                     <div class="absolute -top-1 -right-1">
                         <span class="plan-badge">⭐ پێشنیارکراو</span>
@@ -1013,10 +1011,13 @@
                 planProDesc: 'بۆ کوالێتی بێوێنە و بێ ڕیکلام',
                 planPro1: '4K Ultra HD + HDR', planPro2: 'Dolby Vision', planPro3: 'بێ ڕیکلام', planPro4: 'داونلۆدی بێسنوور',
                 currentPlan: '✅ پلانی ئێستا', proActivated: '🔓 پلانی ئێستا: پرۆ',
-                faqQ1: 'ئەرێ دابەزاندنا ڤیدیۆیان پارەیە؟', faqA1: 'نەخێر، خزمەتگوزاریا KrdDown ب تەمامی بێبەرامبەرە و تو دشێی بێ سنوور ڤیدیۆیان دابەزینی.',
+                faqQ1: 'ئەرێ دابەزاندنا ڤیدیۆیان پارەیە؟', faqA1: 'نەخێر، خزمەتگوزاریا KrdDown ب تەمامی بێبەرامبەرە.',
                 footer: '© 2026 KrdDown. گەشەپێدەر زانیار المزوري الکوردی، هەموو مافەکان پارێزراون.',
                 lockMessage: '🔒 بۆ داونلۆدی 4K پێویستت بە پلانی پرۆ هەیە!',
-                lockPremium: '🔒 ئەم تایبەتمەندییە بۆ پلانی پرۆیە!'
+                lockPremium: '🔒 ئەم تایبەتمەندییە بۆ پلانی پرۆیە!',
+                downloadError: 'نەتوانرا میدیا دابەزێنیت! تکایە لینکێکی دروست بنێرە 🚫',
+                networkError: 'کێشەیەک ڕوویدا! تکایە دووبارە هەوڵبدەوە 🔄',
+                mediaNotFound: 'میدیا نەهاتە دیتن! تکایە لینکێکی دروست بنێرە 📎'
             },
             sorani: {
                 title: 'داگرتنی ڤیدیۆ و ستۆرییەکانی تۆڕە جڤاکیەکان بێ لۆگۆ',
@@ -1029,7 +1030,7 @@
                 clearHistory: 'پاککردنەوە', promoBtn: '🚀 خەڵات و دیارییەکانی ئەمڕۆ (کلیک بکە)',
                 planTitle: 'پلانەکانمان', planFree1: 'داگرتنی 1080p Full HD', planFree4: 'ڕیکلامی ئاسایی',
                 planPro1: '4K Ultra HD + HDR', planPro2: 'Dolby Vision', planPro3: 'بێ ڕیکلام', planPro4: 'داگرتنی بێسنوور',
-                faqQ1: 'ئایا داگرتنی ڤیدیۆکان پارەیە؟', faqA1: 'نەخێر، خزمەتگوزاری KrdDown بە تەواوی بێبەرامبەرە.',
+                faqQ1: 'ئایا داگرتنی ڤیدیۆکان پارەیە؟', faqA1: 'نەخێر، KrdDown بە تەواوی بێبەرامبەرە.',
                 footer: '© 2026 KrdDown. گەشەپێدەر زانیار المزوري الکوردی، هەموو مافەکان پارێزراون.',
                 lockMessage: '🔒 بۆ داگرتنی 4K پێویستت بە پلانی پرۆ هەیە!'
             },
@@ -1059,7 +1060,7 @@
                 clearHistory: 'Clear History', promoBtn: '🚀 Today\'s Rewards (Click Here)',
                 planTitle: 'Our Plans', planFree1: '1080p Full HD Download', planFree4: 'Regular Ads',
                 planPro1: '4K Ultra HD + HDR', planPro2: 'Dolby Vision', planPro3: 'No Ads', planPro4: 'Unlimited Downloads',
-                faqQ1: 'Is downloading videos free?', faqA1: 'No, KrdDown is completely free.',
+                faqQ1: 'Is downloading videos free?', faqA1: 'Yes, KrdDown is completely free.',
                 footer: '© 2026 KrdDown. Developed by Zanyar Al-Mzuri, All Rights Reserved.',
                 lockMessage: '🔒 4K download requires Pro plan!'
             }
@@ -1071,7 +1072,6 @@
                 document.getElementById('welcomeModal').classList.add('show');
             }, 600);
             
-            // Check user plan on load
             userPlan = localStorage.getItem('krddown_plan') || 'free';
             if (userPlan === 'pro') {
                 updateUIForProPlan();
@@ -1081,14 +1081,10 @@
         function updateUIForProPlan() {
             const currentPlanBtn = document.getElementById('txtCurrentPlan');
             if (currentPlanBtn) {
-                currentPlanBtn.textContent = getLangText('proActivated') || '🔓 پلانی ئێستا: پرۆ';
+                const l = langData[currentLang] || langData['badini'];
+                currentPlanBtn.textContent = l.proActivated || '🔓 پلانی ئێستا: پرۆ';
                 currentPlanBtn.className = 'w-full py-2.5 rounded-xl text-xs font-bold bg-amber-500/20 text-amber-400';
             }
-        }
-
-        function getLangText(key) {
-            const l = langData[currentLang] || langData['badini'];
-            return l[key] || '';
         }
 
         // ==================== WELCOME MODAL ====================
@@ -1252,8 +1248,7 @@
             toast(`${quality} دهێتە حازرکرن... 🚀`, 'fa-circle-notch fa-spin');
             
             setTimeout(() => {
-                const proxyUrl = `/api/download?url=${encodeURIComponent(currentActiveVideoUrl)}&quality=${quality}`;
-                window.open(proxyUrl, '_blank');
+                forceDownload(currentActiveVideoUrl, `KrdDown_${quality}_video.mp4`);
                 toast('داونلۆد دەستیپێکرد! 📥✨', 'fa-check');
             }, 1000);
         }
@@ -1271,8 +1266,7 @@
             
             toast('4K HDR Dolby Vision دهێتە حازرکرن... 🎬✨', 'fa-film fa-spin');
             setTimeout(() => {
-                const proxyUrl = `/api/download?url=${encodeURIComponent(currentActiveVideoUrl)}&quality=4K`;
-                window.open(proxyUrl, '_blank');
+                forceDownload(currentActiveVideoUrl, 'KrdDown_4K_HDR.mp4');
                 toast('داونلۆدی 4K HDR دەستیپێکرد! 🎉🔥', 'fa-crown');
             }, 1500);
         }
@@ -1282,7 +1276,7 @@
             albumImages.forEach((url, i) => { setTimeout(() => forceDownload(url, `KrdDown_Image_${i+1}.jpg`), i * 400); });
         }
 
-        // ==================== MAIN DOWNLOAD FUNCTION ====================
+        // ==================== MAIN DOWNLOAD FUNCTION (UNIVERSAL - FIXED) ====================
         async function downloadVideo() {
             let input = document.getElementById('tiktokUrl').value.trim();
             if (!input) return toast('تکایە دەقەکێ بنڤیسە!', 'fa-exclamation');
@@ -1290,21 +1284,39 @@
             animateProgress();
             const btn = document.getElementById('btnDownload');
             btn.disabled = true;
+            const l = langData[currentLang] || langData['badini'];
             
             document.getElementById('previewCard').classList.add('hidden');
             document.getElementById('photoCard').classList.add('hidden');
             document.getElementById('vipUserCard').classList.add('hidden');
             
-            if (currentMode === 'link' && (!input.includes('tiktok.com') && !input.includes('vmt.io'))) {
+            const isTikTok = input.includes('tiktok.com') || input.includes('vm.tiktok.com');
+            const isInstagram = input.includes('instagram.com');
+            const isFacebook = input.includes('facebook.com') || input.includes('fb.watch');
+            const isYouTube = input.includes('youtube.com') || input.includes('youtu.be');
+            const isPinterest = input.includes('pinterest.com') || input.includes('pin.it');
+            
+            // ========== ALL NON-TIKTOK NETWORKS VIA COBALT API ==========
+            if (currentMode === 'link' && !isTikTok) {
                 try {
                     const response = await fetch('https://api.cobalt.tools/api/json', {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                        body: JSON.stringify({ url: input, vQuality: '720', filenamePattern: 'basic' })
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({ 
+                            url: input,
+                            vQuality: '1080',
+                            filenamePattern: 'pretty',
+                            isNoTTWatermark: true,
+                            twitterGif: true
+                        })
                     });
+                    
                     const result = await response.json();
                     
-                    if (result.status === 'redirect' || result.status === 'stream' ) {
+                    if (result.status === 'redirect' || result.status === 'stream') {
                         saveToHistory(input, currentMode);
                         currentActiveVideoUrl = result.url;
                         
@@ -1314,10 +1326,17 @@
                         document.getElementById('previewVideo').classList.remove('hidden');
                         
                         document.getElementById('previewVideo').src = result.url;
-                        document.getElementById('previewAuthor').textContent = 'Social Media Media';
-                        document.getElementById('previewDescription').textContent = 'Ready to Download';
-                        document.getElementById('previewDownloadBtn').onclick = () => forceDownload(result.url, 'download.mp4');
-                        document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(result.url, 'audio.mp3');
+                        
+                        let platformName = 'Social Media';
+                        if (isInstagram) platformName = 'Instagram';
+                        else if (isFacebook) platformName = 'Facebook';
+                        else if (isYouTube) platformName = 'YouTube';
+                        else if (isPinterest) platformName = 'Pinterest';
+                        
+                        document.getElementById('previewAuthor').textContent = platformName + ' Media';
+                        document.getElementById('previewDescription').textContent = result.filename || 'Ready to Download';
+                        document.getElementById('previewDownloadBtn').onclick = () => forceDownload(result.url, platformName + '_Video.mp4');
+                        document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(result.url, platformName + '_Audio.mp3');
                         
                         toast('سەرکەفتی بوو! 🎉', 'fa-check');
                     } else if (result.status === 'picker' && result.picker && result.picker.length > 0) {
@@ -1327,25 +1346,28 @@
                         grid.innerHTML = '';
                         
                         albumImages.forEach((url, i) => {
-                            const proxyUrl = `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
                             const container = document.createElement('div');
                             container.className = "relative group rounded-lg overflow-hidden";
-                            container.innerHTML = `<img src="${proxyUrl}" class="w-full aspect-square object-cover" alt="Image"><button onclick="forceDownload('${url}', 'img_${i}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
+                            container.innerHTML = `<img src="${url}" class="w-full aspect-square object-cover" alt="Image" onerror="this.src='/icon.png'"><button onclick="forceDownload('${url}', 'image_${i+1}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
                             grid.appendChild(container);
                         });
                         document.getElementById('photoCard').classList.remove('hidden');
                         toast('سەرکەفتی بوو! 🎉', 'fa-check');
+                    } else if (result.status === 'error') {
+                        toast('نەتوانرا میدیا دابەزێنیت! ئەم لینکە پشتگیری ناکرێت 🔗', 'fa-times');
                     } else {
-                        toast('میدیا نەهاتە دیتن یان بلۆک کراوە!', 'fa-times');
+                        toast(l.downloadError || 'نەتوانرا میدیا دابەزێنیت! 🚫', 'fa-times');
                     }
-                } catch {
-                    toast('کێشەیەک هەیە د سێرڤەری گشتی دا!', 'fa-times');
+                } catch (error) {
+                    console.error('Download error:', error);
+                    toast(l.networkError || 'کێشەیەک ڕوویدا! 🔄', 'fa-exclamation-triangle');
                 } finally {
                     btn.disabled = false;
                 }
                 return;
             }
 
+            // ========== TIKTOK API (ORIGINAL HANDLER) ==========
             try {
                 let apiUrl = currentMode === 'link' 
                     ? `https://www.tikwm.com/api/?url=${encodeURIComponent(input)}` 
@@ -1360,24 +1382,26 @@
                         const d = data.data;
                         if (d.images && d.images.length > 0) {
                             albumImages = d.images;
-                            const grid = document.getElementById('photoGrid'); grid.innerHTML = '';
+                            const grid = document.getElementById('photoGrid'); 
+                            grid.innerHTML = '';
                             d.images.forEach((url, i) => {
-                                const proxyUrl = `https://images.weserv.nl/?url=${encodeURIComponent(url)}`;
                                 const container = document.createElement('div');
                                 container.className = "relative group rounded-lg overflow-hidden";
-                                container.innerHTML = `<img src="${proxyUrl}" class="w-full aspect-square object-cover" alt="Album Image"><button onclick="forceDownload('${url}', 'img_${i}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
+                                container.innerHTML = `<img src="${url}" class="w-full aspect-square object-cover" alt="TikTok Image"><button onclick="forceDownload('${url}', 'TikTok_${i+1}.jpg')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-white text-xs font-bold"><i class="fa-solid fa-download"></i></button>`;
                                 grid.appendChild(container);
                             });
                             document.getElementById('photoCard').classList.remove('hidden');
                         } else {
                             currentActiveVideoUrl = d.play;
-                            const pCard = document.getElementById('previewCard'); pCard.classList.remove('hidden');
-                            document.getElementById('previewImage').classList.add('hidden'); document.getElementById('previewVideo').classList.remove('hidden');
+                            const pCard = document.getElementById('previewCard'); 
+                            pCard.classList.remove('hidden');
+                            document.getElementById('previewImage').classList.add('hidden'); 
+                            document.getElementById('previewVideo').classList.remove('hidden');
                             document.getElementById('previewVideo').src = d.play;
                             document.getElementById('previewAuthor').textContent = d.author.nickname || 'User';
                             document.getElementById('previewDescription').textContent = d.title || '';
-                            document.getElementById('previewDownloadBtn').onclick = () => forceDownload(d.play, 'video.mp4');
-                            document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(d.music, 'music.mp3');
+                            document.getElementById('previewDownloadBtn').onclick = () => forceDownload(d.play, 'TikTok_Video.mp4');
+                            document.getElementById('previewDownloadAudioBtn').onclick = () => forceDownload(d.music, 'TikTok_Music.mp3');
                         }
                     } else {
                         const posts = data.data.videos;
@@ -1389,7 +1413,8 @@
                             document.getElementById('vipFollowers').textContent = 'N/A'; 
                             document.getElementById('vipHearts').textContent = 'N/A';
                             
-                            const grid = document.getElementById('vipPostGrid'); grid.innerHTML = '';
+                            const grid = document.getElementById('vipPostGrid'); 
+                            grid.innerHTML = '';
                             activeGalleryList = posts.map(p => ({ url: `https://www.tiktok.com/@${user.unique_id}/video/${p.video_id}` }));
 
                             posts.forEach((p, idx) => {
@@ -1403,8 +1428,13 @@
                         } else { toast('چو پۆست نەهاتنە دیتن!', 'fa-times'); }
                     }
                     toast('سەرکەفتی بوو! 🎉', 'fa-check');
-                } else { toast('میدیا نەهاتە دیتن!', 'fa-times'); }
-            } catch { toast('کێشەیەک هەیە د تۆرێ دا!', 'fa-times'); }
+                } else { 
+                    toast(l.mediaNotFound || 'میدیا نەهاتە دیتن! 📎', 'fa-times'); 
+                }
+            } catch (error) { 
+                console.error('TikTok error:', error);
+                toast(l.networkError || 'کێشەیەک ڕوویدا! 🔄', 'fa-times'); 
+            }
             finally { btn.disabled = false; }
         }
 
@@ -1608,7 +1638,6 @@
             document.getElementById('faqA1').textContent = l.faqA1;
             document.getElementById('footerCredit').textContent = l.footer;
             
-            // Update plan texts
             if (l.planTitle) document.getElementById('txtPlanTitle').textContent = l.planTitle;
             if (l.planFreeDesc) document.getElementById('txtPlanFreeDesc').textContent = l.planFreeDesc;
             if (l.planFree1) document.getElementById('txtPlanFree1').textContent = l.planFree1;
@@ -1619,6 +1648,10 @@
             if (l.planPro4) document.getElementById('txtPlanPro4').textContent = l.planPro4;
             
             document.getElementById('tiktokUrl').placeholder = currentMode === 'link' ? l.placeholder : l.placeholderUser;
+            
+            if (userPlan === 'pro') {
+                updateUIForProPlan();
+            }
         }
 
         // ==================== INIT LANGUAGE ====================
